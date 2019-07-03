@@ -1,0 +1,23 @@
+--cpu Cortex-M0+
+".\cubemx\startup_stm32l011xx.o"
+".\cubemx\main.o"
+".\cubemx\stm32l0xx_it.o"
+".\cubemx\commperiph.o"
+".\cubemx\comport.o"
+".\cubemx\flash.o"
+".\cubemx\xbee.o"
+".\cubemx\stm32l0xx_ll_gpio.o"
+".\cubemx\stm32l0xx_ll_rtc.o"
+".\cubemx\stm32l0xx_ll_spi.o"
+".\cubemx\stm32l0xx_ll_dma.o"
+".\cubemx\stm32l0xx_ll_pwr.o"
+".\cubemx\stm32l0xx_ll_exti.o"
+".\cubemx\stm32l0xx_ll_usart.o"
+".\cubemx\stm32l0xx_ll_rcc.o"
+".\cubemx\stm32l0xx_ll_utils.o"
+".\cubemx\stm32l0xx_ll_lpuart.o"
+".\cubemx\system_stm32l0xx.o"
+--library_type=microlib --strict --scatter ".\CubeMX\senior-project.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "senior-project.map" -o .\CubeMX\senior-project.axf

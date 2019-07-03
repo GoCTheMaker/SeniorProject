@@ -3,7 +3,7 @@
  * Auto generated Run-Time-Environment Configuration File
  *      *** Do not modify ! ***
  *
- * Project: 'CubeMX' 
+ * Project: 'senior-project' 
  * Target:  'CubeMX' 
  */
 
