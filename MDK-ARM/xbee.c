@@ -17,7 +17,40 @@ char XbeeRxBuff[BUFFER_SIZE];	//Ring bufer for raw input
 int XbeeRxWriteIndex;	//Current write index of buffer
 int XbeeRxReadTo;
 int XbeeRxReadFrom;
-
+int XbeeRxBufferActive;	//Flag set to signify the existence of new data in the Xbee buffer
+int XbeeDongleConnected;
+//---------------------------------------------------
+int XB_XbeeSubroutine()
+{
+	
+	//Enable XBee
+	XB_EnableXbee();
+	//Start Timeout timer
+	
+	
+	//Check for 
+	//While not timed out 
+	if(!XB_CheckForDongle())
+	{
+		XbeeDongleConnected = YES;
+		//Set connected timeout
+		while(XbeeDongleConnected)
+		{
+			XB_ExecuteCommand(XB_ParseCommand());			
+		}
+	}
+		
+}
+//---------------------------------------------------
+void XB_EnableXbee()
+{
+	XBEE_EN_GPIO_Port->ODR &= ~XBEE_EN_Pin;
+}
+//---------------------------------------------------
+void XB_DisableXbee()
+{
+	XBEE_EN_GPIO_Port->ODR |= XBEE_EN_Pin;
+}
 //---------------------------------------------------
 int XB_SendByte(char byte)
 {
@@ -52,6 +85,8 @@ int XB_GetResponse(char * resp, int *len)
 	{
 		resp[i++] = XbeeRxBuff[XbeeRxReadFrom];
 	}	
+	
+	XbeeRxBufferActive = 0; //Clear buffer flag for safety
 	
 	*len = strlen(resp);
 	
@@ -207,3 +242,97 @@ int XB_GetSN()
 	return 0;	
 }
 //---------------------------------------------------
+int XB_CheckForDongle()
+{
+	int i;
+	if(XbeeRxBufferActive)
+	{
+		//Check for correct character
+		for(i = XbeeRxReadFrom;i != XbeeRxWriteIndex; i = (i + 1) % BUFFER_SIZE)
+		{
+			//If proper handshake char from dongle read
+			if(XbeeRxBuff[i] == EOC)
+			{
+				XbeeRxReadFrom = (i + 1) % BUFFER_SIZE;
+				//Respond with handshake				
+				XB_SendByte(EOC);
+				return 0;				
+			}
+		}
+		return -2; //No correct data on line 
+		//for(chars in buffer)
+		//if char is EOC 
+		//send resp
+		//return 
+		//end of for
+		//return not correct response 
+	}
+	else
+	{
+		return -1;//No activity on rx line
+	}
+}
+//---------------------------------------------------
+int XB_ParseCommand()
+{
+	int i, currWriteIndex = XbeeRxWriteIndex; //Need temp index so global won't be 
+																					//iterated during function call. makes errors
+	char temp[50];
+	
+	//Check for end of command first in buffer
+	//Ideally, this sort of buffering should allow for multiple 
+	//	commands in the buffer at once 
+	for(i=XbeeRxReadFrom; i!=currWriteIndex; i = (i+1)%BUFFER_SIZE)
+	{
+		if(XbeeRxBuff[i] == EOC)
+		{
+			XbeeRxReadTo = i + 1;
+			break;
+		}
+	}	
+	if(i == currWriteIndex) return NO; //No full command found
+	
+	memset(temp, 0, sizeof(temp));//clears string 
+	i = 0;
+	//If command found, read command to local string
+	for(; XbeeRxReadFrom!=XbeeRxReadTo; XbeeRxReadFrom=(XbeeRxReadFrom + 1)%BUFFER_SIZE)
+	{
+		temp[i++] = XbeeRxBuff[XbeeRxReadFrom];
+	}
+	//Check command against known strings 	
+	// Return case for switch case statement
+	if(!strcmp(temp, GETFIXES)) 
+		return GETFIXES_N;
+	//else if(!strcmp(temp, )) return ;
+	
+	else return NO;	//Default for unknown command
+}
+//---------------------------------------------------
+int XB_ExecuteCommand(int command)
+{
+	switch(command)
+	{
+		//Commands run here
+		//-------------------------------------------------------------
+		case GETFIXES_N:
+			return XB_TransmitFixes();
+			break;
+		//-------------------------------------------------------------
+		default:	//Unprogrammed response should be 0 but this is safer
+			return -1;//No command executed
+			break;
+	
+	}
+}
+//---------------------------------------------------
+int XB_TransmitFixes()
+{
+	//Currently a test function
+	char test[] = "this,is\nbullshit,data";
+	XB_SendData(test, strlen(test));
+	XB_SendByte(EOC);
+	XbeeDongleConnected = NO;
+	return 0;//Holder	
+}
+//---------------------------------------------------
+/*--EOF--*/

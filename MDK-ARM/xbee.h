@@ -8,6 +8,7 @@
 
 //Macros
 //----------------------------------------------
+//Xbee Config Commands
 #define DL_LEN	6
 #define PROGRAM_MODE_CMD	"+++"
 #define CR	'\r'
@@ -26,16 +27,31 @@
 #define	DEF_GT	"1F4"
 
 #define SET_NVM	"ATWR"
-
 #define CONFIRM_SET	"ATAC"
+
+//Xbee GUI Commands
+#define GETFIXES "DTA?"
+
+#define GETFIXES_N 1
+
+//File Defines
+#define DELIM ','
+#define END_TRANS '\t'
 
 //Prototypes
 //----------------------------------------------
+int XB_XbeeSubroutine();
+void XB_EnableXbee();
+void XB_DisableXbee();
 int XB_SendByte(char byte);
 int XB_SendData(char * string, int size);
 int XB_GetResponse(char * resp, int *len);
 int XB_ConfigureDevice(char * sn, int len);
 int XB_GetConfig();
 int XB_GetSN();
+int XB_CheckForDongle();
+int XB_ParseCommand();
+int XB_ExecuteCommand(int command);
+int XB_TransmitFixes();
 
 #endif //XBEE_H_

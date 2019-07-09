@@ -148,7 +148,24 @@
           <Name>UL2CM3(-S0 -C0 -P0 -FD20000000 -FC800 -FN1 -FF0STM32L0xx_16 -FS08000000 -FL04000 -FP0($$Device:STM32L011K4Tx$CMSIS\Flash\STM32L0xx_16.FLM))</Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
-      <Breakpoint/>
+      <Breakpoint>
+        <Bp>
+          <Number>0</Number>
+          <Type>0</Type>
+          <LineNumber>333</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134226196</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>E:\altium-senior-project\ÂµVision\MDK-ARM\xbee.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\senior_project\xbee.c\333</Expression>
+        </Bp>
+      </Breakpoint>
       <WatchWindow1>
         <Ww>
           <count>0</count>
@@ -160,7 +177,20 @@
           <WinNumber>1</WinNumber>
           <ItemText>ComRxBuff[BUFFER_SIZE]</ItemText>
         </Ww>
+        <Ww>
+          <count>2</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>ComRxBuff[i]</ItemText>
+        </Ww>
       </WatchWindow1>
+      <MemoryWindow1>
+        <Mm>
+          <WinNumber>1</WinNumber>
+          <SubType>0</SubType>
+          <ItemText>ComRxBuff[ComRxWriteIndex]</ItemText>
+          <AccSizeX>0</AccSizeX>
+        </Mm>
+      </MemoryWindow1>
       <Tracepoint>
         <THDelay>0</THDelay>
       </Tracepoint>
@@ -169,7 +199,7 @@
         <periodic>0</periodic>
         <aLwin>0</aLwin>
         <aCover>0</aCover>
-        <aSer1>0</aSer1>
+        <aSer1>1</aSer1>
         <aSer2>0</aSer2>
         <aPa>0</aPa>
         <viewmode>1</viewmode>
@@ -207,6 +237,10 @@
         <Entry>
           <Name>System Viewer\LPUART1</Name>
           <WinId>35905</WinId>
+        </Entry>
+        <Entry>
+          <Name>System Viewer\USART2</Name>
+          <WinId>35904</WinId>
         </Entry>
       </SystemViewers>
       <DebugDescription>

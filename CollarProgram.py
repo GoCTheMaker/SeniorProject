@@ -3,6 +3,7 @@ from tkinter import ttk
 from tkinter import scrolledtext
 import datetime
 
+
 import threading
 import time
 import os
@@ -311,6 +312,14 @@ class PageDataRx(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         tk.Frame.__init__(self, parent)
+
+        # Labels
+        ttk.Label(self, text="Receive Data", font=LARGE_FONT).grid(row=0, column=0)
+        ttk.Label(self, text="COM Port", font=LARGE_FONT).grid(row=1, column=0)
+        ttk.Label(self, text="Dongle SN", font=LARGE_FONT).grid(row=3, column=0)
+        ttk.Label(self, text="Target SN", font=LARGE_FONT).grid(row=5, column=0)
+        ttk.Label(self, text="Messages", font=LARGE_FONT).grid(row=7, column=0)
+
         #label = tk.Label(self, text="Receive Data", font=LARGE_FONT)
         #label.pack(pady=10, padx=10)
 
@@ -326,6 +335,10 @@ class PageDataRx(tk.Frame):
                              command=self.SetDongleTx)
         button3.grid(row=3, column=1)
 
+        button4 = ttk.Button(self, text="Connect and Download",
+                             command=self.ConnectDownload)
+        button4.grid(row=4, column=1)
+
         #Entries
         self.comPortEntry = tk.Entry(self)
         self.snEntry = tk.Entry(self)
@@ -337,12 +350,12 @@ class PageDataRx(tk.Frame):
         self.snEntry.configure(state='readonly')
 
         self.txEntry = tk.Entry(self)
-        self.txEntry.grid(row=5, column=0)
+        self.txEntry.grid(row=6, column=0)
 
         # Text Box
         self.msgBox = scrolledtext.ScrolledText(self, height=10, width=40)
         self.msgBox.grid(row=7, column=0)
-        self.msgBox.insert(tk.END, "Testing\n")
+
 
         # Serial Port
         self.ser = serial.Serial(
@@ -413,9 +426,137 @@ class PageDataRx(tk.Frame):
         tmpString = tmpa[1:7] + tmpb[0:8]
 
         self.snEntry.configure(state='normal')
+        self.snEntry.delete(0, 'end')
         self.snEntry.insert(0, tmpString.decode())
         self.snEntry.configure(state='readonly')
         print(tmpString.decode())
+
+    def GetDongleDN(self):
+
+        # Flush port before use
+        self.ser.flushInput()
+        self.ser.flushOutput()
+        self.update()
+
+        # Send +++ to device
+        time.sleep(1)
+        self.ser.write(str.encode("+++"))
+        self.msgBox.insert(tk.END, "Sent\n")
+        self.update()
+
+        #Wait for rx
+        self.ser.timeout = 2
+        tmpString = self.ser.read(2)
+        print(tmpString)
+        if tmpString == b'OK':
+            self.msgBox.insert(tk.END, "Programming mode entered\n")
+        else:
+            self.msgBox.insert(tk.END, "Could not connect to device\n")
+            return
+
+        #Get SN Upper
+        self.msgBox.insert(tk.END, "Getting the address from dongle\n")
+        self.update()
+        self.ser.write(b'ATDH\r')
+        tmpa = self.ser.read(8)
+        self.ser.write(b'ATDL\r')
+        tmpb = self.ser.read(8)
+        tmpString = tmpa[1:7] + tmpb[0:8]
+
+
+        self.txEntry.delete(0, 'end')
+        self.txEntry.insert(0, tmpString.decode())
+        print(tmpString.decode())
+
+    def ConnectDownload(self):
+
+        self.ser.port = '\\\\.\\COM' + self.comPortEntry.get()
+
+        # global serial_object
+        # serial_object = self.ser.port
+        # Connect()
+
+        tmpString = ''
+        # Check to see if port is open or if port exists
+        if self.ser.isOpen():
+            try:
+                self.ser.close()
+            except IOError:
+                self.msgBox.insert(tk.END, "Could not close port: " + self.comPortEntry.get() + '\n')
+                return
+            self.msgBox.insert(tk.END, "Comport was open, closing now\n")
+
+        # Attempt to open port with current params
+        try:
+            self.ser.open()
+        except IOError:
+            self.msgBox.insert(tk.END, "Could not open port: " + self.comPortEntry.get() + '\n')
+            return
+        if self.ser.isOpen():
+            self.msgBox.insert(tk.END, "Comport " + self.comPortEntry.get() + " opened succesfully.\n")
+            self.msgBox.insert(tk.END, "Attempting device handshake\n")
+
+        # Flush port before use
+        self.ser.flushInput()
+        self.ser.flushOutput()
+        self.update()
+
+        self.ser.timeout = 0
+
+        # Send '?' and look for ack
+        for x in range(10):
+            self.ser.write(b'?')
+            self.msgBox.insert(tk.END, "Attempt " + str(x) + "\n")
+            self.msgBox.see("end")
+            self.update()
+            time.sleep(0.2)
+            tmpString = self.ser.read(1)
+            if tmpString == b'?':
+                break
+        if tmpString == b'?':
+            self.msgBox.insert(tk.END, "Connection Made\n")
+        else:
+            self.msgBox.insert(tk.END, "Connection Failed\n")
+            return
+
+        #Ask collar for data
+        self.msgBox.insert(tk.END, "Requesting Data\n")
+        self.update()
+
+        self.ser.write(b'DTA?')
+
+        #self.ser.timeout = 1
+        tmpString = bytearray(b'')
+        response = []
+
+        self.ser.timeout = 10
+
+        tmpString = self.ser.read_until(b'?')
+        tmpString += b'\b'
+
+
+
+        #tmpString = self.ser.read(100)
+        tmpString = tmpString.decode()
+
+        time.sleep(1)
+
+        self.GetDongleDN()
+
+        now = datetime.datetime.now()
+
+        path = self.txEntry.get()+ "_" + now.strftime('%m_%d_%y_%H_%M') + ".txt"
+
+        f = open(path, "w+")
+
+        f.write(tmpString)
+        f.close()
+
+        pre, ext = os.path.splitext(path)
+        os.rename(path, pre + ".csv")
+
+        self.msgBox.insert(tk.END, "Data saved to: " + pre + ".csv\n")
+
 
     def SetDongleTx(self):
         self.ser.port = '\\\\.\\COM' + self.comPortEntry.get()
@@ -497,6 +638,13 @@ class PageDataRx(tk.Frame):
         tmp = tmp.decode()
         self.msgBox.insert(tk.END, "DL set to " + tmp + "\n")
         self.update()
+
+        #Save to memory
+        self.ser.write(str.encode("ATWR" + '\r'))
+        tmp = self.ser.read(3)
+        tmp = tmp.decode()
+        self.msgBox.insert(tk.END, tmp + "\n")
+
 
         print(dh)
         print(dl)

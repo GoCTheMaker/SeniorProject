@@ -21,7 +21,7 @@
 //---------------------------------------------------
 int CC_ComPortPresent()
 {
-	return TRUE; //Placeholder function, should poll the usb
+	return FALSE; //Placeholder function, should poll the usb
 							//present line in future
 }
 //---------------------------------------------------

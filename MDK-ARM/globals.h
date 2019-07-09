@@ -33,6 +33,8 @@ extern char XbeeRxBuff[BUFFER_SIZE];	//Ring bufer for raw input
 extern int XbeeRxWriteIndex;	//Current write index of buffer
 extern int XbeeRxReadTo;
 extern int XbeeRxReadFrom;
+extern int XbeeRxBufferActive;
+extern int XbeeDongleConnected;
 
 
 
