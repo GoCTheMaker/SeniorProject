@@ -21,7 +21,9 @@
 //---------------------------------------------------
 int CC_ComPortPresent()
 {
-	return FALSE; //Placeholder function, should poll the usb
+	//return (USB_PRSNT_GPIO_Port->IDR & USB_PRSNT_Pin) == USB_PRSNT_Pin;
+	
+	return TRUE; //Placeholder function, should poll the usb
 							//present line in future
 }
 //---------------------------------------------------
