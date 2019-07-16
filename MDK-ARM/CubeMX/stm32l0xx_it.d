@@ -25,4 +25,6 @@
 .\cubemx\stm32l0xx_it.o: ..\MDK-ARM\globals.h
 .\cubemx\stm32l0xx_it.o: ..\MDK-ARM\comport.h
 .\cubemx\stm32l0xx_it.o: ..\MDK-ARM\xbee.h
+.\cubemx\stm32l0xx_it.o: ..\MDK-ARM\timers.h
+.\cubemx\stm32l0xx_it.o: ..\MDK-ARM\gps.h
 .\cubemx\stm32l0xx_it.o: ../Inc/stm32l0xx_it.h

@@ -27,5 +27,6 @@
 .\cubemx\main.o: ..\MDK-ARM\globals.h
 .\cubemx\main.o: ..\MDK-ARM\flash.h
 .\cubemx\main.o: ..\MDK-ARM\xbee.h
+.\cubemx\main.o: ..\MDK-ARM\timers.h
 .\cubemx\main.o: ..\MDK-ARM\gps.h
 .\cubemx\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

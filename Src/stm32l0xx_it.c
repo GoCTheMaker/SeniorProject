@@ -23,6 +23,7 @@
 #include "globals.h"
 #include "comport.h"
 #include "xbee.h"
+#include "timers.h"
 #include "stm32l0xx_it.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -196,6 +197,17 @@ void LPUART1_IRQHandler(void)
 }
 
 /* USER CODE BEGIN 1 */
+
+void RTC_IRQHandler(void){
+	
+	static int count = 0;
+	count++;
+	
+	//RTC_Flag = 1;
+		
+}
+
+
 
 /* USER CODE END 1 */
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
