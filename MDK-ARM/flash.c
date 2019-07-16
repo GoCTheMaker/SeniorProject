@@ -25,8 +25,7 @@ int FLASH_Unlock()
 		FLASH->PEKEYR = UNLOCK_KEY_2;
 		return 0; //No err
 	}
-	return -1; //Not reset
-	 
+	return -1; //Not reset	 
 }
 //---------------------------------------------------
 int FLASH_Lock()
@@ -78,5 +77,37 @@ int FLASH_ReadData(unsigned char * str, int len, unsigned long addr)
 		ptr++;
 	}
 	return 0;
+}
+//---------------------------------------------------
+int FLASH_unlockPrgm(void){
+	/* Unlocking FLASH_PECR register access */
+	if((FLASH->PECR & FLASH_PECR_PRGLOCK) != RESET)
+	{ 
+		
+		FLASH->PRGKEYR = PRGKEY1;
+		FLASH->PRGKEYR = PRGKET2;
+		FLASH->PECR &= ~FLASH_PECR_PRGLOCK;
+		return 0; //No err
+	}
+	return -1; //Not reset
+}
+//---------------------------------------------------
+int FLASH_writeWord( unsigned int data, unsigned int addr){
+	__disable_irq();
+	while ((FLASH->SR & FLASH_SR_BSY) != 0);
+	*(__IO uint32_t*)(addr) = data;
+	while ((FLASH->SR & FLASH_SR_BSY) != 0)
+	{
+		/* For robust implementation, add here time-out management */
+	}
+	__enable_irq();
+	if ((FLASH->SR & FLASH_SR_EOP) != 0)
+	{
+		FLASH->SR = FLASH_SR_EOP;
+		return 0;
+	}else{
+		// Error
+		return 1;
+	}
 }
 //---------------------------------------------------

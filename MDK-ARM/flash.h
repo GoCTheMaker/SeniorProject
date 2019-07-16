@@ -10,6 +10,10 @@
 //----------------------------------------------
 #define UNLOCK_KEY_1 0x89ABCDEF
 #define UNLOCK_KEY_2 0x02030405
+#define PRGKEY1 0x8C9DAEBF
+#define PRGKET2	0x13141516
+
+// End of memory is 0x0800 3FFF
 
 //Prototypes
 //----------------------------------------------
@@ -17,7 +21,11 @@ int FLASH_Unlock();
 int FLASH_Lock();
 int FLASH_WriteByte(unsigned char byte, unsigned long addr);
 int FLASH_WriteData(unsigned char * str, int len, unsigned long addr);
+
+int FLASH_unlockPrgm(void);
 int FLASH_ReadData(unsigned char * str, int len, unsigned long addr);
 
+
+int FLASH_writeWord(unsigned int data, unsigned int addr);
 
 #endif //FLASH_H_

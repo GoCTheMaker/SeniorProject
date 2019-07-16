@@ -28,7 +28,10 @@
 #include "globals.h"
 #include "flash.h"
 #include "xbee.h"
+#include "timers.h"
 #include <string.h>
+
+#include "stm32l0xx_hal_conf_template.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -118,6 +121,20 @@ int main(void)
 	
 	__enable_irq();	
 	
+	
+	
+	LL_RTC_TimeTypeDef time;
+	LL_RTC_DateTypeDef date;
+	RTC_initAlarm();
+	initTIM2();
+	
+	
+	
+	FLASH_Unlock();
+	FLASH_unlockPrgm();
+	FLASH_writeWord( 0xBFBF, 0x8003F00);
+	FLASH_Lock();
+	
 
   /* USER CODE END 2 */
 
@@ -128,6 +145,7 @@ int main(void)
 		//Check for com port connected
 		//----------------------------
 		if(CC_ComPortPresent())
+
 		{
 			//Check for handshake from GUI
 			if(CC_CheckForHandshake())
@@ -137,13 +155,18 @@ int main(void)
 				{
 					CC_ExecuteCommand(CC_ParseCommand());
 				}
-				
 			}
 			
 		}//Comport present
 		
 		//Fix this later 
 		XB_XbeeSubroutine();
+		
+			
+		RTC_getTimeDate( &time, &date );			
+
+		
+		
 		
 		
 		
@@ -348,6 +371,10 @@ static void MX_RTC_Init(void)
 
   /* Peripheral clock enable */
   LL_RCC_EnableRTC();
+	
+	/* RTC interrupt Init */
+  NVIC_SetPriority(RTC_IRQn, 0);
+  NVIC_EnableIRQ(RTC_IRQn);
 
   /* USER CODE BEGIN RTC_Init 1 */
 
