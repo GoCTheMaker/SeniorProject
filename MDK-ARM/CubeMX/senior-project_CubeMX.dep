@@ -1,6 +1,6 @@
 Dependencies for Project 'senior-project', Target 'CubeMX': (DO NOT MODIFY !)
 F (startup_stm32l011xx.s)(0x5D2CF4B9)(--cpu Cortex-M0+ --pd "__EVAL SETA 1" -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_CubeMX-IC:\Users\Collin\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\Collin\AppData\Local\Arm\Packs\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include--pd "__UVISION_VERSION SETA 527" --pd "_RTE_ SETA 1" --pd "STM32L011xx SETA 1"--list startup_stm32l011xx.lst --xref -o .\cubemx\startup_stm32l011xx.o --depend .\cubemx\startup_stm32l011xx.d)
-F (../Src/main.c)(0x5D2F8EBC)(--c99 -c --cpu Cortex-M0+ -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\MDK-ARM -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_CubeMX-IC:\Users\Collin\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\Collin\AppData\Local\Arm\Packs\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32L011xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DMSI_VALUE="2097000" -DHSI_VALUE="16000000" -DLSI_VALUE="37000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32L011xx-o .\cubemx\main.o --omf_browse .\cubemx\main.crf --depend .\cubemx\main.d)
+F (../Src/main.c)(0x5D2F9200)(--c99 -c --cpu Cortex-M0+ -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\MDK-ARM -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_CubeMX-IC:\Users\Collin\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\Collin\AppData\Local\Arm\Packs\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32L011xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DMSI_VALUE="2097000" -DHSI_VALUE="16000000" -DLSI_VALUE="37000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32L011xx-o .\cubemx\main.o --omf_browse .\cubemx\main.crf --depend .\cubemx\main.d)
 I (../Inc/main.h)(0x5D28F03D)
 I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_lpuart.h)(0x5D01428E)
 I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h)(0x5D01428E)
@@ -29,8 +29,8 @@ I (..\MDK-ARM\comport.h)(0x5D2CF4B9)
 I (..\MDK-ARM\globals.h)(0x5D2F7E6C)
 I (..\MDK-ARM\flash.h)(0x5D2F2E39)
 I (..\MDK-ARM\xbee.h)(0x5D2E15B8)
-I (..\MDK-ARM\timers.h)(0x5D2F3309)
-I (..\MDK-ARM\gps.h)(0x5D2F5953)
+I (..\MDK-ARM\timers.h)(0x5D2F98EC)
+I (..\MDK-ARM\gps.h)(0x5D2F988D)
 I (..\MDK-ARM\scheduler.h)(0x5D2F8EA9)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x599F75EC)
 I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_conf_template.h)(0x5D01428E)
@@ -109,8 +109,8 @@ I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_gpio.h)(0x5D01428E)
 I (..\MDK-ARM\globals.h)(0x5D2F7E6C)
 I (..\MDK-ARM\comport.h)(0x5D2CF4B9)
 I (..\MDK-ARM\xbee.h)(0x5D2E15B8)
-I (..\MDK-ARM\timers.h)(0x5D2F3309)
-I (..\MDK-ARM\gps.h)(0x5D2F5953)
+I (..\MDK-ARM\timers.h)(0x5D2F98EC)
+I (..\MDK-ARM\gps.h)(0x5D2F988D)
 I (../Inc/stm32l0xx_it.h)(0x5D2E36D4)
 F (..\Src\commPeriph.c)(0x5D2E15B8)(--c99 -c --cpu Cortex-M0+ -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\MDK-ARM -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_CubeMX-IC:\Users\Collin\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\Collin\AppData\Local\Arm\Packs\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32L011xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DMSI_VALUE="2097000" -DHSI_VALUE="16000000" -DLSI_VALUE="37000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32L011xx-o .\cubemx\commperiph.o --omf_browse .\cubemx\commperiph.crf --depend .\cubemx\commperiph.d)
 I (../Inc/commPeriph.h)(0x5D0166A8)
@@ -214,7 +214,7 @@ I (flash.h)(0x5D2F2E39)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x599F75EC)
 I (xbee.h)(0x5D2E15B8)
 F (.\xbee.h)(0x5D2E15B8)()
-F (.\gps.c)(0x5D2F7931)(--c99 -c --cpu Cortex-M0+ -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\MDK-ARM -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_CubeMX-IC:\Users\Collin\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\Collin\AppData\Local\Arm\Packs\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32L011xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DMSI_VALUE="2097000" -DHSI_VALUE="16000000" -DLSI_VALUE="37000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32L011xx-o .\cubemx\gps.o --omf_browse .\cubemx\gps.crf --depend .\cubemx\gps.d)
+F (.\gps.c)(0x5D2F98E3)(--c99 -c --cpu Cortex-M0+ -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\MDK-ARM -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_CubeMX-IC:\Users\Collin\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\Collin\AppData\Local\Arm\Packs\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32L011xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DMSI_VALUE="2097000" -DHSI_VALUE="16000000" -DLSI_VALUE="37000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32L011xx-o .\cubemx\gps.o --omf_browse .\cubemx\gps.crf --depend .\cubemx\gps.d)
 I (globals.h)(0x5D2F7E6C)
 I (../Inc/main.h)(0x5D28F03D)
 I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_lpuart.h)(0x5D01428E)
@@ -240,11 +240,11 @@ I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_spi.h)(0x5D01428E)
 I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_usart.h)(0x5D01428E)
 I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_gpio.h)(0x5D01428E)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x599F75EC)
-I (gps.h)(0x5D2F5953)
-I (timers.h)(0x5D2F3309)
+I (gps.h)(0x5D2F988D)
+I (timers.h)(0x5D2F98EC)
 I (comport.h)(0x5D2CF4B9)
-F (.\gps.h)(0x5D2F5953)()
-F (.\timers.c)(0x5D2F8264)(--c99 -c --cpu Cortex-M0+ -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\MDK-ARM -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_CubeMX-IC:\Users\Collin\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\Collin\AppData\Local\Arm\Packs\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32L011xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DMSI_VALUE="2097000" -DHSI_VALUE="16000000" -DLSI_VALUE="37000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32L011xx-o .\cubemx\timers.o --omf_browse .\cubemx\timers.crf --depend .\cubemx\timers.d)
+F (.\gps.h)(0x5D2F988D)()
+F (.\timers.c)(0x5D2F98E2)(--c99 -c --cpu Cortex-M0+ -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\MDK-ARM -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_CubeMX-IC:\Users\Collin\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\Collin\AppData\Local\Arm\Packs\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32L011xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DMSI_VALUE="2097000" -DHSI_VALUE="16000000" -DLSI_VALUE="37000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32L011xx-o .\cubemx\timers.o --omf_browse .\cubemx\timers.crf --depend .\cubemx\timers.d)
 I (../Inc/main.h)(0x5D28F03D)
 I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_lpuart.h)(0x5D01428E)
 I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h)(0x5D01428E)
@@ -268,16 +268,16 @@ I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_rtc.h)(0x5D2E86C8)
 I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_spi.h)(0x5D01428E)
 I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_usart.h)(0x5D01428E)
 I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_gpio.h)(0x5D01428E)
-I (timers.h)(0x5D2F3309)
-I (gps.h)(0x5D2F5953)
+I (timers.h)(0x5D2F98EC)
+I (gps.h)(0x5D2F988D)
 I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_tim.h)(0x5D01428E)
-F (.\timers.h)(0x5D2F3309)()
-F (.\scheduler.c)(0x5D2F900C)(--c99 -c --cpu Cortex-M0+ -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\MDK-ARM -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_CubeMX-IC:\Users\Collin\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\Collin\AppData\Local\Arm\Packs\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32L011xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DMSI_VALUE="2097000" -DHSI_VALUE="16000000" -DLSI_VALUE="37000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32L011xx-o .\cubemx\scheduler.o --omf_browse .\cubemx\scheduler.crf --depend .\cubemx\scheduler.d)
+F (.\timers.h)(0x5D2F98EC)()
+F (.\scheduler.c)(0x5D2F90C6)(--c99 -c --cpu Cortex-M0+ -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\MDK-ARM -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_CubeMX-IC:\Users\Collin\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\Collin\AppData\Local\Arm\Packs\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32L011xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DMSI_VALUE="2097000" -DHSI_VALUE="16000000" -DLSI_VALUE="37000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32L011xx-o .\cubemx\scheduler.o --omf_browse .\cubemx\scheduler.crf --depend .\cubemx\scheduler.d)
 I (scheduler.h)(0x5D2F8EA9)
 I (globals.h)(0x5D2F7E6C)
-I (timers.h)(0x5D2F3309)
+I (timers.h)(0x5D2F98EC)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F75EE)
-I (gps.h)(0x5D2F5953)
+I (gps.h)(0x5D2F988D)
 I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_rtc.h)(0x5D2E86C8)
 I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h)(0x5D01428E)
 I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l011xx.h)(0x5D2A20FC)

@@ -12,7 +12,7 @@ void TIM2_init(void){
 	TIM2->PSC = 262144 / 1000;
 }
 
-void TIM2_delay(uint16_t delay){
+int TIM2_delay(uint16_t delay){
 	// Delay is in ms
 	
 	// Clear the update event flag 
@@ -25,9 +25,19 @@ void TIM2_delay(uint16_t delay){
 	TIM2->CR1 |= TIM_CR1_CEN;
 	
 	// Wait until it's done:
-	while (!(TIM2->SR & TIM_SR_UIF));
+	while (TIM2_DELAY_INLINE);
 	
-	return;
+	return 0;
+}
+void TIM2_initDelay_inline(uint16_t delay){	
+	// Clear the update event flag 
+	TIM2->SR = 0;
+	
+	// Move the delay into the ARR:
+	TIM2->ARR = delay;
+	
+	// Start the timer:
+	TIM2->CR1 |= TIM_CR1_CEN;
 }
 
 void RTC_initAlarm(void){

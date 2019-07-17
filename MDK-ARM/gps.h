@@ -17,10 +17,9 @@
 
 #define IDLE_LINE (char)0xFF
 #define LINE_FEED (char)10
-	
-//#define TESTCOMMAND "$PUBX,41,4,0007,0003,19200,0*25"
-//#define TESTCOMMAND "$EIGNQ,RMC*24"
-#define TESTCOMMAND "PUBX,40,RMC,1,1,1,1,1,0*46"
+
+#define GPS_TIMEOUT 30000
+#define GPS_ACC_REQ 15
 
 
 #define SYNC_CHAR_1 0xB5
@@ -53,22 +52,14 @@ struct UBXTXInfo{
 	uint8_t checksumB;
 };
 
-struct NMEA_RMC{
-	LL_RTC_TimeTypeDef time;	// Time struct, see above
-	char 		status;			// Data validity status. 
-											// V = No pos/Limits Exceeded/DeadReckoning&limits exceeded 
-											// A = Dead Reckoning fix/RKT Float/RTK Fixed/ 2D/3D Fix/ Combined GNSS/dead reckoning fix
+struct GPS_POS{
+	LL_RTC_TimeTypeDef time;	// time
+	LL_RTC_DateTypeDef date;	// date
 	float 	lat;				// Latitude
 	char 		NS;					// North/South Indicator
 	float 	longt;			// Longitude
 	char 		EW;					// East/West Indicator
-	float 	speed;			// speed in knots
-	float 	cog;				// Course Over Ground (heading) (in degrees)
-	float		mv;					// "Magnetic Variation Value"
-	char		mvEW;				// "Magnetic Variation E/R Indicator"
-	char		posMode;		// Mode Indicator
-	char 		navStatus;	// Navigation status indicator. Should always be 'V'. I think.
-	uint8_t	checksum;		// Checksum. Hex. 
+	int			acc;				// Horizontal Accuracy
 };
 
 //Prototypes
@@ -90,7 +81,9 @@ void clearGPSBuffer(void);
 
 int GPS_UBX_enablePUBX_Position(void);
 
-struct NMEA_RMC GPS_getNMEA_RMC(void);
+struct GPS_POS GPS_getNMEA(void);
+
+int GPS_subroutine(void);
 
 
 #endif //GPS_H_

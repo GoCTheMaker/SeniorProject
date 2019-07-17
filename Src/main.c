@@ -130,14 +130,17 @@ int main(void)
 	FLASH_Lock();
 	*/
 
-
+	
+	GPS_GPSCSHigh();
+	
+/*
 // GPS Initialization
 	GPS_GPSCSHigh();
 	TIM2_delay(100);
 	GPS_GPSCSLow();
 	TIM2_delay(100);
 	GPS_UBX_enablePUBX_Position();
-
+*/
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
@@ -162,6 +165,9 @@ int main(void)
 		if( checkSchedule == 1){		
 			scheduler( &GPS_active, &XB_VHF_active );
 			//checkSchedule == 0;
+		}
+		if(GPS_active == 1){
+			GPS_subroutine();
 		}
 
   }

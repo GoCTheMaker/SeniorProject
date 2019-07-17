@@ -11,6 +11,7 @@
 #include "gps.h"
 #include "timers.h"
 #include "comport.h"
+#include "flash.h"
 
 //Software init
 
@@ -290,7 +291,7 @@ void clearGPSBuffer(void){
 }
 
 //---------------------------------------------------
-struct NMEA_RMC GPS_getNMEA_RMC(void){
+struct GPS_POS GPS_getNMEA(void){
 	// End goal here is to only parse RMC data. However, it currently just prints whatever
 	// Sentance it reads. 
 
@@ -301,7 +302,7 @@ struct NMEA_RMC GPS_getNMEA_RMC(void){
 	int index = 0;
 	char checksum[2];
 	uint8_t msgComplete = 0;
-	struct NMEA_RMC rmc;
+	struct GPS_POS position;
 
 
 		
@@ -310,7 +311,7 @@ struct NMEA_RMC GPS_getNMEA_RMC(void){
 		//		1 - idle. waiting for '$' start character 
 		//		2 - reserved
 		//		3 - start char detected. keep reading until the '*' checksum deliminator and store to array.
-		//		4 - reserved
+		//		4 - UBX Parse
 		//		5 - we got the full message. let's parse it based on the ',' field deliminator.
 
 	while( msgComplete == 0 ){
@@ -380,6 +381,8 @@ struct NMEA_RMC GPS_getNMEA_RMC(void){
 			case 5:
 				// ---- NMEA PARSE STATE ---
 				// We successfully read a full sentance! Theoretically.
+			
+				
 					
 				CC_SendData( rxBuffer, sizeof(rxBuffer) );
 				msgComplete = 1;
@@ -402,6 +405,27 @@ int GPS_UBX_enablePUBX_Position(void){
 	}
 }
 //---------------------------------------------------
+int GPS_subroutine(void){
+	struct GPS_POS position = {0};
+	position.acc = 9999;
+	
+	GPS_GPSEnable();
+	GPS_GPSCSHigh();
+	TIM2_delay(50);
+	GPS_GPSCSLow();
+	TIM2_delay(50);
+	GPS_UBX_enablePUBX_Position();
+	
+	TIM2_initDelay_inline( GPS_TIMEOUT );
+	while( TIM2_DELAY_INLINE ||  position.acc > GPS_ACC_REQ){
+		position = GPS_getNMEA();
+	}
+	if( position.date.Year != 0){	
+		RTC_setTimeDate( position.time, position.date);
+	};
+	
+	FLASH_saveFix(position);
+}
 //---------------------------------------------------
 //---------------------------------------------------
 //---------------------------------------------------

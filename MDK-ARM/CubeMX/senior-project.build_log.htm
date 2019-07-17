@@ -29,36 +29,6 @@ Project File Date:  07/17/2019
 Rebuild target 'CubeMX'
 assembling startup_stm32l011xx.s...
 compiling commPeriph.c...
-compiling flash.c...
-comport.h(34): warning:  #1295-D: Deprecated declaration CC_ComPortPresent - give arg types
-  int CC_ComPortPresent();
-comport.h(37): warning:  #1295-D: Deprecated declaration CC_CheckForHandshake - give arg types
-  int CC_CheckForHandshake();
-comport.h(38): warning:  #1295-D: Deprecated declaration CC_ParseCommand - give arg types
-  int CC_ParseCommand();
-comport.h(40): warning:  #1295-D: Deprecated declaration CC_SetRTC - give arg types
-  int CC_SetRTC();
-comport.h(41): warning:  #1295-D: Deprecated declaration CC_SendTimestamp - give arg types
-  int CC_SendTimestamp();
-comport.h(42): warning:  #1295-D: Deprecated declaration CC_SetProgram - give arg types
-  int CC_SetProgram();
-comport.h(43): warning:  #1295-D: Deprecated declaration CC_ReadProgram - give arg types
-  int CC_ReadProgram();
-comport.h(44): warning:  #1295-D: Deprecated declaration CC_ConfigureXbee - give arg types
-  int CC_ConfigureXbee();
-comport.h(48): warning:  #1-D: last line of file ends without a newline
-  #endif //COMPORT_H_
-globals.h(42): warning:  #1-D: last line of file ends without a newline
-  #endif //GLOBALS_H_
-flash.h(20): warning:  #1295-D: Deprecated declaration FLASH_Unlock - give arg types
-  int FLASH_Unlock();
-flash.h(21): warning:  #1295-D: Deprecated declaration FLASH_Lock - give arg types
-  int FLASH_Lock();
-flash.h(32): warning:  #1-D: last line of file ends without a newline
-  #endif //FLASH_H_
-flash.c(38): warning:  #940-D: missing return statement at end of non-void function "FLASH_Lock" 
-  }
-flash.c: 14 warnings, 0 errors
 compiling xbee.c...
 comport.h(34): warning:  #1295-D: Deprecated declaration CC_ComPortPresent - give arg types
   int CC_ComPortPresent();
@@ -113,6 +83,36 @@ xbee.c(319): warning:  #111-D: statement is unreachable
 xbee.c(323): warning:  #111-D: statement is unreachable
   			break;
 xbee.c: 26 warnings, 0 errors
+compiling flash.c...
+comport.h(34): warning:  #1295-D: Deprecated declaration CC_ComPortPresent - give arg types
+  int CC_ComPortPresent();
+comport.h(37): warning:  #1295-D: Deprecated declaration CC_CheckForHandshake - give arg types
+  int CC_CheckForHandshake();
+comport.h(38): warning:  #1295-D: Deprecated declaration CC_ParseCommand - give arg types
+  int CC_ParseCommand();
+comport.h(40): warning:  #1295-D: Deprecated declaration CC_SetRTC - give arg types
+  int CC_SetRTC();
+comport.h(41): warning:  #1295-D: Deprecated declaration CC_SendTimestamp - give arg types
+  int CC_SendTimestamp();
+comport.h(42): warning:  #1295-D: Deprecated declaration CC_SetProgram - give arg types
+  int CC_SetProgram();
+comport.h(43): warning:  #1295-D: Deprecated declaration CC_ReadProgram - give arg types
+  int CC_ReadProgram();
+comport.h(44): warning:  #1295-D: Deprecated declaration CC_ConfigureXbee - give arg types
+  int CC_ConfigureXbee();
+comport.h(48): warning:  #1-D: last line of file ends without a newline
+  #endif //COMPORT_H_
+globals.h(42): warning:  #1-D: last line of file ends without a newline
+  #endif //GLOBALS_H_
+flash.h(20): warning:  #1295-D: Deprecated declaration FLASH_Unlock - give arg types
+  int FLASH_Unlock();
+flash.h(21): warning:  #1295-D: Deprecated declaration FLASH_Lock - give arg types
+  int FLASH_Lock();
+flash.h(32): warning:  #1-D: last line of file ends without a newline
+  #endif //FLASH_H_
+flash.c(38): warning:  #940-D: missing return statement at end of non-void function "FLASH_Lock" 
+  }
+flash.c: 14 warnings, 0 errors
 compiling stm32l0xx_it.c...
 ..\MDK-ARM\globals.h(42): warning:  #1-D: last line of file ends without a newline
   #endif //GLOBALS_H_
@@ -152,9 +152,9 @@ compiling stm32l0xx_it.c...
   int XB_TransmitFixes();
 ..\MDK-ARM\xbee.h(57): warning:  #1-D: last line of file ends without a newline
   #endif //XBEE_H_
-..\MDK-ARM\gps.h(96): warning:  #1-D: last line of file ends without a newline
+..\MDK-ARM\gps.h(89): warning:  #1-D: last line of file ends without a newline
   #endif //GPS_H_
-..\MDK-ARM\timers.h(22): warning:  #1-D: last line of file ends without a newline
+..\MDK-ARM\timers.h(23): warning:  #1-D: last line of file ends without a newline
   #endif // TIMERS_H__
 ../Src/stm32l0xx_it.c(202): warning:  #177-D: variable "count"  was declared but never referenced
   	static int count = 0;
@@ -236,9 +236,9 @@ comport.c: 36 warnings, 0 errors
 compiling gps.c...
 globals.h(42): warning:  #1-D: last line of file ends without a newline
   #endif //GLOBALS_H_
-gps.h(96): warning:  #1-D: last line of file ends without a newline
+gps.h(89): warning:  #1-D: last line of file ends without a newline
   #endif //GPS_H_
-timers.h(22): warning:  #1-D: last line of file ends without a newline
+timers.h(23): warning:  #1-D: last line of file ends without a newline
   #endif // TIMERS_H__
 comport.h(34): warning:  #1295-D: Deprecated declaration CC_ComPortPresent - give arg types
   int CC_ComPortPresent();
@@ -276,37 +276,39 @@ gps.c(202): warning:  #550-D: variable "rxChecksumB"  was set but never used
   	uint8_t rxChecksumB = 0;
 gps.c(208): warning:  #177-D: variable "txInfo"  was declared but never referenced
   	struct UBXTXInfo txInfo; // needed to compare checksums but not currently used
-gps.c(390): warning:  #940-D: missing return statement at end of non-void function "GPS_getNMEA_RMC" 
+gps.c(392): warning:  #940-D: missing return statement at end of non-void function "GPS_getNMEA" 
   } // GPS_getNMEA_RMC 
 gps.c(302): warning:  #550-D: variable "checksum"  was set but never used
   	char checksum[2];
-gps.c(304): warning:  #177-D: variable "rmc"  was declared but never referenced
-  	struct NMEA_RMC rmc;
-gps.c(403): warning:  #940-D: missing return statement at end of non-void function "GPS_UBX_enablePUBX_Position" 
+gps.c(304): warning:  #177-D: variable "position"  was declared but never referenced
+  	struct GPS_POS position;
+gps.c(405): warning:  #940-D: missing return statement at end of non-void function "GPS_UBX_enablePUBX_Position" 
   }
-gps.c: 25 warnings, 0 errors
+gps.c(420): warning:  #940-D: missing return statement at end of non-void function "GPS_subroutine" 
+  }
+gps.c: 26 warnings, 0 errors
 compiling timers.c...
-gps.h(96): warning:  #1-D: last line of file ends without a newline
+gps.h(89): warning:  #1-D: last line of file ends without a newline
   #endif //GPS_H_
-timers.h(22): warning:  #1-D: last line of file ends without a newline
+timers.h(23): warning:  #1-D: last line of file ends without a newline
   #endif // TIMERS_H__
 timers.c: 2 warnings, 0 errors
+compiling stm32l0xx_ll_gpio.c...
 compiling scheduler.c...
 globals.h(42): warning:  #1-D: last line of file ends without a newline
   #endif //GLOBALS_H_
-gps.h(96): warning:  #1-D: last line of file ends without a newline
+gps.h(89): warning:  #1-D: last line of file ends without a newline
   #endif //GPS_H_
-timers.h(22): warning:  #1-D: last line of file ends without a newline
+timers.h(23): warning:  #1-D: last line of file ends without a newline
   #endif // TIMERS_H__
 scheduler.h(15): warning:  #1-D: last line of file ends without a newline
   #endif // SCHEDULER_H__
 scheduler.c: 4 warnings, 0 errors
-compiling stm32l0xx_ll_gpio.c...
 compiling stm32l0xx_ll_rtc.c...
 compiling stm32l0xx_ll_pwr.c...
 compiling stm32l0xx_ll_spi.c...
-compiling stm32l0xx_ll_exti.c...
 compiling stm32l0xx_ll_dma.c...
+compiling stm32l0xx_ll_exti.c...
 compiling stm32l0xx_ll_usart.c...
 compiling stm32l0xx_ll_rcc.c...
 compiling system_stm32l0xx.c...
@@ -357,9 +359,9 @@ compiling main.c...
   int XB_TransmitFixes();
 ..\MDK-ARM\xbee.h(57): warning:  #1-D: last line of file ends without a newline
   #endif //XBEE_H_
-..\MDK-ARM\gps.h(96): warning:  #1-D: last line of file ends without a newline
+..\MDK-ARM\gps.h(89): warning:  #1-D: last line of file ends without a newline
   #endif //GPS_H_
-..\MDK-ARM\timers.h(22): warning:  #1-D: last line of file ends without a newline
+..\MDK-ARM\timers.h(23): warning:  #1-D: last line of file ends without a newline
   #endif // TIMERS_H__
 ..\MDK-ARM\scheduler.h(15): warning:  #1-D: last line of file ends without a newline
   #endif // SCHEDULER_H__
@@ -367,13 +369,13 @@ compiling main.c...
   #define  VDD_VALUE                    ((uint32_t)3300U) /*!< Value of VDD in mv */
 ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_conf_template.h(142): warning:  #47-D: incompatible redefinition of macro "PREFETCH_ENABLE" 
   #define  PREFETCH_ENABLE              1U              
-../Src/main.c(357): warning:  #550-D: variable "RTC_InitStruct"  was set but never used
+../Src/main.c(363): warning:  #550-D: variable "RTC_InitStruct"  was set but never used
     LL_RTC_InitTypeDef RTC_InitStruct = {0};
 ../Src/main.c: 28 warnings, 0 errors
 linking...
-Program Size: Code=10052 RO-data=260 RW-data=52 ZI-data=1156  
+Program Size: Code=10156 RO-data=260 RW-data=52 ZI-data=1156  
 FromELF: creating hex file...
-".\CubeMX\senior-project.axf" - 0 Error(s), 157 Warning(s).
+".\CubeMX\senior-project.axf" - 0 Error(s), 158 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -396,7 +398,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.2.0
-Build Time Elapsed:  00:00:04
+Build Time Elapsed:  00:00:05
 </pre>
 </body>
 </html>

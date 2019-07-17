@@ -126,3 +126,7 @@ int FLASH_erasePage(unsigned int addr){
 	return 0;
 }
 //---------------------------------------------------
+int FLASH_saveFix(struct GPS_POS position){
+	
+}
+//---------------------------------------------------
