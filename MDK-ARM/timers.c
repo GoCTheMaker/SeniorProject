@@ -2,7 +2,6 @@
 #include "timers.h"
 #include "stm32l0xx_ll_tim.h"
 
-int RTC_Flag = 0;
 
 void TIM2_init(void){
 	

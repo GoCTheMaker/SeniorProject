@@ -8,6 +8,7 @@
 ".\cubemx\xbee.o"
 ".\cubemx\gps.o"
 ".\cubemx\timers.o"
+".\cubemx\scheduler.o"
 ".\cubemx\stm32l0xx_ll_gpio.o"
 ".\cubemx\stm32l0xx_ll_rtc.o"
 ".\cubemx\stm32l0xx_ll_spi.o"

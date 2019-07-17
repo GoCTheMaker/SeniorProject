@@ -1,0 +1,14 @@
+.\cubemx\scheduler.o: scheduler.c
+.\cubemx\scheduler.o: scheduler.h
+.\cubemx\scheduler.o: globals.h
+.\cubemx\scheduler.o: timers.h
+.\cubemx\scheduler.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\cubemx\scheduler.o: gps.h
+.\cubemx\scheduler.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_rtc.h
+.\cubemx\scheduler.o: ../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h
+.\cubemx\scheduler.o: ../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l011xx.h
+.\cubemx\scheduler.o: ../Drivers/CMSIS/Include/core_cm0plus.h
+.\cubemx\scheduler.o: ../Drivers/CMSIS/Include/core_cmInstr.h
+.\cubemx\scheduler.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
+.\cubemx\scheduler.o: ../Drivers/CMSIS/Include/core_cmFunc.h
+.\cubemx\scheduler.o: ../Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h

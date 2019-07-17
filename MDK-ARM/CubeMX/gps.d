@@ -25,3 +25,5 @@
 .\cubemx\gps.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_gpio.h
 .\cubemx\gps.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\cubemx\gps.o: gps.h
+.\cubemx\gps.o: timers.h
+.\cubemx\gps.o: comport.h

@@ -312,7 +312,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>4</Optim>
+            <Optim>1</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -530,6 +530,16 @@
               <FileName>timers.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\timers.h</FilePath>
+            </File>
+            <File>
+              <FileName>scheduler.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\scheduler.c</FilePath>
+            </File>
+            <File>
+              <FileName>scheduler.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\scheduler.h</FilePath>
             </File>
           </Files>
         </Group>

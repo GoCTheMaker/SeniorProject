@@ -36,6 +36,7 @@ extern int XbeeRxReadFrom;
 extern int XbeeRxBufferActive;
 extern int XbeeDongleConnected;
 
+extern int checkSchedule;
 
 
 #endif //GLOBALS_H_

@@ -29,6 +29,7 @@
 #include "flash.h"
 #include "xbee.h"
 #include "timers.h"
+#include "scheduler.h"
 #include <string.h>
 
 #include "stm32l0xx_hal_conf_template.h"
@@ -52,7 +53,9 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+int checkSchedule = 0;
+int GPS_active = 0;
+int XB_VHF_active = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -77,33 +80,14 @@ static void MX_LPUART1_UART_Init(void);
   */
 int main(void)
 {
-  /* USER CODE BEGIN 1 */
-	
-
-  /* USER CODE END 1 */
-  
-
-  /* MCU Configuration--------------------------------------------------------*/
-
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-  
-
-  LL_APB2_GRP1_EnableClock(LL_APB2_GRP1_PERIPH_SYSCFG);
+    LL_APB2_GRP1_EnableClock(LL_APB2_GRP1_PERIPH_SYSCFG);
   LL_APB1_GRP1_EnableClock(LL_APB1_GRP1_PERIPH_PWR);
-
-  /* System interrupt init*/
-
-  /* USER CODE BEGIN Init */
-
-  /* USER CODE END Init */
 
   /* Configure the system clock */
   SystemClock_Config();
 
-  /* USER CODE BEGIN SysInit */
-
-  /* USER CODE END SysInit */
-
+ 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_RTC_Init();
@@ -120,14 +104,18 @@ int main(void)
 	LL_USART_Enable(USART2);
 	
 	__enable_irq();	
+		
 	
-	
-	
-	LL_RTC_TimeTypeDef time;
-	LL_RTC_DateTypeDef date;
 	RTC_initAlarm();
 	TIM2_init();
 	
+	
+	XB_DisableXbee();
+	
+	//-----------------
+	// Main Variables
+	int GPS_active 	= 0;
+	int XB_VHF_active 	= 0;
 	
 	/*
 	FLASH_Unlock();
@@ -142,7 +130,14 @@ int main(void)
 	FLASH_Lock();
 	*/
 
-  /* USER CODE END 2 */
+
+// GPS Initialization
+	GPS_GPSCSHigh();
+	TIM2_delay(100);
+	GPS_GPSCSLow();
+	TIM2_delay(100);
+	GPS_UBX_enablePUBX_Position();
+
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
@@ -151,7 +146,6 @@ int main(void)
 		//Check for com port connected
 		//----------------------------
 		if(CC_ComPortPresent())
-
 		{
 			//Check for handshake from GUI
 			if(CC_CheckForHandshake())
@@ -165,25 +159,12 @@ int main(void)
 			
 		}//Comport present
 		
-		//Fix this later 
-		XB_XbeeSubroutine();
-		
-			
-		RTC_getTimeDate( &time, &date );			
+		if( checkSchedule == 1){		
+			scheduler( &GPS_active, &XB_VHF_active );
+			//checkSchedule == 0;
+		}
 
-		
-		
-		
-		
-		
-    /* USER CODE END WHILE */
-
-    /* USER CODE BEGIN 3 */
   }
-	
-
-	
-  /* USER CODE END 3 */
 }
 
 /**
@@ -469,7 +450,11 @@ static void MX_SPI1_Init(void)
   LL_SPI_Init(SPI1, &SPI_InitStruct);
   LL_SPI_SetStandard(SPI1, LL_SPI_PROTOCOL_MOTOROLA);
   /* USER CODE BEGIN SPI1_Init 2 */
-
+	 if((SPI1->CR1 & SPI_CR1_SPE) != SPI_CR1_SPE)
+  {
+      // If disabled, I enable it
+      SPI1->CR1 |= SPI_CR1_SPE;
+  }
   /* USER CODE END SPI1_Init 2 */
 
 }

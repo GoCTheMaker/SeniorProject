@@ -204,10 +204,8 @@ void RTC_IRQHandler(void){
 	// If the Alarm A interrupt is active, 
 	if( (RTC->ISR & RTC_ISR_ALRAF) == RTC_ISR_ALRAF){
 		
-		
-		
-		
-		
+		checkSchedule = 1;
+				
 		//------------------
 		// Reset the Alarm A flag in the RTC registers & the Pending Interrupt in EXTI
 		RTC->ISR &= ~RTC_ISR_ALRAF;

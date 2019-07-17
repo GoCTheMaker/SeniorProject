@@ -29,6 +29,7 @@
 .\cubemx\main.o: ..\MDK-ARM\xbee.h
 .\cubemx\main.o: ..\MDK-ARM\timers.h
 .\cubemx\main.o: ..\MDK-ARM\gps.h
+.\cubemx\main.o: ..\MDK-ARM\scheduler.h
 .\cubemx\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\cubemx\main.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_conf_template.h
 .\cubemx\main.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h
