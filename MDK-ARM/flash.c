@@ -37,7 +37,7 @@ int FLASH_Lock()
 	FLASH->PECR |= FLASH_PECR_PELOCK; //Lock flash write
 }
 //---------------------------------------------------
-int FLASH_WriteByte(unsigned char byte, unsigned long addr)
+int FLASH_WriteByte(unsigned char byte, unsigned int addr)
 {
 	/*
 	if((FLASH->PECR & FLASH_PECR_PELOCK) == RESET)
@@ -50,7 +50,7 @@ int FLASH_WriteByte(unsigned char byte, unsigned long addr)
 	return 0; //No err	
 }
 //---------------------------------------------------
-int FLASH_WriteData(unsigned char * str, int len, unsigned long addr)
+int FLASH_WriteData(unsigned char * str, int len, unsigned int addr)
 {
 	int i;
 	for(i=0; i<len; i++)
@@ -65,7 +65,7 @@ int FLASH_WriteData(unsigned char * str, int len, unsigned long addr)
 	return 0; //No err
 }
 //---------------------------------------------------
-int FLASH_ReadData(unsigned char * str, int len, unsigned long addr)
+int FLASH_ReadData(unsigned char * str, int len, unsigned int addr)
 {
 	int i;
 	unsigned char * ptr = (unsigned char *) addr;
@@ -109,5 +109,20 @@ int FLASH_writeWord( unsigned int data, unsigned int addr){
 		// Error
 		return 1;
 	}
+}
+//---------------------------------------------------
+int FLASH_erasePage(unsigned int addr){
+	
+	FLASH->PECR |= FLASH_PECR_ERASE | FLASH_PECR_PROG; 
+	*(__IO uint32_t *)addr = (uint32_t)0;
+	while ((FLASH->SR & FLASH_SR_BSY) != 0);
+	if ((FLASH->SR & FLASH_SR_EOP) != 0)
+	{
+		FLASH->SR = FLASH_SR_EOP;
+	}else{
+		return 1;
+	}
+	FLASH->PECR &= ~(FLASH_PECR_ERASE | FLASH_PECR_PROG);
+	return 0;
 }
 //---------------------------------------------------

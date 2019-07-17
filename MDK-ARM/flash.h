@@ -19,11 +19,12 @@
 //----------------------------------------------
 int FLASH_Unlock();
 int FLASH_Lock();
-int FLASH_WriteByte(unsigned char byte, unsigned long addr);
-int FLASH_WriteData(unsigned char * str, int len, unsigned long addr);
+int FLASH_WriteByte(unsigned char byte, unsigned int addr);
+int FLASH_WriteData(unsigned char * str, int len, unsigned int addr);
 
 int FLASH_unlockPrgm(void);
-int FLASH_ReadData(unsigned char * str, int len, unsigned long addr);
+int FLASH_ReadData(unsigned char * str, int len, unsigned int addr);
+int FLASH_erasePage(unsigned int addr);
 
 
 int FLASH_writeWord(unsigned int data, unsigned int addr);

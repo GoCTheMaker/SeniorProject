@@ -199,9 +199,20 @@ void LPUART1_IRQHandler(void)
 /* USER CODE BEGIN 1 */
 
 void RTC_IRQHandler(void){
-	
 	static int count = 0;
-	count++;
+	
+	// If the Alarm A interrupt is active, 
+	if( (RTC->ISR & RTC_ISR_ALRAF) == RTC_ISR_ALRAF){
+		
+		
+		
+		
+		
+		//------------------
+		// Reset the Alarm A flag in the RTC registers & the Pending Interrupt in EXTI
+		RTC->ISR &= ~RTC_ISR_ALRAF;
+		EXTI->PR |= EXTI_PR_PIF17;
+	}
 	
 	//RTC_Flag = 1;
 		

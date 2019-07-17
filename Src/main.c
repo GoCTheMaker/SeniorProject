@@ -126,15 +126,21 @@ int main(void)
 	LL_RTC_TimeTypeDef time;
 	LL_RTC_DateTypeDef date;
 	RTC_initAlarm();
-	initTIM2();
+	TIM2_init();
 	
 	
-	
+	/*
 	FLASH_Unlock();
 	FLASH_unlockPrgm();
 	FLASH_writeWord( 0xBFBF, 0x8003F00);
 	FLASH_Lock();
 	
+	FLASH_Unlock();
+	FLASH_unlockPrgm();
+	FLASH_erasePage( 0x8003F00 );
+	FLASH_writeWord( 0xDFDF, 0x8003F00);
+	FLASH_Lock();
+	*/
 
   /* USER CODE END 2 */
 

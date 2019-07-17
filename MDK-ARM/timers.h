@@ -11,8 +11,8 @@
 
 
 
-void initTIM2(void);
-void tim2Delay(uint16_t delay);
+void TIM2_init(void);
+void TIM2_delay(uint16_t delay);
 
 void RTC_initAlarm(void);
 void RTC_setTimeDate(LL_RTC_TimeTypeDef time, LL_RTC_DateTypeDef date);
