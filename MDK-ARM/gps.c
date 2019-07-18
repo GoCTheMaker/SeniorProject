@@ -8,6 +8,7 @@
 #include "globals.h"
 #include "main.h"
 #include <string.h>
+#include <stdlib.h>
 #include "gps.h"
 #include "timers.h"
 #include "comport.h"
@@ -300,6 +301,8 @@ struct GPS_POS GPS_getNMEA(void){
 	char rxBuffer[125];
 	memset( rxBuffer, 0, sizeof( rxBuffer ) );
 	int index = 0;
+	int strI = 0;
+	char* charTok;
 	char checksum[2];
 	uint8_t msgComplete = 0;
 	struct GPS_POS position;
@@ -381,9 +384,31 @@ struct GPS_POS GPS_getNMEA(void){
 			case 5:
 				// ---- NMEA PARSE STATE ---
 				// We successfully read a full sentance! Theoretically.
-			
-				
+ 				
+				// Verify that we are parsing the correct message:
+				if(rxBuffer[0] == 'P' && rxBuffer[1] == 'U' && rxBuffer[2] == 'B'){
+					// strtok! 
+					charTok = strtok( rxBuffer, ",");
+					for( strI=0; strI<PUBX_POS_NUM_FIELDS-1; strI++){
+						charTok = strtok( NULL, ",");
+						
+						// The required fields are 2, 3, 4, 5, 6, 9.
+						// Subtract 1 to adjust and strtok!
+						switch( strI ){
+							case 1:
+								position.time.Hours = ((charTok[0]-'0')*10) + (charTok[1]-'0');
+								position.time.Minutes = ((charTok[2]-'0')*10) + (charTok[3]-'0');
+								position.time.Seconds = ((charTok[4]-'0')*10) + (charTok[5]-'0');							
+							break;
+							case 2:
+								position.lat = ((charTok[0]-'0')*10)+(charTok[1]) +
+															 (((charTok[0]-'0')*10)+(charTok[1]) /60);// + 
+															 //((( 
+							break;
+						};
+					}
 					
+				}		
 				CC_SendData( rxBuffer, sizeof(rxBuffer) );
 				msgComplete = 1;
 				//return rmc;
@@ -417,7 +442,7 @@ int GPS_subroutine(void){
 	GPS_UBX_enablePUBX_Position();
 	
 	TIM2_initDelay_inline( GPS_TIMEOUT );
-	while( TIM2_DELAY_INLINE ||  position.acc > GPS_ACC_REQ){
+	while( !(TIM2->SR & TIM_SR_UIF) ||  position.acc > GPS_ACC_REQ){
 		position = GPS_getNMEA();
 	}
 	if( position.date.Year != 0){	

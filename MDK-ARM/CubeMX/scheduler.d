@@ -2,7 +2,7 @@
 .\cubemx\scheduler.o: scheduler.h
 .\cubemx\scheduler.o: globals.h
 .\cubemx\scheduler.o: timers.h
-.\cubemx\scheduler.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\cubemx\scheduler.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\cubemx\scheduler.o: gps.h
 .\cubemx\scheduler.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_rtc.h
 .\cubemx\scheduler.o: ../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h

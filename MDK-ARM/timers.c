@@ -25,7 +25,7 @@ int TIM2_delay(uint16_t delay){
 	TIM2->CR1 |= TIM_CR1_CEN;
 	
 	// Wait until it's done:
-	while (TIM2_DELAY_INLINE);
+	while ( !(TIM2->SR & TIM_SR_UIF) );
 	
 	return 0;
 }

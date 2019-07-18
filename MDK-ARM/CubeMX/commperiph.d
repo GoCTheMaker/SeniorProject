@@ -1,6 +1,6 @@
 .\cubemx\commperiph.o: ..\Src\commPeriph.c
 .\cubemx\commperiph.o: ../Inc/commPeriph.h
-.\cubemx\commperiph.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\cubemx\commperiph.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\cubemx\commperiph.o: ../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h
 .\cubemx\commperiph.o: ../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l011xx.h
 .\cubemx\commperiph.o: ../Drivers/CMSIS/Include/core_cm0plus.h

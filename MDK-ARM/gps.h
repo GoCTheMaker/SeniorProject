@@ -20,6 +20,7 @@
 
 #define GPS_TIMEOUT 30000
 #define GPS_ACC_REQ 15
+#define PUBX_POS_NUM_FIELDS	23
 
 
 #define SYNC_CHAR_1 0xB5

@@ -152,34 +152,18 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>163</LineNumber>
+          <LineNumber>391</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134227672</Address>
+          <Address>134220690</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>../Src/main.c</Filename>
+          <Filename>.\gps.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\senior_project\../Src/main.c\163</Expression>
-        </Bp>
-        <Bp>
-          <Number>1</Number>
-          <Type>0</Type>
-          <LineNumber>92</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134220268</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>../Src/stm32l0xx_it.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\senior_project\../Src/stm32l0xx_it.c\92</Expression>
+          <Expression>\\senior_project\gps.c\391</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -202,8 +186,8 @@
       <MemoryWindow1>
         <Mm>
           <WinNumber>1</WinNumber>
-          <SubType>266</SubType>
-          <ItemText>VHF_startTime</ItemText>
+          <SubType>8</SubType>
+          <ItemText>charTok</ItemText>
           <AccSizeX>0</AccSizeX>
         </Mm>
       </MemoryWindow1>

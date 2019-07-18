@@ -4,7 +4,7 @@
 .\cubemx\timers.o: ../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h
 .\cubemx\timers.o: ../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l011xx.h
 .\cubemx\timers.o: ../Drivers/CMSIS/Include/core_cm0plus.h
-.\cubemx\timers.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\cubemx\timers.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\cubemx\timers.o: ../Drivers/CMSIS/Include/core_cmInstr.h
 .\cubemx\timers.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 .\cubemx\timers.o: ../Drivers/CMSIS/Include/core_cmFunc.h
