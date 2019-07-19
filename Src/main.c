@@ -111,6 +111,8 @@ int main(void)
 	
 	
 	XB_DisableXbee();
+	GPS_GPSDisable();
+	
 	
 	//-----------------
 	// Main Variables
@@ -141,13 +143,13 @@ int main(void)
 	}
 		*/
 	
-	TIM2_delay(3000);
-	TIM2_delay(3000);
-	TIM2_delay(3000);
-	TIM2_delay(3000);
 
 	
 	GPS_GPSCSHigh();
+	
+	while(1){
+		GPS_subroutine();
+	}
 	
 
 
@@ -173,7 +175,7 @@ int main(void)
 		
 		if( checkSchedule == 1){		
 			scheduler( &GPS_active, &XB_VHF_active );
-			//checkSchedule == 0;
+			checkSchedule = 0;
 		}
 		if(GPS_active == 1){
 			GPS_subroutine();

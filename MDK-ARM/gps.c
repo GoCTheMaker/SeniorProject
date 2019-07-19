@@ -386,6 +386,9 @@ struct GPS_POS GPS_getNMEA(void){
 			case 5:
 				// ---- NMEA PARSE STATE ---
 				// We successfully read a full sentance! Theoretically.
+			
+				// For debugging, send the string to UART before it's messed with
+				CC_SendData( rxBuffer, sizeof(rxBuffer) );
  				
 				// Verify that we are parsing the correct message:
 				if(rxBuffer[0] == 'P' && rxBuffer[1] == 'U' && rxBuffer[2] == 'B'){
@@ -403,15 +406,15 @@ struct GPS_POS GPS_getNMEA(void){
 								position.time.Seconds = ((charTok[4]-'0')*10) + (charTok[5]-'0');							
 							break;
 							case 2:
-								position.lat = ((charTok[0]-'0')*10)+(charTok[1]) +
-															 (((charTok[0]-'0')*10)+(charTok[1]) /60);// + 
-															 //((( 
+								int degrees = ((charTok[0]-'0')*10)+ (charTok[1]-'0');
+								float minuteDec = ((charTok[6]-'0')/10) + ((charTok[7]-'0')/100) + ((charTok[8]-'0')/1000) + ((charTok[9]-'0')/10000);
+								float minutes = (60/((charTok[2]-'0')*10)+(charTok[3]));
+								position.lat = 0;
 							break;
 						};
 					}
 					
 				}		
-				CC_SendData( rxBuffer, sizeof(rxBuffer) );
 				msgComplete = 1;
 				//return rmc;
 			break;
