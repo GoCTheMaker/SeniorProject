@@ -103,6 +103,7 @@ int GPS_GetDataWord(char * data, int len)
 //int GPS_SendCommand
 //---------------------------------------------------
 //---------------------------------------------------
+/* Unused functions
 void GPS_TestCommand(void)
 {
 	unsigned int len = 20;
@@ -126,6 +127,7 @@ void GPS_TestCommand(void)
 		
 }
 //---------------------------------------------------
+
 struct UBXTXInfo GPS_UBX_sendMSG(struct UBXmessage msg, char payload[50] ){
 	int i = 0;
 	char msgBuffer[50];
@@ -290,7 +292,7 @@ void clearGPSBuffer(void){
 		count++;
 	}
 }
-
+*/
 //---------------------------------------------------
 struct GPS_POS GPS_getNMEA(void){
 	// End goal here is to only parse RMC data. However, it currently just prints whatever

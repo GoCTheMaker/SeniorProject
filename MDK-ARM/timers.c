@@ -10,6 +10,9 @@ void TIM2_init(void){
 	
 	// Prescaler is the core clock (262144 Hz) by 1000:
 	TIM2->PSC = 262144 / 1000;
+	
+	
+	TIM2->CR1 |= TIM_CR1_CEN;
 }
 
 int TIM2_delay(uint16_t delay){
@@ -17,6 +20,8 @@ int TIM2_delay(uint16_t delay){
 	
 	// Clear the update event flag 
 	TIM2->SR = 0;
+	
+	TIM2->CNT = 0;
 	
 	// Move the delay into the ARR:
 	TIM2->ARR = delay;

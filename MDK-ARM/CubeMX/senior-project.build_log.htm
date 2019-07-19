@@ -22,7 +22,7 @@ Dialog DLL:      TARMCM1.DLL V1.14.1.0
  
 <h2>Project:</h2>
 D:\git\SeniorProject\MDK-ARM\senior-project.uvprojx
-Project File Date:  07/17/2019
+Project File Date:  07/18/2019
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
@@ -52,45 +52,85 @@ comport.h(44): warning:  #1295-D: Deprecated declaration CC_ConfigureXbee - give
   int CC_ConfigureXbee();
 comport.h(48): warning:  #1-D: last line of file ends without a newline
   #endif //COMPORT_H_
-flash.h(23): warning:  #1295-D: Deprecated declaration FLASH_Unlock - give arg types
+flash.h(25): warning:  #1295-D: Deprecated declaration FLASH_Unlock - give arg types
   int FLASH_Unlock();
-flash.h(24): warning:  #1295-D: Deprecated declaration FLASH_Lock - give arg types
+flash.h(26): warning:  #1295-D: Deprecated declaration FLASH_Lock - give arg types
   int FLASH_Lock();
-flash.h(37): warning:  #1-D: last line of file ends without a newline
+flash.h(39): warning:  #1-D: last line of file ends without a newline
   #endif //FLASH_H_
-gps.c(109): warning:  #550-D: variable "test"  was set but never used
-  	char test[50];
-gps.c(110): warning:  #177-D: variable "a"  was declared but never referenced
-  	unsigned int a, b;
-gps.c(110): warning:  #177-D: variable "b"  was declared but never referenced
-  	unsigned int a, b;
-gps.c(131): warning:  #177-D: variable "msgBuffer"  was declared but never referenced
-  	char msgBuffer[50];
-gps.c(135): warning:  #177-D: variable "wwww"  was declared but never referenced
-  	char wwww;
-gps.c(275): warning:  #940-D: missing return statement at end of non-void function "GPS_UBX_requestMSG" 
-  }
-gps.c(203): warning:  #550-D: variable "rxChecksumA"  was set but never used
-  	uint8_t rxChecksumA = 0;
-gps.c(204): warning:  #550-D: variable "rxChecksumB"  was set but never used
-  	uint8_t rxChecksumB = 0;
-gps.c(210): warning:  #177-D: variable "txInfo"  was declared but never referenced
-  	struct UBXTXInfo txInfo; // needed to compare checksums but not currently used
-gps.c(418): warning:  #940-D: missing return statement at end of non-void function "GPS_getNMEA" 
+gps.c(420): warning:  #940-D: missing return statement at end of non-void function "GPS_getNMEA" 
   } // GPS_getNMEA_RMC 
-gps.c(306): warning:  #550-D: variable "checksum"  was set but never used
+gps.c(308): warning:  #550-D: variable "checksum"  was set but never used
   	char checksum[2];
-gps.c(308): warning:  #550-D: variable "position"  was set but never used
+gps.c(310): warning:  #550-D: variable "position"  was set but never used
   	struct GPS_POS position;
-gps.c(431): warning:  #940-D: missing return statement at end of non-void function "GPS_UBX_enablePUBX_Position" 
+gps.c(433): warning:  #940-D: missing return statement at end of non-void function "GPS_UBX_enablePUBX_Position" 
   }
-gps.c(453): warning:  #940-D: missing return statement at end of non-void function "GPS_subroutine" 
+gps.c(455): warning:  #940-D: missing return statement at end of non-void function "GPS_subroutine" 
   }
-gps.c: 29 warnings, 0 errors
+gps.c: 20 warnings, 0 errors
+compiling main.c...
+..\MDK-ARM\comport.h(34): warning:  #1295-D: Deprecated declaration CC_ComPortPresent - give arg types
+  int CC_ComPortPresent();
+..\MDK-ARM\comport.h(37): warning:  #1295-D: Deprecated declaration CC_CheckForHandshake - give arg types
+  int CC_CheckForHandshake();
+..\MDK-ARM\comport.h(38): warning:  #1295-D: Deprecated declaration CC_ParseCommand - give arg types
+  int CC_ParseCommand();
+..\MDK-ARM\comport.h(40): warning:  #1295-D: Deprecated declaration CC_SetRTC - give arg types
+  int CC_SetRTC();
+..\MDK-ARM\comport.h(41): warning:  #1295-D: Deprecated declaration CC_SendTimestamp - give arg types
+  int CC_SendTimestamp();
+..\MDK-ARM\comport.h(42): warning:  #1295-D: Deprecated declaration CC_SetProgram - give arg types
+  int CC_SetProgram();
+..\MDK-ARM\comport.h(43): warning:  #1295-D: Deprecated declaration CC_ReadProgram - give arg types
+  int CC_ReadProgram();
+..\MDK-ARM\comport.h(44): warning:  #1295-D: Deprecated declaration CC_ConfigureXbee - give arg types
+  int CC_ConfigureXbee();
+..\MDK-ARM\comport.h(48): warning:  #1-D: last line of file ends without a newline
+  #endif //COMPORT_H_
+..\MDK-ARM\globals.h(42): warning:  #1-D: last line of file ends without a newline
+  #endif //GLOBALS_H_
+..\MDK-ARM\gps.h(90): warning:  #1-D: last line of file ends without a newline
+  #endif //GPS_H_
+..\MDK-ARM\flash.h(25): warning:  #1295-D: Deprecated declaration FLASH_Unlock - give arg types
+  int FLASH_Unlock();
+..\MDK-ARM\flash.h(26): warning:  #1295-D: Deprecated declaration FLASH_Lock - give arg types
+  int FLASH_Lock();
+..\MDK-ARM\flash.h(39): warning:  #1-D: last line of file ends without a newline
+  #endif //FLASH_H_
+..\MDK-ARM\xbee.h(43): warning:  #1295-D: Deprecated declaration XB_XbeeSubroutine - give arg types
+  int XB_XbeeSubroutine();
+..\MDK-ARM\xbee.h(44): warning:  #1295-D: Deprecated declaration XB_EnableXbee - give arg types
+  void XB_EnableXbee();
+..\MDK-ARM\xbee.h(45): warning:  #1295-D: Deprecated declaration XB_DisableXbee - give arg types
+  void XB_DisableXbee();
+..\MDK-ARM\xbee.h(50): warning:  #1295-D: Deprecated declaration XB_GetConfig - give arg types
+  int XB_GetConfig();
+..\MDK-ARM\xbee.h(51): warning:  #1295-D: Deprecated declaration XB_GetSN - give arg types
+  int XB_GetSN();
+..\MDK-ARM\xbee.h(52): warning:  #1295-D: Deprecated declaration XB_CheckForDongle - give arg types
+  int XB_CheckForDongle();
+..\MDK-ARM\xbee.h(53): warning:  #1295-D: Deprecated declaration XB_ParseCommand - give arg types
+  int XB_ParseCommand();
+..\MDK-ARM\xbee.h(55): warning:  #1295-D: Deprecated declaration XB_TransmitFixes - give arg types
+  int XB_TransmitFixes();
+..\MDK-ARM\xbee.h(57): warning:  #1-D: last line of file ends without a newline
+  #endif //XBEE_H_
+..\MDK-ARM\timers.h(23): warning:  #1-D: last line of file ends without a newline
+  #endif // TIMERS_H__
+..\MDK-ARM\scheduler.h(15): warning:  #1-D: last line of file ends without a newline
+  #endif // SCHEDULER_H__
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_conf_template.h(139): warning:  #47-D: incompatible redefinition of macro "VDD_VALUE" 
+  #define  VDD_VALUE                    ((uint32_t)3300U) /*!< Value of VDD in mv */
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_conf_template.h(142): warning:  #47-D: incompatible redefinition of macro "PREFETCH_ENABLE" 
+  #define  PREFETCH_ENABLE              1U              
+../Src/main.c(372): warning:  #550-D: variable "RTC_InitStruct"  was set but never used
+    LL_RTC_InitTypeDef RTC_InitStruct = {0};
+../Src/main.c: 28 warnings, 0 errors
 linking...
-Program Size: Code=10988 RO-data=260 RW-data=56 ZI-data=1152  
+Program Size: Code=11032 RO-data=260 RW-data=56 ZI-data=1152  
 FromELF: creating hex file...
-".\CubeMX\senior-project.axf" - 0 Error(s), 29 Warning(s).
+".\CubeMX\senior-project.axf" - 0 Error(s), 48 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -113,7 +153,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.2.0
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:03
 </pre>
 </body>
 </html>

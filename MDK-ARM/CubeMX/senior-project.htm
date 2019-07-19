@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\CubeMX\senior-project.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\CubeMX\senior-project.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Wed Jul 17 22:01:58 2019
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Thu Jul 18 20:55:32 2019
 <BR><P>
 <H3>Maximum Stack Usage =        300 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -356,8 +356,8 @@ Global Symbols
 <LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DATE_GetWeekDay
 <LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DATE_GetMonth
 <LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DATE_GetDay
-<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 <LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CC_ExecuteCommand
 </UL>
@@ -387,9 +387,9 @@ Global Symbols
 <LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DATE_GetWeekDay
 <LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DATE_GetMonth
 <LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DATE_GetDay
-<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 <LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 <LI><a href="#[1f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CC_ExecuteCommand
 </UL>
@@ -467,9 +467,9 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 284<LI>Call Chain = GPS_subroutine &rArr; GPS_getNMEA &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_saveFix
+<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM2_delay
 <LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPS_GPSCSHigh
 <LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM2_initDelay_inline
-<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM2_delay
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_setTimeDate
 <LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPS_getNMEA
 <LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPS_UBX_enablePUBX_Position
@@ -703,11 +703,12 @@ Global Symbols
 <P><STRONG><a name="[1a]"></a>SystemInit</STRONG> (Thumb, 88 bytes, Stack size 0 bytes, system_stm32l0xx.o(i.SystemInit))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l011xx.o(.text)
 </UL>
-<P><STRONG><a name="[52]"></a>TIM2_delay</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, timers.o(i.TIM2_delay))
+<P><STRONG><a name="[52]"></a>TIM2_delay</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, timers.o(i.TIM2_delay))
 <BR><BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPS_subroutine
+<LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[95]"></a>TIM2_init</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, timers.o(i.TIM2_init))
+<P><STRONG><a name="[95]"></a>TIM2_init</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, timers.o(i.TIM2_init))
 <BR><BR>[Called By]<UL><LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -818,12 +819,13 @@ Global Symbols
 
 <P><STRONG><a name="[af]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
-<P><STRONG><a name="[19]"></a>main</STRONG> (Thumb, 208 bytes, Stack size 16 bytes, main.o(i.main))
+<P><STRONG><a name="[19]"></a>main</STRONG> (Thumb, 232 bytes, Stack size 16 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 300<LI>Call Chain = main &rArr; GPS_subroutine &rArr; GPS_getNMEA &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scheduler
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;XB_DisableXbee
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM2_init
+<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM2_delay
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_initAlarm
 <LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPS_subroutine
 <LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPS_GPSCSHigh

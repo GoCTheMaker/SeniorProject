@@ -118,29 +118,38 @@ int main(void)
 	int XB_VHF_active 	= 0;
 	
 	/*
-	FLASH_Unlock();
-	FLASH_unlockPrgm();
-	FLASH_writeWord( 0xBFBF, 0x8003F00);
-	FLASH_Lock();
+	//------------------------------
+	// 		GROSS CODE INCOMING
+	//  SHOULD PROBABLY PUT THESE SOMEWHERE ELSE BUT IT WORK
+	//------------------------------
+	//------------------------------
+	FLASH_EraseInitTypeDef EraseInitStruct;
+	uint32_t PageError;
 	
-	FLASH_Unlock();
-	FLASH_unlockPrgm();
-	FLASH_erasePage( 0x8003F00 );
-	FLASH_writeWord( 0xDFDF, 0x8003F00);
-	FLASH_Lock();
-	*/
+	EraseInitStruct.TypeErase = FLASH_TYPEERASE_PAGES;
+	EraseInitStruct.PageAddress = 0x0800307F;
+	EraseInitStruct.NbPages = 1; //This is also important!
+	HAL_FLASH_Unlock();
+	HAL_FLASHEx_Erase(&EraseInitStruct, &PageError);
+	
+	uint8_t i = 0;
+	for(i=0; i<5; i++){
+		
+			HAL_FLASH_Unlock();
+			HAL_FLASH_Program(FLASH_TYPEPROGRAM_WORD, ( 0x08003000 + (i * 32)), i );
+			FLASH_Lock();
+	}
+		*/
+	
+	TIM2_delay(3000);
+	TIM2_delay(3000);
+	TIM2_delay(3000);
+	TIM2_delay(3000);
 
 	
 	GPS_GPSCSHigh();
 	
-/*
-// GPS Initialization
-	GPS_GPSCSHigh();
-	TIM2_delay(100);
-	GPS_GPSCSLow();
-	TIM2_delay(100);
-	GPS_UBX_enablePUBX_Position();
-*/
+
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
