@@ -31,21 +31,74 @@ gps.c(354): warning: if statement has empty body [-Wempty-body]
                                 }else if( rxData != (char)0xFF ); //LL_USART_TransmitData8( USART2, rxData );
                                                                 ^
 gps.c(354): note: put the semicolon on a separate line to silence this warning
-gps.c(449): warning: control reaches end of non-void function [-Wreturn-type]
-} // GPS_getNMEA_RMC 
-^
-gps.c(461): warning: control reaches end of non-void function [-Wreturn-type]
-}
-^
-gps.c(483): warning: control reaches end of non-void function [-Wreturn-type]
-}
-^
-4 warnings generated.
+gps.c(413): error: member reference base type 'char [6]' is not a structure or union
+                                                                position.time.Hours = ((charTok[0]-'0')*10) + (charTok[1]-'0');
+                                                                ~~~~~~~~~~~~~^~~~~~
+gps.c(414): error: member reference base type 'char [6]' is not a structure or union
+                                                                position.time.Minutes = ((charTok[2]-'0')*10) + (charTok[3]-'0');
+                                                                ~~~~~~~~~~~~~^~~~~~~~
+gps.c(415): error: member reference base type 'char [6]' is not a structure or union
+                                                                position.time.Seconds = ((charTok[4]-'0')*10) + (charTok[5]-'0');                                               
+                                                                ~~~~~~~~~~~~~^~~~~~~~
+gps.c(448): error: member reference base type 'char [6]' is not a structure or union
+                                                        position.date.Day       = 0;
+                                                        ~~~~~~~~~~~~~^~~~
+gps.c(449): error: member reference base type 'char [6]' is not a structure or union
+                                                        position.date.Month = 0;
+                                                        ~~~~~~~~~~~~~^~~~~~
+gps.c(450): error: member reference base type 'char [6]' is not a structure or union
+                                                        position.date.Year      = 0;
+                                                        ~~~~~~~~~~~~~^~~~~
+gps.c(491): error: member reference base type 'char [6]' is not a structure or union
+        if( position.date.Year != 0){   
+            ~~~~~~~~~~~~~^~~~~
+gps.c(492): error: passing 'char [6]' to parameter of incompatible type 'LL_RTC_TimeTypeDef'
+                RTC_setTimeDate( position.time, position.date);
+                                 ^~~~~~~~~~~~~
+../MDK-ARM/timers.h(19): note: passing argument to parameter 'time' here
+void RTC_setTimeDate(LL_RTC_TimeTypeDef time, LL_RTC_DateTypeDef date);
+                                        ^
+1 warning and 8 errors generated.
 compiling gps.c...
-linking...
-Program Size: Code=3766 RO-data=262 RW-data=8 ZI-data=1184  
-FromELF: creating hex file...
-".\CubeMX\senior-project.axf" - 0 Error(s), 4 Warning(s).
+compiling stm32l0xx_it.c...
+flash.c(38): warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+flash.c(131): warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+2 warnings generated.
+compiling flash.c...
+compiling timers.c...
+xbee.c(43): warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+compiling xbee.c...
+comport.c(216): warning: implicitly declaring library function 'sprintf' with type 'int (char *, const char *, ...)' [-Wimplicit-function-declaration]
+        sprintf(time, "%x%x%x%x%x%x%x", currtime.Seconds,
+        ^
+comport.c(216): note: include the header <stdio.h> or explicitly provide a declaration for 'sprintf'
+1 warning generated.
+compiling comport.c...
+../Src/main.c(35): warning: In file included from...
+../Drivers/STM32L0xx_HAL_Driver/Inc\stm32l0xx_hal_conf_template.h(139): warning: 'VDD_VALUE' macro redefined [-Wmacro-redefined]
+#define  VDD_VALUE                    ((uint32_t)3300U) /*!< Value of VDD in mv */
+         ^
+<command line>(14): note: previous definition is here
+#define VDD_VALUE 3300
+        ^
+../Src/main.c(35): warning: In file included from...
+../Drivers/STM32L0xx_HAL_Driver/Inc\stm32l0xx_hal_conf_template.h(142): warning: 'PREFETCH_ENABLE' macro redefined [-Wmacro-redefined]
+#define  PREFETCH_ENABLE              1U              
+         ^
+<command line>(15): note: previous definition is here
+#define PREFETCH_ENABLE 0
+        ^
+2 warnings generated.
+compiling main.c...
+compiling scheduler.c...
+".\CubeMX\senior-project.axf" - 8 Error(s), 7 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -68,6 +121,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.2.0
+Target not created.
 Build Time Elapsed:  00:00:01
 </pre>
 </body>

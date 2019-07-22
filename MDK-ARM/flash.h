@@ -15,6 +15,9 @@
 #define PRGKEY1 0x8C9DAEBF
 #define PRGKET2	0x13141516
 
+#define PAGE_SZE 128 // in bytes
+#define DATA_LENGTH 
+
 
 
 

@@ -21,6 +21,7 @@
 #define GPS_TIMEOUT 30000
 #define GPS_ACC_REQ 15
 #define PUBX_POS_NUM_FIELDS	23
+#define GPS_RX_BUFF_SIZE	125
 
 
 #define SYNC_CHAR_1 0xB5
@@ -54,13 +55,13 @@ struct UBXTXInfo{
 };
 
 struct GPS_POS{
-	LL_RTC_TimeTypeDef time;	// time
-	LL_RTC_DateTypeDef date;	// date
+	char 		time[6];
+	char		date[6];
 	char 		lat[10];		// Latitude
 	char 		NS;					// North/South Indicator
 	char 		longt[10];  // Longitude
 	char 		EW;					// East/West Indicator
-	char		acc[4];				// Horizontal Accuracy
+	float		acc;				// Horizontal Accuracy
 };
 
 //Prototypes

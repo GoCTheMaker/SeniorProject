@@ -300,8 +300,8 @@ struct GPS_POS GPS_getNMEA(void){
 
 	char rxData = 0;
 	int state = 1;
-	char rxBuffer[125];
-	memset( rxBuffer, 0, sizeof( rxBuffer ) );
+	char rxBuffer[GPS_RX_BUFF_SIZE];
+	memset( rxBuffer, 0, GPS_RX_BUFF_SIZE );
 	int index = 0;
 	int strI = 0;
 	char* charTok;
@@ -364,6 +364,10 @@ struct GPS_POS GPS_getNMEA(void){
 					rxBuffer[ index + 2 ] = 0x0A;
 					state = 5;
 				}
+				if( index >= GPS_RX_BUFF_SIZE){
+					// Overflow, start over I guess
+					state = 1;
+				}
 				index++;
 				break;
 			case 4:
@@ -381,11 +385,15 @@ struct GPS_POS GPS_getNMEA(void){
 				// IF it is:
 					LL_USART_TransmitData8( USART2, rxData );
 				}
+				if( index >= GPS_RX_BUFF_SIZE){
+					// Overflow, start over I guess
+					state = 1;
+				}
 				index++;
 				break;
 			case 5:
 				// ---- NMEA PARSE STATE ---
-				// We successfully read a full sentance! Theoretically.
+				// We successfully read a full sentence! Theoretically.
 			
 				// For debugging, send the string to UART before it's messed with
 				CC_SendData( rxBuffer, sizeof(rxBuffer) );
@@ -408,13 +416,15 @@ struct GPS_POS GPS_getNMEA(void){
 							break;
 							case 2:
 								// Latitude 
-								position.NS = charTok[0];
+								strcpy(position.lat, charTok);
 							break;
 							case 3:
 								// N/S Indicator 
+								position.NS = charTok[0];
 							break;
 							case 4:
 								// Longitude
+								strcpy(position.longt, charTok);
 							break;
 							case 5:
 								// E/W Indicator
@@ -422,7 +432,7 @@ struct GPS_POS GPS_getNMEA(void){
 							break;
 							case 8:
 								// Horizontal Accuracy
-								// how to do when not always the same number of digits?
+								// get accuracy
 							break;
 						};
 					}					
@@ -446,6 +456,8 @@ struct GPS_POS GPS_getNMEA(void){
 			break;
 		}
 	}
+	
+	return position;
 } // GPS_getNMEA_RMC 
 
 //---------------------------------------------------
@@ -458,11 +470,12 @@ int GPS_UBX_enablePUBX_Position(void){
 		while( (SPI1->SR & 0x80) == 0x80);				// Wait until bus is calm
 		LL_SPI_TransmitData8( SPI1, payload[i] );	// Send character
 	}
+	return 0;
 }
 //---------------------------------------------------
 int GPS_subroutine(void){
 	struct GPS_POS position = {0};
-	position.acc = 9999;
+	position.acc = 999.0;
 	
 	GPS_GPSEnable();
 	GPS_GPSCSHigh();
@@ -480,6 +493,8 @@ int GPS_subroutine(void){
 	};
 	
 	FLASH_saveFix(position);
+	
+	return 0;
 }
 //---------------------------------------------------
 //---------------------------------------------------
