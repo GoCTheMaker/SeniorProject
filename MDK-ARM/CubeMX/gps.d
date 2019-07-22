@@ -1,31 +1,26 @@
-.\cubemx\gps.o: gps.c
-.\cubemx\gps.o: globals.h
-.\cubemx\gps.o: ../Inc/main.h
-.\cubemx\gps.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_lpuart.h
-.\cubemx\gps.o: ../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h
-.\cubemx\gps.o: ../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l011xx.h
-.\cubemx\gps.o: ../Drivers/CMSIS/Include/core_cm0plus.h
-.\cubemx\gps.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-.\cubemx\gps.o: ../Drivers/CMSIS/Include/core_cmInstr.h
-.\cubemx\gps.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
-.\cubemx\gps.o: ../Drivers/CMSIS/Include/core_cmFunc.h
-.\cubemx\gps.o: ../Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h
-.\cubemx\gps.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_rcc.h
-.\cubemx\gps.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_crs.h
-.\cubemx\gps.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h
-.\cubemx\gps.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_system.h
-.\cubemx\gps.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_exti.h
-.\cubemx\gps.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_cortex.h
-.\cubemx\gps.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_utils.h
-.\cubemx\gps.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_pwr.h
-.\cubemx\gps.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_dma.h
-.\cubemx\gps.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_rtc.h
-.\cubemx\gps.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_spi.h
-.\cubemx\gps.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_usart.h
-.\cubemx\gps.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_gpio.h
-.\cubemx\gps.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-.\cubemx\gps.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
-.\cubemx\gps.o: gps.h
-.\cubemx\gps.o: timers.h
-.\cubemx\gps.o: comport.h
-.\cubemx\gps.o: flash.h
+./cubemx/gps.o: gps.c ..\MDK-ARM\globals.h ..\Inc\main.h \
+  ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_ll_lpuart.h \
+  ..\Drivers\CMSIS\Device\ST\STM32L0xx\Include\stm32l0xx.h \
+  ..\Drivers\CMSIS\Device\ST\STM32L0xx\Include\stm32l011xx.h \
+  ..\Drivers\CMSIS\Include\core_cm0plus.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  ..\Drivers\CMSIS\Include\core_cmInstr.h \
+  ..\Drivers\CMSIS\Include\cmsis_armcc_V6.h \
+  ..\Drivers\CMSIS\Include\core_cmFunc.h \
+  ..\Drivers\CMSIS\Device\ST\STM32L0xx\Include\system_stm32l0xx.h \
+  ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_ll_rcc.h \
+  ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_ll_crs.h \
+  ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_ll_bus.h \
+  ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_ll_system.h \
+  ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_ll_exti.h \
+  ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_ll_cortex.h \
+  ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_ll_utils.h \
+  ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_ll_pwr.h \
+  ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_ll_dma.h \
+  ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_ll_rtc.h \
+  ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_ll_spi.h \
+  ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_ll_usart.h \
+  ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_ll_gpio.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h ..\MDK-ARM\gps.h \
+  ..\MDK-ARM\timers.h ..\MDK-ARM\comport.h ..\MDK-ARM\flash.h

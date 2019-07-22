@@ -390,7 +390,7 @@ struct GPS_POS GPS_getNMEA(void){
 				// For debugging, send the string to UART before it's messed with
 				CC_SendData( rxBuffer, sizeof(rxBuffer) );
  				
-			// Parse PUBX,00 to read fix & accuracy data:
+			// Parse PUBX,00 to read time, fix & accuracy data:
 				if(rxBuffer[0] == 'P' && rxBuffer[1] == 'U' && rxBuffer[2] == 'B'){
 					// strtok! 
 					charTok = strtok( rxBuffer, ",");
@@ -404,7 +404,7 @@ struct GPS_POS GPS_getNMEA(void){
 								// Time
 								position.time.Hours = ((charTok[0]-'0')*10) + (charTok[1]-'0');
 								position.time.Minutes = ((charTok[2]-'0')*10) + (charTok[3]-'0');
-								position.time.Seconds = ((charTok[4]-'0')*10) + (charTok[5]-'0');							
+								position.time.Seconds = ((charTok[4]-'0')*10) + (charTok[5]-'0');						
 							break;
 							case 2:
 								// Latitude 
@@ -426,7 +426,7 @@ struct GPS_POS GPS_getNMEA(void){
 							break;
 						};
 					}					
-				}		
+				}
 				// Parse RMC to get date:
 				if(rxBuffer[0] == 'G' && rxBuffer[1] == 'N' && rxBuffer[2] == 'R' && rxBuffer[3] == 'M'){
 					// strtok! 
@@ -440,7 +440,7 @@ struct GPS_POS GPS_getNMEA(void){
 							position.date.Year 	= 0;
 						}
 					}					
-				}	
+				}
 				msgComplete = 1;
 				//return rmc;
 			break;

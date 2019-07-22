@@ -56,11 +56,11 @@ struct UBXTXInfo{
 struct GPS_POS{
 	LL_RTC_TimeTypeDef time;	// time
 	LL_RTC_DateTypeDef date;	// date
-	float 	lat;				// Latitude
+	char 		lat[10];		// Latitude
 	char 		NS;					// North/South Indicator
-	float 	longt;			// Longitude
+	char 		longt[10];  // Longitude
 	char 		EW;					// East/West Indicator
-	int			acc;				// Horizontal Accuracy
+	char		acc[4];				// Horizontal Accuracy
 };
 
 //Prototypes
