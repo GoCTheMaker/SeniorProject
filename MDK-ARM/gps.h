@@ -55,8 +55,8 @@ struct UBXTXInfo{
 };
 
 struct GPS_POS{
-	char 		time[6];
-	char		date[4];
+	char 		time[4];
+	char		date[6];
 	char 		lat[10];		// Latitude
 	char 		NS;					// North/South Indicator
 	char 		longt[10];  // Longitude
