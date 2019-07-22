@@ -390,7 +390,7 @@ struct GPS_POS GPS_getNMEA(void){
 				// For debugging, send the string to UART before it's messed with
 				CC_SendData( rxBuffer, sizeof(rxBuffer) );
  				
-				// Verify that we are parsing the correct message:
+			// Parse PUBX,00 to read fix & accuracy data:
 				if(rxBuffer[0] == 'P' && rxBuffer[1] == 'U' && rxBuffer[2] == 'B'){
 					// strtok! 
 					charTok = strtok( rxBuffer, ",");
@@ -401,20 +401,46 @@ struct GPS_POS GPS_getNMEA(void){
 						// Subtract 1 to adjust and strtok!
 						switch( strI ){
 							case 1:
+								// Time
 								position.time.Hours = ((charTok[0]-'0')*10) + (charTok[1]-'0');
 								position.time.Minutes = ((charTok[2]-'0')*10) + (charTok[3]-'0');
 								position.time.Seconds = ((charTok[4]-'0')*10) + (charTok[5]-'0');							
 							break;
 							case 2:
-								int degrees = ((charTok[0]-'0')*10)+ (charTok[1]-'0');
-								float minuteDec = ((charTok[6]-'0')/10) + ((charTok[7]-'0')/100) + ((charTok[8]-'0')/1000) + ((charTok[9]-'0')/10000);
-								float minutes = (60/((charTok[2]-'0')*10)+(charTok[3]));
-								position.lat = 0;
+								// Latitude 
+								position.NS = charTok[0];
+							break;
+							case 3:
+								// N/S Indicator 
+							break;
+							case 4:
+								// Longitude
+							break;
+							case 5:
+								// E/W Indicator
+								position.EW = charTok[0];
+							break;
+							case 8:
+								// Horizontal Accuracy
+								// how to do when not always the same number of digits?
 							break;
 						};
-					}
-					
+					}					
 				}		
+				// Parse RMC to get date:
+				if(rxBuffer[0] == 'G' && rxBuffer[1] == 'N' && rxBuffer[2] == 'R' && rxBuffer[3] == 'M'){
+					// strtok! 
+					charTok = strtok( rxBuffer, ",");
+					for( strI=0; strI<PUBX_POS_NUM_FIELDS-1; strI++){
+						charTok = strtok( NULL, ",");
+						// 9th field is the date
+						if( strI == 8){
+							position.date.Day 	= 0;
+							position.date.Month = 0;
+							position.date.Year 	= 0;
+						}
+					}					
+				}	
 				msgComplete = 1;
 				//return rmc;
 			break;
@@ -429,9 +455,8 @@ int GPS_UBX_enablePUBX_Position(void){
 	int i = 0;
 	
 	for(i=0;i<16; i++){
-		while( (SPI1->SR & 0x80) == 0x80);
-		LL_SPI_TransmitData8( SPI1, payload[i] );
-		while( (SPI1->SR & 0x80) == 0x80);
+		while( (SPI1->SR & 0x80) == 0x80);				// Wait until bus is calm
+		LL_SPI_TransmitData8( SPI1, payload[i] );	// Send character
 	}
 }
 //---------------------------------------------------
@@ -441,9 +466,9 @@ int GPS_subroutine(void){
 	
 	GPS_GPSEnable();
 	GPS_GPSCSHigh();
-	TIM2_delay(50);
+	TIM2_delay(150);
 	GPS_GPSCSLow();
-	TIM2_delay(50);
+	TIM2_delay(5);
 	GPS_UBX_enablePUBX_Position();
 	
 	TIM2_initDelay_inline( GPS_TIMEOUT );

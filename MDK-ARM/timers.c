@@ -21,6 +21,7 @@ int TIM2_delay(uint16_t delay){
 	// Clear the update event flag 
 	TIM2->SR = 0;
 	
+	// Make sure it's reset
 	TIM2->CNT = 0;
 	
 	// Move the delay into the ARR:
@@ -37,6 +38,9 @@ int TIM2_delay(uint16_t delay){
 void TIM2_initDelay_inline(uint16_t delay){	
 	// Clear the update event flag 
 	TIM2->SR = 0;
+	
+	// Make sure it's reset
+	TIM2->CNT = 0;
 	
 	// Move the delay into the ARR:
 	TIM2->ARR = delay;

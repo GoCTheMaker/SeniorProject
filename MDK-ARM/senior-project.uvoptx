@@ -148,24 +148,7 @@
           <Name>UL2CM3(-S0 -C0 -P0 -FD20000000 -FC800 -FN1 -FF0STM32L0xx_16 -FS08000000 -FL04000 -FP0($$Device:STM32L011K4Tx$CMSIS\Flash\STM32L0xx_16.FLM))</Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
-      <Breakpoint>
-        <Bp>
-          <Number>0</Number>
-          <Type>0</Type>
-          <LineNumber>413</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134219052</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>.\gps.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\senior_project\gps.c\413</Expression>
-        </Bp>
-      </Breakpoint>
+      <Breakpoint/>
       <WatchWindow1>
         <Ww>
           <count>0</count>
