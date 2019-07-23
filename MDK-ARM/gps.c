@@ -300,14 +300,19 @@ struct GPS_POS GPS_getNMEA(void){
 
 	char rxData = 0;
 	int state = 1;
+	int RMC_timeFlag = 0;
 	char rxBuffer[GPS_RX_BUFF_SIZE];
 	memset( rxBuffer, 0, GPS_RX_BUFF_SIZE );
 	int index = 0;
+	int accI = 0;
 	int strI = 0;
 	char* charTok;
+	char accTemp[ACC_TEMP_SIZE];
 	char checksum[2];
 	uint8_t msgComplete = 0;
-	struct GPS_POS position;
+	static struct GPS_POS position;
+	position.acc = 99999;
+	int i, count = 0, nextIndex = 0, lastIndex = 0;
 
 
 		
@@ -341,6 +346,7 @@ struct GPS_POS GPS_getNMEA(void){
 			break;
 		// State 2 is reserved. 
 			case 3:
+				
 				// ---- NMEA READ STATE ---
 				LL_SPI_TransmitData8( SPI1, 0x00 );
 				while( (SPI1->SR & 0x80) == 0x80);
@@ -400,17 +406,15 @@ struct GPS_POS GPS_getNMEA(void){
  				
 			// Parse PUBX,00 to read time, fix & accuracy data:
 				if(rxBuffer[0] == 'P' && rxBuffer[1] == 'U' && rxBuffer[2] == 'B'){
+					
 					// strtok! 
-					charTok = strtok( rxBuffer, ",");
+ 					charTok = strtok( rxBuffer, ",");
 					for( strI=0; strI<PUBX_POS_NUM_FIELDS-1; strI++){
 						charTok = strtok( NULL, ",");
 						
 						// The required fields are 2, 3, 4, 5, 6, 9.
 						// Subtract 1 to adjust and strtok!
 						switch( strI ){
-							case 1:
-								// Time					
-							break;
 							case 2:
 								// Latitude 
 								strcpy(position.lat, charTok);
@@ -429,24 +433,35 @@ struct GPS_POS GPS_getNMEA(void){
 							break;
 							case 8:
 								// Horizontal Accuracy
-								// get accuracy
+								//position.acc = atoi(charTok);
+								strI=PUBX_POS_NUM_FIELDS;
 							break;
 						};
 					}					
 				}
 				// Parse RMC to get date:
 				if(rxBuffer[0] == 'G' && rxBuffer[1] == 'N' && rxBuffer[2] == 'R' && rxBuffer[3] == 'M'){
-					// strtok! 
-					charTok = strtok( rxBuffer, ",");
-					for( strI=0; strI<PUBX_POS_NUM_FIELDS-1; strI++){
-						charTok = strtok( NULL, ",");
-						// 9th field is the date
-						if( strI == 8){
+					for(i=0; i<strlen(rxBuffer);i++)
+					{
+						if(rxBuffer[i] == ',')
+						{
+							count++;
+							lastIndex = nextIndex;
+							nextIndex = i;
 						}
-					}					
-				}
-				msgComplete = 1;
-				//return rmc;
+						if( (count == 2) && (RMC_timeFlag == 0) ){
+							memcpy(position.time, &rxBuffer[lastIndex + 1], index - lastIndex - 1);
+							RMC_timeFlag = 1;
+						}
+						if(count == 10)
+						{
+							memcpy(position.date, &rxBuffer[lastIndex + 1], index - lastIndex - 1);
+							break;
+						}
+
+					}//for rxbuffer
+				}//if rmc			
+			msgComplete = 1;
 			break;
 		}
 	}
@@ -468,18 +483,18 @@ int GPS_UBX_enablePUBX_Position(void){
 }
 //---------------------------------------------------
 int GPS_subroutine(void){
-	struct GPS_POS position = {0};
-	position.acc = 999.0;
+	static struct GPS_POS position = {0};
+	position.acc = 99999;
 	
 	GPS_GPSEnable();
 	GPS_GPSCSHigh();
 	TIM2_delay(150);
 	GPS_GPSCSLow();
-	TIM2_delay(5);
+	TIM2_delay(150);
 	GPS_UBX_enablePUBX_Position();
 	
 	TIM2_initDelay_inline( GPS_TIMEOUT );
-	while( !(TIM2->SR & TIM_SR_UIF) ||  position.acc > GPS_ACC_REQ){
+	while( !(TIM2->SR & TIM_SR_UIF) &&  (position.acc > GPS_ACC_REQ) ){
 		position = GPS_getNMEA();
 	}
 	/*

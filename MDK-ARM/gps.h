@@ -22,6 +22,7 @@
 #define GPS_ACC_REQ 15
 #define PUBX_POS_NUM_FIELDS	23
 #define GPS_RX_BUFF_SIZE	125
+#define ACC_TEMP_SIZE	4
 
 
 #define SYNC_CHAR_1 0xB5

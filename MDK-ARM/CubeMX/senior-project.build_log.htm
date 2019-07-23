@@ -26,63 +26,53 @@ Project File Date:  07/22/2019
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.12', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
-Build target 'CubeMX'
-flash.c(168): warning: incompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type 'unsigned char *' [-Wincompatible-pointer-types]
+Rebuild target 'CubeMX'
+assembling startup_stm32l011xx.s...
+compiling commPeriph.c...
+compiling stm32l0xx_it.c...
+flash.c(176): warning: incompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type 'unsigned char *' [-Wincompatible-pointer-types]
         FLASH_ReadData( &startAddr, 4, NEXTSTARTADDR_ADDR);
                         ^~~~~~~~~~
 flash.c(70): note: passing argument to parameter 'str' here
 int FLASH_ReadData(unsigned char * str, int len, unsigned int addr)
                                    ^
-flash.c(179): warning: incompatible pointer to integer conversion passing 'char *' to parameter of type 'uint32_t' (aka 'unsigned int') [-Wint-conversion]
-        FLASH_writeWord( &str1[0], startAddr);
-                         ^~~~~~~~
-flash.c(97): note: passing argument to parameter 'data' here
-int FLASH_writeWord( uint32_t data, unsigned int addr){
-                              ^
-flash.c(180): warning: incompatible pointer to integer conversion passing 'char *' to parameter of type 'uint32_t' (aka 'unsigned int') [-Wint-conversion]
-        FLASH_writeWord( &str2[0], startAddr+4);
-                         ^~~~~~~~
-flash.c(97): note: passing argument to parameter 'data' here
-int FLASH_writeWord( uint32_t data, unsigned int addr){
-                              ^
-flash.c(181): warning: incompatible pointer to integer conversion passing 'char *' to parameter of type 'uint32_t' (aka 'unsigned int') [-Wint-conversion]
-        FLASH_writeWord( &str3[0], startAddr+8);
-                         ^~~~~~~~
-flash.c(97): note: passing argument to parameter 'data' here
-int FLASH_writeWord( uint32_t data, unsigned int addr){
-                              ^
-flash.c(182): warning: incompatible pointer to integer conversion passing 'char *' to parameter of type 'uint32_t' (aka 'unsigned int') [-Wint-conversion]
-        FLASH_writeWord( &str4[0], startAddr+12);
-                         ^~~~~~~~
-flash.c(97): note: passing argument to parameter 'data' here
-int FLASH_writeWord( uint32_t data, unsigned int addr){
-                              ^
-flash.c(183): warning: incompatible pointer to integer conversion passing 'char *' to parameter of type 'uint32_t' (aka 'unsigned int') [-Wint-conversion]
-        FLASH_writeWord( &str5[0], startAddr+16);
-                         ^~~~~~~~
-flash.c(97): note: passing argument to parameter 'data' here
-int FLASH_writeWord( uint32_t data, unsigned int addr){
-                              ^
-flash.c(184): warning: incompatible pointer to integer conversion passing 'char *' to parameter of type 'uint32_t' (aka 'unsigned int') [-Wint-conversion]
-        FLASH_writeWord( &str6[0], startAddr+20);
-                         ^~~~~~~~
-flash.c(97): note: passing argument to parameter 'data' here
-int FLASH_writeWord( uint32_t data, unsigned int addr){
-                              ^
-flash.c(185): warning: incompatible pointer to integer conversion passing 'char *' to parameter of type 'uint32_t' (aka 'unsigned int') [-Wint-conversion]
-        FLASH_writeWord( &str7[0], startAddr+24);
-                         ^~~~~~~~
-flash.c(97): note: passing argument to parameter 'data' here
-int FLASH_writeWord( uint32_t data, unsigned int addr){
-                              ^
-flash.c(186): warning: incompatible pointer to integer conversion passing 'char *' to parameter of type 'uint32_t' (aka 'unsigned int') [-Wint-conversion]
-        FLASH_writeWord( &str8[0], startAddr+28);
-                         ^~~~~~~~
-flash.c(97): note: passing argument to parameter 'data' here
-int FLASH_writeWord( uint32_t data, unsigned int addr){
-                              ^
+flash.c(187): warning: incompatible pointer types assigning to 'uint32_t *' (aka 'unsigned int *') from 'char *' [-Wincompatible-pointer-types]
+        data = &position.time[0];       // Time: 4/4
+             ^ ~~~~~~~~~~~~~~~~~
+flash.c(189): warning: incompatible pointer types assigning to 'uint32_t *' (aka 'unsigned int *') from 'char *' [-Wincompatible-pointer-types]
+        data = &position.date[0]; // Date: 4/6
+             ^ ~~~~~~~~~~~~~~~~~
+flash.c(191): warning: incompatible pointer types assigning to 'uint32_t *' (aka 'unsigned int *') from 'char *' [-Wincompatible-pointer-types]
+        data = &str1[0];                                        // Date: 6/6 | Lat 2/10
+             ^ ~~~~~~~~
+flash.c(193): warning: incompatible pointer types assigning to 'uint32_t *' (aka 'unsigned int *') from 'char *' [-Wincompatible-pointer-types]
+        data = &position.lat[2];        // Lat: 6/10
+             ^ ~~~~~~~~~~~~~~~~
+flash.c(195): warning: incompatible pointer types assigning to 'uint32_t *' (aka 'unsigned int *') from 'char *' [-Wincompatible-pointer-types]
+        data = &position.lat[6];        // Lat: 10/10
+             ^ ~~~~~~~~~~~~~~~~
+flash.c(197): warning: incompatible pointer types assigning to 'uint32_t *' (aka 'unsigned int *') from 'char *' [-Wincompatible-pointer-types]
+        data = &str2[0];                                        // NS: 1/1 | Longt: 3/10
+             ^ ~~~~~~~~
+flash.c(199): warning: incompatible pointer types assigning to 'uint32_t *' (aka 'unsigned int *') from 'char *' [-Wincompatible-pointer-types]
+        data = &position.longt[3];// Longt: 7/10
+             ^ ~~~~~~~~~~~~~~~~~~
+flash.c(201): warning: incompatible pointer types assigning to 'uint32_t *' (aka 'unsigned int *') from 'char *' [-Wincompatible-pointer-types]
+        data = &str3[0];
+             ^ ~~~~~~~~
 9 warnings generated.
 compiling flash.c...
+xbee.c(43): warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+compiling xbee.c...
+comport.c(220): warning: implicitly declaring library function 'sprintf' with type 'int (char *, const char *, ...)' [-Wimplicit-function-declaration]
+        sprintf(time, "%x%x%x%x%x%x%x", currtime.Seconds,
+        ^
+comport.c(220): note: include the header <stdio.h> or explicitly provide a declaration for 'sprintf'
+1 warning generated.
+compiling comport.c...
 ../Src/main.c(35): warning: In file included from...
 ../Drivers/STM32L0xx_HAL_Driver/Inc\stm32l0xx_hal_conf_template.h(139): warning: 'VDD_VALUE' macro redefined [-Wmacro-redefined]
 #define  VDD_VALUE                    ((uint32_t)3300U) /*!< Value of VDD in mv */
@@ -99,10 +89,101 @@ compiling flash.c...
         ^
 2 warnings generated.
 compiling main.c...
+gps.c(360): warning: if statement has empty body [-Wempty-body]
+                                }else if( rxData != (char)0xFF ); //LL_USART_TransmitData8( USART2, rxData );
+                                                                ^
+gps.c(360): note: put the semicolon on a separate line to silence this warning
+1 warning generated.
+compiling gps.c...
+compiling timers.c...
+compiling scheduler.c...
+compiling stm32l0xx_ll_gpio.c...
+compiling stm32l0xx_ll_spi.c...
+compiling stm32l0xx_ll_pwr.c...
+compiling stm32l0xx_ll_exti.c...
+compiling stm32l0xx_ll_dma.c...
+compiling stm32l0xx_ll_rtc.c...
+compiling stm32l0xx_ll_usart.c...
+compiling stm32l0xx_ll_rcc.c...
+compiling stm32l0xx_ll_lpuart.c...
+compiling stm32l0xx_ll_utils.c...
+../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.c(153): warning: In file included from...
+../Drivers/STM32L0xx_HAL_Driver/Inc\stm32l0xx_hal.h(30): warning: In file included from...
+../Inc\stm32l0xx_hal_conf.h(138): warning: 'VDD_VALUE' macro redefined [-Wmacro-redefined]
+#define  VDD_VALUE                    ((uint32_t)3300U) /*!< Value of VDD in mv */           
+         ^
+<command line>(13): note: previous definition is here
+#define VDD_VALUE 3300
+        ^
+../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.c(153): warning: In file included from...
+../Drivers/STM32L0xx_HAL_Driver/Inc\stm32l0xx_hal.h(30): warning: In file included from...
+../Inc\stm32l0xx_hal_conf.h(141): warning: 'PREFETCH_ENABLE' macro redefined [-Wmacro-redefined]
+#define  PREFETCH_ENABLE              0U              
+         ^
+<command line>(14): note: previous definition is here
+#define PREFETCH_ENABLE 0
+        ^
+2 warnings generated.
+compiling stm32l0xx_hal_flash.c...
+../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.c(51): warning: In file included from...
+../Drivers/STM32L0xx_HAL_Driver/Inc\stm32l0xx_hal.h(30): warning: In file included from...
+../Inc\stm32l0xx_hal_conf.h(138): warning: 'VDD_VALUE' macro redefined [-Wmacro-redefined]
+#define  VDD_VALUE                    ((uint32_t)3300U) /*!< Value of VDD in mv */           
+         ^
+<command line>(13): note: previous definition is here
+#define VDD_VALUE 3300
+        ^
+../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.c(51): warning: In file included from...
+../Drivers/STM32L0xx_HAL_Driver/Inc\stm32l0xx_hal.h(30): warning: In file included from...
+../Inc\stm32l0xx_hal_conf.h(141): warning: 'PREFETCH_ENABLE' macro redefined [-Wmacro-redefined]
+#define  PREFETCH_ENABLE              0U              
+         ^
+<command line>(14): note: previous definition is here
+#define PREFETCH_ENABLE 0
+        ^
+2 warnings generated.
+compiling stm32l0xx_hal_flash_ex.c...
+../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c(36): warning: In file included from...
+../Drivers/STM32L0xx_HAL_Driver/Inc\stm32l0xx_hal.h(30): warning: In file included from...
+../Inc\stm32l0xx_hal_conf.h(138): warning: 'VDD_VALUE' macro redefined [-Wmacro-redefined]
+#define  VDD_VALUE                    ((uint32_t)3300U) /*!< Value of VDD in mv */           
+         ^
+<command line>(13): note: previous definition is here
+#define VDD_VALUE 3300
+        ^
+../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c(36): warning: In file included from...
+../Drivers/STM32L0xx_HAL_Driver/Inc\stm32l0xx_hal.h(30): warning: In file included from...
+../Inc\stm32l0xx_hal_conf.h(141): warning: 'PREFETCH_ENABLE' macro redefined [-Wmacro-redefined]
+#define  PREFETCH_ENABLE              0U              
+         ^
+<command line>(14): note: previous definition is here
+#define PREFETCH_ENABLE 0
+        ^
+2 warnings generated.
+compiling stm32l0xx_hal.c...
+../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c(79): warning: In file included from...
+../Drivers/STM32L0xx_HAL_Driver/Inc\stm32l0xx_hal.h(30): warning: In file included from...
+../Inc\stm32l0xx_hal_conf.h(138): warning: 'VDD_VALUE' macro redefined [-Wmacro-redefined]
+#define  VDD_VALUE                    ((uint32_t)3300U) /*!< Value of VDD in mv */           
+         ^
+<command line>(13): note: previous definition is here
+#define VDD_VALUE 3300
+        ^
+../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c(79): warning: In file included from...
+../Drivers/STM32L0xx_HAL_Driver/Inc\stm32l0xx_hal.h(30): warning: In file included from...
+../Inc\stm32l0xx_hal_conf.h(141): warning: 'PREFETCH_ENABLE' macro redefined [-Wmacro-redefined]
+#define  PREFETCH_ENABLE              0U              
+         ^
+<command line>(14): note: previous definition is here
+#define PREFETCH_ENABLE 0
+        ^
+2 warnings generated.
+compiling stm32l0xx_hal_cortex.c...
+compiling system_stm32l0xx.c...
 linking...
-Program Size: Code=8950 RO-data=294 RW-data=8 ZI-data=1192  
+Program Size: Code=4590 RO-data=262 RW-data=8 ZI-data=1256  
 FromELF: creating hex file...
-".\CubeMX\senior-project.axf" - 0 Error(s), 11 Warning(s).
+".\CubeMX\senior-project.axf" - 0 Error(s), 22 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -125,7 +206,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.2.0
-Build Time Elapsed:  00:00:02
+Build Time Elapsed:  00:00:03
 </pre>
 </body>
 </html>

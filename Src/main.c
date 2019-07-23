@@ -112,6 +112,7 @@ int main(void)
 	
 	XB_DisableXbee();
 	GPS_GPSDisable();
+	GPS_GPSCSHigh();
 	
 	
 	//-----------------
@@ -145,9 +146,13 @@ int main(void)
 	
 
 	
-	GPS_GPSCSHigh();
 	
-
+	while(1){
+		GPS_subroutine();
+		TIM2_delay(100);
+	}
+	
+/*
 	char time[4] = {'2','2','1','0'};
 	char date[6] = {'0','7','2','2','1','9'};
 	char tLat[] = {'4','7','1','7','.','1','1','3','2','1','0'};
@@ -170,7 +175,7 @@ int main(void)
 	FLASH_saveFix( pos );
 	FLASH_saveFix( pos );
 	FLASH_saveFix( pos );
-	
+	*/
 
 
   /* Infinite loop */

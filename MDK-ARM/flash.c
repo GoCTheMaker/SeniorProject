@@ -147,13 +147,14 @@ int FLASH_saveFix( struct GPS_POS position){
 	
 	uint32_t startAddr;
 	uint32_t nextStartAddr;
+	uint32_t *data;
 	
 	char str1[4], str2[4], str3[4], str4[4];
 	char str5[4], str6[4], str7[4], str8[4];
-	
-	strcpy( str1, position.time);				// All of time into str1
-	strncpy(str2, position.date, 4);		// First 4 of date into str2 (4/6)
-	strncpy(str3, position.date+4, 2);	// Rest of date into str3 (6/6)
+	/*
+	strcpy(str1, position.time);				// All of time into str1
+	strcpy(str2, position.date);		// First 4 of date into str2 (4/6)
+	strncpy(str3, &position.date[3], 2);	// Rest of date into str3 (6/6)
 	strncpy(str3, position.lat, 2);			// First 2 of lat into str3 (2/10)
 	strncpy(str4, position.lat+2, 4);		// Next 4 of lat (6/10)
 	strncpy(str5, position.lat+6, 4);		// Final 4 of lat
@@ -162,7 +163,14 @@ int FLASH_saveFix( struct GPS_POS position){
 	strncpy(str7, position.longt+3, 4);	// Next 4 of longt (7/10)
 	strncpy(str8, position.longt+7, 3);	// Final 3 of longt (10/10)
 	str8[3] = position.EW;
+	*/
 	
+	str1[0] = position.date[4];  str1[1] = position.date[5];
+	str1[2] = position.lat[0];   str1[3] = position.lat[1];
+	str2[0] = position.NS; 			 str2[1] = position.longt[0];
+	str2[2] = position.longt[1]; str2[3] = position.longt[2];
+	str3[0] = position.longt[7]; str3[1] = position.longt[8];
+	str3[2] = position.longt[9]; str3[3] = position.EW;
 	
 	
 	FLASH_ReadData( &startAddr, 4, NEXTSTARTADDR_ADDR);
@@ -176,14 +184,22 @@ int FLASH_saveFix( struct GPS_POS position){
 	if( (startAddr % 128) == 0){
 			FLASH_erasePage( startAddr );
 	}
-	FLASH_writeWord( &str1[0], startAddr);
-	FLASH_writeWord( &str2[0], startAddr+4);
-	FLASH_writeWord( &str3[0], startAddr+8);
-	FLASH_writeWord( &str4[0], startAddr+12);
-	FLASH_writeWord( &str5[0], startAddr+16);
-	FLASH_writeWord( &str6[0], startAddr+20);
-	FLASH_writeWord( &str7[0], startAddr+24);
-	FLASH_writeWord( &str8[0], startAddr+28);
+	data = &position.time[0];	// Time: 4/4
+	FLASH_writeWord( *data, startAddr);
+	data = &position.date[0]; // Date: 4/6
+	FLASH_writeWord( *data, startAddr+4);
+	data = &str1[0]; 					// Date: 6/6 | Lat 2/10
+	FLASH_writeWord( *data, startAddr+8);
+	data = &position.lat[2];	// Lat: 6/10
+	FLASH_writeWord( *data, startAddr+12);
+	data = &position.lat[6];	// Lat: 10/10
+	FLASH_writeWord( *data, startAddr+16);
+	data = &str2[0];					// NS: 1/1 | Longt: 3/10
+	FLASH_writeWord( *data, startAddr+20);
+	data = &position.longt[3];// Longt: 7/10
+	FLASH_writeWord( *data, startAddr+24);
+	data = &str3[0];
+	FLASH_writeWord( *data, startAddr+28);
 	
 	return 0;
 }
