@@ -164,6 +164,7 @@ int FLASH_saveFix( struct GPS_POS position){
 	str8[3] = position.EW;
 	
 	
+	
 	FLASH_ReadData( &startAddr, 4, NEXTSTARTADDR_ADDR);
 	nextStartAddr = startAddr + DATA_LENGTH;
 	
@@ -172,7 +173,7 @@ int FLASH_saveFix( struct GPS_POS position){
 	FLASH_Unlock();
 	EEPROM_WriteByte( nextStartAddr, NEXTSTARTADDR_ADDR);
 	FLASH_unlockPrgm();
-	if( (startAddr % 128) != 0){
+	if( (startAddr % 128) == 0){
 			FLASH_erasePage( startAddr );
 	}
 	FLASH_writeWord( &str1[0], startAddr);
