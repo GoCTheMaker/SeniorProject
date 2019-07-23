@@ -433,7 +433,8 @@ struct GPS_POS GPS_getNMEA(void){
 							break;
 							case 8:
 								// Horizontal Accuracy
-								//position.acc = atoi(charTok);
+							
+							
 								strI=PUBX_POS_NUM_FIELDS;
 							break;
 						};
@@ -497,11 +498,8 @@ int GPS_subroutine(void){
 	while( !(TIM2->SR & TIM_SR_UIF) &&  (position.acc > GPS_ACC_REQ) ){
 		position = GPS_getNMEA();
 	}
-	/*
-	if( position.date.Year != 0){	
-		RTC_setTimeDate( position.time, position.date);
-	};
-	*/
+	
+	
 	FLASH_saveFix(position);
 	
 	return 0;

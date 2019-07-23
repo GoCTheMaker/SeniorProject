@@ -120,32 +120,8 @@ int main(void)
 	int GPS_active 	= 0;
 	int XB_VHF_active 	= 0;
 	
-	/*
-	//------------------------------
-	// 		GROSS CODE INCOMING
-	//  SHOULD PROBABLY PUT THESE SOMEWHERE ELSE BUT IT WORK
-	//------------------------------
-	//------------------------------
-	FLASH_EraseInitTypeDef EraseInitStruct;
-	uint32_t PageError;
 	
-	EraseInitStruct.TypeErase = FLASH_TYPEERASE_PAGES;
-	EraseInitStruct.PageAddress = 0x0800307F;
-	EraseInitStruct.NbPages = 1; //This is also important!
-	HAL_FLASH_Unlock();
-	HAL_FLASHEx_Erase(&EraseInitStruct, &PageError);
-	
-	uint8_t i = 0;
-	for(i=0; i<5; i++){
-		
-			HAL_FLASH_Unlock();
-			HAL_FLASH_Program(FLASH_TYPEPROGRAM_WORD, ( 0x08003000 + (i * 32)), i );
-			FLASH_Lock();
-	}
-		*/
-	
-
-	
+	FLASH_initDataStorage(); 
 	
 	while(1){
 		GPS_subroutine();

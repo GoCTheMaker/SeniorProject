@@ -1,6 +1,6 @@
 Dependencies for Project 'senior-project', Target 'CubeMX': (DO NOT MODIFY !)
 F (startup_stm32l011xx.s)(0x5D2CF4B9)(--cpu Cortex-M0+ -g --pd "__MICROLIB SETA 1"-I.\RTE\_CubeMX-IC:\Users\Collin\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\Collin\AppData\Local\Arm\Packs\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include--pd "__UVISION_VERSION SETA 527"--pd "_RTE_ SETA 1"--pd "STM32L011xx SETA 1"--list startup_stm32l011xx.lst--xref -o .\cubemx\startup_stm32l011xx.o--depend .\cubemx\startup_stm32l011xx.d)
-F (../Src/main.c)(0x5D376464)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../MDK-ARM -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/_CubeMX-IC:/Users/Collin/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/Collin/AppData/Local/Arm/Packs/Keil/STM32L0xx_DFP/2.0.1/Drivers/CMSIS/Device/ST/STM32L0xx/Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32L011xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DMSI_VALUE="2097000" -DHSI_VALUE="16000000" -DLSI_VALUE="37000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32L011xx-o ./cubemx/main.o -MD)
+F (../Src/main.c)(0x5D376DB5)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../MDK-ARM -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/_CubeMX-IC:/Users/Collin/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/Collin/AppData/Local/Arm/Packs/Keil/STM32L0xx_DFP/2.0.1/Drivers/CMSIS/Device/ST/STM32L0xx/Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32L011xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DMSI_VALUE="2097000" -DHSI_VALUE="16000000" -DLSI_VALUE="37000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32L011xx-o ./cubemx/main.o -MD)
 I (..\Inc\main.h)(0x5D28F03D)
 I (..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_ll_lpuart.h)(0x5D01428E)
 I (..\Drivers\CMSIS\Device\ST\STM32L0xx\Include\stm32l0xx.h)(0x5D01428E)
@@ -27,7 +27,7 @@ I (..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_ll_gpio.h)(0x5D01428E)
 I (..\Inc\commPeriph.h)(0x5D0166A8)
 I (..\MDK-ARM\comport.h)(0x5D361360)
 I (..\MDK-ARM\globals.h)(0x5D2F7E6C)
-I (..\MDK-ARM\flash.h)(0x5D36686E)
+I (..\MDK-ARM\flash.h)(0x5D376D82)
 I (..\MDK-ARM\gps.h)(0x5D37667D)
 I (..\MDK-ARM\xbee.h)(0x5D2E15B8)
 I (..\MDK-ARM\timers.h)(0x5D2F98EC)
@@ -151,12 +151,12 @@ I (..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_ll_rtc.h)(0x5D2E86C8)
 I (..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_ll_spi.h)(0x5D01428E)
 I (..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_ll_usart.h)(0x5D01428E)
 I (..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_ll_gpio.h)(0x5D01428E)
-I (..\MDK-ARM\flash.h)(0x5D36686E)
+I (..\MDK-ARM\flash.h)(0x5D376D82)
 I (..\MDK-ARM\gps.h)(0x5D37667D)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5C418CEA)
 I (..\MDK-ARM\xbee.h)(0x5D2E15B8)
 F (.\comport.h)(0x5D361360)()
-F (.\flash.c)(0x5D374767)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../MDK-ARM -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/_CubeMX-IC:/Users/Collin/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/Collin/AppData/Local/Arm/Packs/Keil/STM32L0xx_DFP/2.0.1/Drivers/CMSIS/Device/ST/STM32L0xx/Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32L011xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DMSI_VALUE="2097000" -DHSI_VALUE="16000000" -DLSI_VALUE="37000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32L011xx-o ./cubemx/flash.o -MD)
+F (.\flash.c)(0x5D376E31)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../MDK-ARM -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/_CubeMX-IC:/Users/Collin/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/Collin/AppData/Local/Arm/Packs/Keil/STM32L0xx_DFP/2.0.1/Drivers/CMSIS/Device/ST/STM32L0xx/Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32L011xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DMSI_VALUE="2097000" -DHSI_VALUE="16000000" -DLSI_VALUE="37000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32L011xx-o ./cubemx/flash.o -MD)
 I (..\MDK-ARM\comport.h)(0x5D361360)
 I (..\MDK-ARM\globals.h)(0x5D2F7E6C)
 I (..\Inc\main.h)(0x5D28F03D)
@@ -182,10 +182,10 @@ I (..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_ll_rtc.h)(0x5D2E86C8)
 I (..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_ll_spi.h)(0x5D01428E)
 I (..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_ll_usart.h)(0x5D01428E)
 I (..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_ll_gpio.h)(0x5D01428E)
-I (..\MDK-ARM\flash.h)(0x5D36686E)
+I (..\MDK-ARM\flash.h)(0x5D376D82)
 I (..\MDK-ARM\gps.h)(0x5D37667D)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5C418CEA)
-F (.\flash.h)(0x5D36686E)()
+F (.\flash.h)(0x5D376D82)()
 F (.\xbee.c)(0x5D2E15B8)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../MDK-ARM -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/_CubeMX-IC:/Users/Collin/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/Collin/AppData/Local/Arm/Packs/Keil/STM32L0xx_DFP/2.0.1/Drivers/CMSIS/Device/ST/STM32L0xx/Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32L011xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DMSI_VALUE="2097000" -DHSI_VALUE="16000000" -DLSI_VALUE="37000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32L011xx-o ./cubemx/xbee.o -MD)
 I (..\MDK-ARM\comport.h)(0x5D361360)
 I (..\MDK-ARM\globals.h)(0x5D2F7E6C)
@@ -212,12 +212,12 @@ I (..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_ll_rtc.h)(0x5D2E86C8)
 I (..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_ll_spi.h)(0x5D01428E)
 I (..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_ll_usart.h)(0x5D01428E)
 I (..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_ll_gpio.h)(0x5D01428E)
-I (..\MDK-ARM\flash.h)(0x5D36686E)
+I (..\MDK-ARM\flash.h)(0x5D376D82)
 I (..\MDK-ARM\gps.h)(0x5D37667D)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5C418CEA)
 I (..\MDK-ARM\xbee.h)(0x5D2E15B8)
 F (.\xbee.h)(0x5D2E15B8)()
-F (.\gps.c)(0x5D376A4C)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../MDK-ARM -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/_CubeMX-IC:/Users/Collin/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/Collin/AppData/Local/Arm/Packs/Keil/STM32L0xx_DFP/2.0.1/Drivers/CMSIS/Device/ST/STM32L0xx/Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32L011xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DMSI_VALUE="2097000" -DHSI_VALUE="16000000" -DLSI_VALUE="37000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32L011xx-o ./cubemx/gps.o -MD)
+F (.\gps.c)(0x5D376C65)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../MDK-ARM -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/_CubeMX-IC:/Users/Collin/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/Collin/AppData/Local/Arm/Packs/Keil/STM32L0xx_DFP/2.0.1/Drivers/CMSIS/Device/ST/STM32L0xx/Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32L011xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DMSI_VALUE="2097000" -DHSI_VALUE="16000000" -DLSI_VALUE="37000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32L011xx-o ./cubemx/gps.o -MD)
 I (..\MDK-ARM\globals.h)(0x5D2F7E6C)
 I (..\Inc\main.h)(0x5D28F03D)
 I (..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_ll_lpuart.h)(0x5D01428E)
@@ -247,7 +247,7 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x5C418CEA)
 I (..\MDK-ARM\gps.h)(0x5D37667D)
 I (..\MDK-ARM\timers.h)(0x5D2F98EC)
 I (..\MDK-ARM\comport.h)(0x5D361360)
-I (..\MDK-ARM\flash.h)(0x5D36686E)
+I (..\MDK-ARM\flash.h)(0x5D376D82)
 F (.\gps.h)(0x5D37667D)()
 F (.\timers.c)(0x5D35EC5C)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../MDK-ARM -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/_CubeMX-IC:/Users/Collin/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/Collin/AppData/Local/Arm/Packs/Keil/STM32L0xx_DFP/2.0.1/Drivers/CMSIS/Device/ST/STM32L0xx/Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32L011xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DMSI_VALUE="2097000" -DHSI_VALUE="16000000" -DLSI_VALUE="37000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32L011xx-o ./cubemx/timers.o -MD)
 I (..\Inc\main.h)(0x5D28F03D)

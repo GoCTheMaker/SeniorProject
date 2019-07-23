@@ -201,6 +201,8 @@ int FLASH_saveFix( struct GPS_POS position){
 	data = &str3[0];
 	FLASH_writeWord( *data, startAddr+28);
 	
+	FLASH_Lock();
+	
 	return 0;
 }
 //---------------------------------------------------
