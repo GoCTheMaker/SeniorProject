@@ -116,6 +116,7 @@ int CC_ParseCommand()
 	else if(!strcmp(temp, CONFIGXBEE)) return CONFIGXBEE_N;
 	else if(!strcmp(temp, GETXBCFG)) return GETXBCFG_N;
 	else if(!strcmp(temp, GETSN)) return GETSN_N;
+	else if(!strcmp(temp, ERSFLASH)) return ERSFLASH_N;
 	
 	else return NO;	//Default for unknown command
 }
@@ -146,6 +147,9 @@ int CC_ExecuteCommand(int command)
 			break;
 		case GETSN_N:
 			return XB_GetSN();
+			break;
+		case ERSFLASH_N:
+			return FLASH_initDataStorage();
 			break;
 		//-------------------------------------------------------------
 		default:	//Unprogrammed response should be 0 but this is safer
@@ -269,7 +273,7 @@ int CC_SetProgram()
 	memset(str, 0, sizeof(str));//Clear string 
 	//Clear EEPROM region
 	FLASH_Unlock();
-	ret = FLASH_WriteData((unsigned char *)str, MAX_PGM_LEN, DATA_EEPROM_BASE);
+	ret = EEPROM_WriteData((unsigned char *)str, MAX_PGM_LEN, DATA_EEPROM_BASE);
 	FLASH_Lock();
 	
 	//Get data from buffer
@@ -284,7 +288,7 @@ int CC_SetProgram()
 	
 	//Program flash starting at EEPROM Base addr
 	FLASH_Unlock();
-	ret = FLASH_WriteData((unsigned char *)str, strlen(str), DATA_EEPROM_BASE);
+	ret = EEPROM_WriteData((unsigned char *)str, strlen(str), DATA_EEPROM_BASE);
 	FLASH_Lock();
 	return ret;
 }

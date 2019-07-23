@@ -400,10 +400,9 @@ Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M0+ --depend=.\c
 ubemx\startup_stm32l011xx.d -o.\cubemx\startup_stm32l011xx.o -I.\RTE\_CubeMX -I
 C:\Users\Collin\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include -IC:
 \Users\Collin\AppData\Local\Arm\Packs\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\De
-vice\ST\STM32L0xx\Include --predefine="__EVAL SETA 1" --predefine="__MICROLIB S
-ETA 1" --predefine="__UVISION_VERSION SETA 527" --predefine="_RTE_ SETA 1" --pr
-edefine="STM32L011xx SETA 1" --list=startup_stm32l011xx.lst startup_stm32l011xx
-.s
+vice\ST\STM32L0xx\Include --predefine="__MICROLIB SETA 1" --predefine="__UVISIO
+N_VERSION SETA 527" --predefine="_RTE_ SETA 1" --predefine="STM32L011xx SETA 1"
+ --list=startup_stm32l011xx.lst startup_stm32l011xx.s
 
 
 
@@ -843,4 +842,4 @@ Symbol: __main
       At line 164 in file startup_stm32l011xx.s
 Comment: __main used once
 2 symbols
-380 symbols in table
+379 symbols in table

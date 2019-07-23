@@ -17,6 +17,7 @@
 #define CONFIGXBEE	"CFG?"
 #define GETXBCFG	"GFG?"
 #define GETSN			"GSN?"
+#define ERSFLASH	"ERS?"
 
 #define	TIMESET_N	1
 #define	PROGRAM_N	2
@@ -25,6 +26,7 @@
 #define CONFIGXBEE_N 5
 #define GETXBCFG_N	6
 #define GETSN_N	7
+#define ERSFLASH_N 8
 
 //Program data
 #define MAX_PGM_LEN 50

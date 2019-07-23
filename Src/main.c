@@ -148,18 +148,28 @@ int main(void)
 	GPS_GPSCSHigh();
 	
 
+	char time[4] = {'2','2','1','0'};
+	char date[6] = {'0','7','2','2','1','9'};
 	char tLat[] = {'4','7','1','7','.','1','1','3','2','1','0'};
 	char tLong[] = {'0','0','8','3','3','9','1','5','1','8','7'};
 	struct GPS_POS pos;
-	strcpy( pos.lat, tLat);
-	strcpy( pos.longt, tLong);
+	strcpy(pos.time, time);
+	strcpy(pos.date, date);
+	strcpy(pos.lat, tLat);
+	strcpy(pos.longt, tLong);	
 	pos.NS = 'N';
 	pos.EW = 'E';
 	pos.acc = 2.1;
-	
-	
+
+	FLASH_initDataStorage();	
 	FLASH_saveFix( pos );
-	
+	FLASH_saveFix( pos );
+	FLASH_saveFix( pos );
+	FLASH_saveFix( pos );
+	FLASH_saveFix( pos );
+	FLASH_saveFix( pos );
+	FLASH_saveFix( pos );
+	FLASH_saveFix( pos );
 	
 
 

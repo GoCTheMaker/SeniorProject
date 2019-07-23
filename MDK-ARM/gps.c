@@ -409,10 +409,7 @@ struct GPS_POS GPS_getNMEA(void){
 						// Subtract 1 to adjust and strtok!
 						switch( strI ){
 							case 1:
-								// Time
-								position.time.Hours = ((charTok[0]-'0')*10) + (charTok[1]-'0');
-								position.time.Minutes = ((charTok[2]-'0')*10) + (charTok[3]-'0');
-								position.time.Seconds = ((charTok[4]-'0')*10) + (charTok[5]-'0');						
+								// Time					
 							break;
 							case 2:
 								// Latitude 
@@ -445,9 +442,6 @@ struct GPS_POS GPS_getNMEA(void){
 						charTok = strtok( NULL, ",");
 						// 9th field is the date
 						if( strI == 8){
-							position.date.Day 	= 0;
-							position.date.Month = 0;
-							position.date.Year 	= 0;
 						}
 					}					
 				}
