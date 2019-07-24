@@ -3,9 +3,9 @@
 <title>Static Call Graph - [.\CubeMX\senior-project.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\CubeMX\senior-project.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6120001: Last Updated: Tue Jul 23 21:44:18 2019
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6120001: Last Updated: Wed Jul 24 08:54:25 2019
 <BR><P>
-<H3>Maximum Stack Usage =        552 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        592 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
 main &rArr; GPS_subroutine &rArr; GPS_getNMEA &rArr; atoi &rArr; strtol &rArr; _strtoul
 <P>
@@ -53,7 +53,7 @@ Global Symbols
 <P><STRONG><a name="[1b]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l011xx.o(.text)
 </UL>
-<P><STRONG><a name="[ca]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[d3]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
 <P><STRONG><a name="[1c]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
@@ -63,15 +63,15 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[cb]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[d4]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[cc]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[d5]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[cd]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[d6]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[ce]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
+<P><STRONG><a name="[d7]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
 
-<P><STRONG><a name="[cf]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[d8]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
 
 <P><STRONG><a name="[0]"></a>Reset_Handler</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, startup_stm32l011xx.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l011xx.o(RESET)
@@ -132,20 +132,21 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = __aeabi_uidiv
 </UL>
 <BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPS_subroutine
-<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_InitTick
-<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_PLL_GetFreqDomain_SYS
-<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_USART_SetBaudRate
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_InitTick
+<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_PLL_GetFreqDomain_SYS
+<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_USART_SetBaudRate
 </UL>
 
 <P><STRONG><a name="[1f]"></a>__aeabi_uidivmod</STRONG> (Thumb, 44 bytes, Stack size 12 bytes, uidiv.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = __aeabi_uidivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_TIME_Init
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DATE_Init
+<BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_TIME_Init
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DATE_Init
+<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPS_subroutine
 <LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
 
-<P><STRONG><a name="[d0]"></a>__aeabi_idiv</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, idiv.o(.text), UNUSED)
+<P><STRONG><a name="[d9]"></a>__aeabi_idiv</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, idiv.o(.text), UNUSED)
 
 <P><STRONG><a name="[1e]"></a>__aeabi_idivmod</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, idiv.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = __aeabi_idivmod &rArr; __aeabi_uidivmod
@@ -161,7 +162,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
 <LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
 </UL>
-<BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_LPUART_SetBaudRate
+<BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_LPUART_SetBaudRate
 </UL>
 
 <P><STRONG><a name="[24]"></a>__aeabi_memset</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, memseta.o(.text))
@@ -170,9 +171,9 @@ Global Symbols
 <LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
 
-<P><STRONG><a name="[d1]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[da]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
-<P><STRONG><a name="[d2]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[db]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[23]"></a>__aeabi_memclr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, memseta.o(.text))
 <BR><BR>[Calls]<UL><LI><a href="#[24]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
@@ -182,11 +183,11 @@ Global Symbols
 
 <P><STRONG><a name="[3f]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPS_subroutine
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI1_Init
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI1_Init
 <LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPS_getNMEA
 </UL>
 
-<P><STRONG><a name="[d3]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[dc]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[25]"></a>_memset$wrapper</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, memseta.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[24]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
@@ -239,7 +240,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 </UL>
 
-<P><STRONG><a name="[d4]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, llshl.o(.text), UNUSED)
+<P><STRONG><a name="[dd]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, llshl.o(.text), UNUSED)
 
 <P><STRONG><a name="[21]"></a>__aeabi_llsr</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, llushr.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_llsr
@@ -247,7 +248,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 </UL>
 
-<P><STRONG><a name="[d5]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, llushr.o(.text), UNUSED)
+<P><STRONG><a name="[de]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, llushr.o(.text), UNUSED)
 
 <P><STRONG><a name="[28]"></a>strtol</STRONG> (Thumb, 108 bytes, Stack size 32 bytes, strtol.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = strtol &rArr; _strtoul
@@ -259,9 +260,9 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atoi
 </UL>
 
-<P><STRONG><a name="[d6]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, iusefp.o(.text), UNUSED)
+<P><STRONG><a name="[df]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, iusefp.o(.text), UNUSED)
 
-<P><STRONG><a name="[d7]"></a>_float_round</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, fepilogue.o(.text), UNUSED)
+<P><STRONG><a name="[e0]"></a>_float_round</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, fepilogue.o(.text), UNUSED)
 
 <P><STRONG><a name="[2a]"></a>_float_epilogue</STRONG> (Thumb, 114 bytes, Stack size 12 bytes, fepilogue.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = _float_epilogue
@@ -275,7 +276,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[d8]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[e1]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
 <P><STRONG><a name="[2b]"></a>__rt_ctype_table</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, ctype_o.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strtol
@@ -325,8 +326,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_initDataStorage
 </UL>
 
-<P><STRONG><a name="[ae]"></a>Error_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, main.o(.text.Error_Handler))
-<BR><BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<P><STRONG><a name="[b7]"></a>Error_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, main.o(.text.Error_Handler))
+<BR><BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
 <P><STRONG><a name="[38]"></a>FLASH_Lock</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, flash.o(.text.FLASH_Lock))
@@ -402,7 +403,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPS_subroutine
 </UL>
 
-<P><STRONG><a name="[c9]"></a>GPS_GPSDisable</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, gps.o(.text.GPS_GPSDisable))
+<P><STRONG><a name="[d2]"></a>GPS_GPSDisable</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, gps.o(.text.GPS_GPSDisable))
 <BR><BR>[Called By]<UL><LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -436,8 +437,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPS_subroutine
 </UL>
 
-<P><STRONG><a name="[45]"></a>GPS_subroutine</STRONG> (Thumb, 544 bytes, Stack size 168 bytes, gps.o(.text.GPS_subroutine))
-<BR><BR>[Stack]<UL><LI>Max Depth = 504<LI>Call Chain = GPS_subroutine &rArr; GPS_getNMEA &rArr; atoi &rArr; strtol &rArr; _strtoul
+<P><STRONG><a name="[45]"></a>GPS_subroutine</STRONG> (Thumb, 736 bytes, Stack size 208 bytes, gps.o(.text.GPS_subroutine))
+<BR><BR>[Stack]<UL><LI>Max Depth = 544<LI>Call Chain = GPS_subroutine &rArr; GPS_getNMEA &rArr; atoi &rArr; strtol &rArr; _strtoul
 </UL>
 <BR>[Calls]<UL><LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_saveFix
 <LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM2_delay
@@ -446,6 +447,7 @@ Global Symbols
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpgt
 <LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM2_initDelay_inline
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_setTimeDate
+<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_getTimeDate
 <LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPS_getNMEA
 <LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPS_UBX_enablePUBX_Position
 <LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPS_GPSEnable
@@ -453,6 +455,7 @@ Global Symbols
 <LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[24]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 <LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+<LI><a href="#[1f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 <LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidiv
 </UL>
 <BR>[Called By]<UL><LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -461,163 +464,163 @@ Global Symbols
 <P><STRONG><a name="[2]"></a>HardFault_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32l0xx_it.o(.text.HardFault_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l011xx.o(RESET)
 </UL>
-<P><STRONG><a name="[4f]"></a>LL_EXTI_Init</STRONG> (Thumb, 258 bytes, Stack size 32 bytes, stm32l0xx_ll_exti.o(.text.LL_EXTI_Init))
+<P><STRONG><a name="[50]"></a>LL_EXTI_Init</STRONG> (Thumb, 258 bytes, Stack size 32 bytes, stm32l0xx_ll_exti.o(.text.LL_EXTI_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = LL_EXTI_Init &rArr; LL_EXTI_EnableRisingTrig_0_31
 </UL>
-<BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_EXTI_EnableRisingTrig_0_31
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_EXTI_EnableIT_0_31
-<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_EXTI_EnableFallingTrig_0_31
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_EXTI_EnableEvent_0_31
-<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_EXTI_DisableRisingTrig_0_31
-<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_EXTI_DisableIT_0_31
-<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_EXTI_DisableFallingTrig_0_31
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_EXTI_DisableEvent_0_31
+<BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_EXTI_EnableRisingTrig_0_31
+<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_EXTI_EnableIT_0_31
+<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_EXTI_EnableFallingTrig_0_31
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_EXTI_EnableEvent_0_31
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_EXTI_DisableRisingTrig_0_31
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_EXTI_DisableIT_0_31
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_EXTI_DisableFallingTrig_0_31
+<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_EXTI_DisableEvent_0_31
 </UL>
-<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
+<BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 </UL>
 
-<P><STRONG><a name="[58]"></a>LL_GPIO_Init</STRONG> (Thumb, 222 bytes, Stack size 40 bytes, stm32l0xx_ll_gpio.o(.text.LL_GPIO_Init))
+<P><STRONG><a name="[59]"></a>LL_GPIO_Init</STRONG> (Thumb, 222 bytes, Stack size 40 bytes, stm32l0xx_ll_gpio.o(.text.LL_GPIO_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = LL_GPIO_Init &rArr; LL_GPIO_SetPinSpeed
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_SetPinSpeed
-<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_SetPinPull
-<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_SetPinOutputType
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_SetPinMode
-<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_SetAFPin_8_15
-<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_SetAFPin_0_7
+<BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_SetPinSpeed
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_SetPinPull
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_SetPinOutputType
+<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_SetPinMode
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_SetAFPin_8_15
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_SetAFPin_0_7
 </UL>
-<BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART2_UART_Init
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI1_Init
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_LPUART1_UART_Init
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
+<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART2_UART_Init
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI1_Init
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_LPUART1_UART_Init
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 </UL>
 
-<P><STRONG><a name="[5f]"></a>LL_Init1msTick</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, stm32l0xx_ll_utils.o(.text.LL_Init1msTick))
+<P><STRONG><a name="[60]"></a>LL_Init1msTick</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, stm32l0xx_ll_utils.o(.text.LL_Init1msTick))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = LL_Init1msTick &rArr; LL_InitTick &rArr; __aeabi_uidiv
 </UL>
-<BR>[Calls]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_InitTick
+<BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_InitTick
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[61]"></a>LL_LPUART_Init</STRONG> (Thumb, 148 bytes, Stack size 32 bytes, stm32l0xx_ll_lpuart.o(.text.LL_LPUART_Init))
+<P><STRONG><a name="[62]"></a>LL_LPUART_Init</STRONG> (Thumb, 148 bytes, Stack size 32 bytes, stm32l0xx_ll_lpuart.o(.text.LL_LPUART_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = LL_LPUART_Init &rArr; LL_LPUART_SetBaudRate &rArr; __aeabi_uldivmod &rArr; __aeabi_llsr
 </UL>
-<BR>[Calls]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_LPUART_SetStopBitsLength
-<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_LPUART_SetHWFlowCtrl
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_LPUART_SetBaudRate
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_LPUART_IsEnabled
-<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetLPUARTClockFreq
+<BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_LPUART_SetStopBitsLength
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_LPUART_SetHWFlowCtrl
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_LPUART_SetBaudRate
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_LPUART_IsEnabled
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetLPUARTClockFreq
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_LPUART1_UART_Init
+<BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_LPUART1_UART_Init
 </UL>
 
-<P><STRONG><a name="[65]"></a>LL_RCC_GetLPUARTClockFreq</STRONG> (Thumb, 164 bytes, Stack size 24 bytes, stm32l0xx_ll_rcc.o(.text.LL_RCC_GetLPUARTClockFreq))
+<P><STRONG><a name="[66]"></a>LL_RCC_GetLPUARTClockFreq</STRONG> (Thumb, 164 bytes, Stack size 24 bytes, stm32l0xx_ll_rcc.o(.text.LL_RCC_GetLPUARTClockFreq))
 <BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = LL_RCC_GetLPUARTClockFreq &rArr; RCC_GetSystemClockFreq &rArr; RCC_PLL_GetFreqDomain_SYS &rArr; __aeabi_uidiv
 </UL>
-<BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetSystemClockFreq
-<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetPCLK1ClockFreq
-<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetHCLKClockFreq
-<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_LSE_IsReady
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_IsActiveFlag_HSIDIV
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_HSI_IsReady
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetLPUARTClockSource
+<BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetSystemClockFreq
+<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetPCLK1ClockFreq
+<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetHCLKClockFreq
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_LSE_IsReady
+<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_IsActiveFlag_HSIDIV
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_HSI_IsReady
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetLPUARTClockSource
 </UL>
-<BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_LPUART_Init
+<BR>[Called By]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_LPUART_Init
 </UL>
 
-<P><STRONG><a name="[6e]"></a>LL_RCC_GetUSARTClockFreq</STRONG> (Thumb, 164 bytes, Stack size 24 bytes, stm32l0xx_ll_rcc.o(.text.LL_RCC_GetUSARTClockFreq))
+<P><STRONG><a name="[6f]"></a>LL_RCC_GetUSARTClockFreq</STRONG> (Thumb, 164 bytes, Stack size 24 bytes, stm32l0xx_ll_rcc.o(.text.LL_RCC_GetUSARTClockFreq))
 <BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = LL_RCC_GetUSARTClockFreq &rArr; RCC_GetSystemClockFreq &rArr; RCC_PLL_GetFreqDomain_SYS &rArr; __aeabi_uidiv
 </UL>
-<BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetSystemClockFreq
-<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetPCLK1ClockFreq
-<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetHCLKClockFreq
-<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_LSE_IsReady
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_IsActiveFlag_HSIDIV
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_HSI_IsReady
-<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetUSARTClockSource
+<BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetSystemClockFreq
+<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetPCLK1ClockFreq
+<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetHCLKClockFreq
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_LSE_IsReady
+<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_IsActiveFlag_HSIDIV
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_HSI_IsReady
+<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetUSARTClockSource
 </UL>
-<BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_USART_Init
+<BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_USART_Init
 </UL>
 
-<P><STRONG><a name="[70]"></a>LL_RTC_DATE_Init</STRONG> (Thumb, 272 bytes, Stack size 72 bytes, stm32l0xx_ll_rtc.o(.text.LL_RTC_DATE_Init))
+<P><STRONG><a name="[71]"></a>LL_RTC_DATE_Init</STRONG> (Thumb, 272 bytes, Stack size 72 bytes, stm32l0xx_ll_rtc.o(.text.LL_RTC_DATE_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = LL_RTC_DATE_Init &rArr; LL_RTC_DATE_Config
 </UL>
-<BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_WaitForSynchro
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_EnterInitMode
-<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_IsShadowRegBypassEnabled
-<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_EnableWriteProtection
-<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DisableWriteProtection
-<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DisableInitMode
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DATE_Config
+<BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_WaitForSynchro
+<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_EnterInitMode
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_IsShadowRegBypassEnabled
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_EnableWriteProtection
+<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DisableWriteProtection
+<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DisableInitMode
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DATE_Config
 <LI><a href="#[1f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_setTimeDate
 </UL>
 
-<P><STRONG><a name="[72]"></a>LL_RTC_EnterInitMode</STRONG> (Thumb, 138 bytes, Stack size 32 bytes, stm32l0xx_ll_rtc.o(.text.LL_RTC_EnterInitMode))
+<P><STRONG><a name="[73]"></a>LL_RTC_EnterInitMode</STRONG> (Thumb, 138 bytes, Stack size 32 bytes, stm32l0xx_ll_rtc.o(.text.LL_RTC_EnterInitMode))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = LL_RTC_EnterInitMode &rArr; LL_RTC_IsActiveFlag_INIT
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_SYSTICK_IsActiveCounterFlag
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_IsActiveFlag_INIT
-<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_EnableInitMode
+<BR>[Calls]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_SYSTICK_IsActiveCounterFlag
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_IsActiveFlag_INIT
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_EnableInitMode
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_TIME_Init
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DATE_Init
+<BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_TIME_Init
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DATE_Init
 </UL>
 
-<P><STRONG><a name="[7b]"></a>LL_RTC_TIME_Init</STRONG> (Thumb, 284 bytes, Stack size 72 bytes, stm32l0xx_ll_rtc.o(.text.LL_RTC_TIME_Init))
+<P><STRONG><a name="[7c]"></a>LL_RTC_TIME_Init</STRONG> (Thumb, 284 bytes, Stack size 72 bytes, stm32l0xx_ll_rtc.o(.text.LL_RTC_TIME_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = LL_RTC_TIME_Init &rArr; LL_RTC_TIME_Config
 </UL>
-<BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_WaitForSynchro
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_EnterInitMode
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_TIME_Config
-<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_IsShadowRegBypassEnabled
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_GetHourFormat
-<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_EnableWriteProtection
-<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DisableWriteProtection
-<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DisableInitMode
+<BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_WaitForSynchro
+<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_EnterInitMode
+<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_TIME_Config
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_IsShadowRegBypassEnabled
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_GetHourFormat
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_EnableWriteProtection
+<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DisableWriteProtection
+<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DisableInitMode
 <LI><a href="#[1f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_setTimeDate
 </UL>
 
-<P><STRONG><a name="[76]"></a>LL_RTC_WaitForSynchro</STRONG> (Thumb, 240 bytes, Stack size 48 bytes, stm32l0xx_ll_rtc.o(.text.LL_RTC_WaitForSynchro))
+<P><STRONG><a name="[77]"></a>LL_RTC_WaitForSynchro</STRONG> (Thumb, 240 bytes, Stack size 48 bytes, stm32l0xx_ll_rtc.o(.text.LL_RTC_WaitForSynchro))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = LL_RTC_WaitForSynchro &rArr; LL_RTC_IsActiveFlag_RS
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_SYSTICK_IsActiveCounterFlag
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_IsActiveFlag_RS
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_ClearFlag_RS
+<BR>[Calls]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_SYSTICK_IsActiveCounterFlag
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_IsActiveFlag_RS
+<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_ClearFlag_RS
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_TIME_Init
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DATE_Init
+<BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_TIME_Init
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DATE_Init
 </UL>
 
-<P><STRONG><a name="[80]"></a>LL_SPI_Init</STRONG> (Thumb, 148 bytes, Stack size 32 bytes, stm32l0xx_ll_spi.o(.text.LL_SPI_Init))
+<P><STRONG><a name="[81]"></a>LL_SPI_Init</STRONG> (Thumb, 148 bytes, Stack size 32 bytes, stm32l0xx_ll_spi.o(.text.LL_SPI_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = LL_SPI_Init &rArr; LL_SPI_SetCRCPolynomial
 </UL>
-<BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_SPI_SetCRCPolynomial
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_SPI_IsEnabled
+<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_SPI_SetCRCPolynomial
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_SPI_IsEnabled
 </UL>
-<BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI1_Init
+<BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI1_Init
 </UL>
 
-<P><STRONG><a name="[c1]"></a>LL_SetSystemCoreClock</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, stm32l0xx_ll_utils.o(.text.LL_SetSystemCoreClock))
+<P><STRONG><a name="[ca]"></a>LL_SetSystemCoreClock</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, stm32l0xx_ll_utils.o(.text.LL_SetSystemCoreClock))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_SetSystemCoreClock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[83]"></a>LL_USART_Init</STRONG> (Thumb, 176 bytes, Stack size 40 bytes, stm32l0xx_ll_usart.o(.text.LL_USART_Init))
+<P><STRONG><a name="[84]"></a>LL_USART_Init</STRONG> (Thumb, 176 bytes, Stack size 40 bytes, stm32l0xx_ll_usart.o(.text.LL_USART_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 116<LI>Call Chain = LL_USART_Init &rArr; LL_RCC_GetUSARTClockFreq &rArr; RCC_GetSystemClockFreq &rArr; RCC_PLL_GetFreqDomain_SYS &rArr; __aeabi_uidiv
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetUSARTClockFreq
-<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_USART_SetStopBitsLength
-<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_USART_SetHWFlowCtrl
-<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_USART_SetBaudRate
-<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_USART_IsEnabled
+<BR>[Calls]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetUSARTClockFreq
+<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_USART_SetStopBitsLength
+<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_USART_SetHWFlowCtrl
+<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_USART_SetBaudRate
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_USART_IsEnabled
 </UL>
-<BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART2_UART_Init
+<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART2_UART_Init
 </UL>
 
 <P><STRONG><a name="[18]"></a>LPUART1_IRQHandler</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, stm32l0xx_it.o(.text.LPUART1_IRQHandler))
@@ -629,60 +632,75 @@ Global Symbols
 <P><STRONG><a name="[4]"></a>PendSV_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32l0xx_it.o(.text.PendSV_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l011xx.o(RESET)
 </UL>
-<P><STRONG><a name="[6c]"></a>RCC_GetHCLKClockFreq</STRONG> (Thumb, 40 bytes, Stack size 24 bytes, stm32l0xx_ll_rcc.o(.text.RCC_GetHCLKClockFreq))
+<P><STRONG><a name="[6d]"></a>RCC_GetHCLKClockFreq</STRONG> (Thumb, 40 bytes, Stack size 24 bytes, stm32l0xx_ll_rcc.o(.text.RCC_GetHCLKClockFreq))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = RCC_GetHCLKClockFreq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetAHBPrescaler
+<BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetAHBPrescaler
 </UL>
-<BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetLPUARTClockFreq
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetUSARTClockFreq
+<BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetLPUARTClockFreq
+<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetUSARTClockFreq
 </UL>
 
-<P><STRONG><a name="[6d]"></a>RCC_GetPCLK1ClockFreq</STRONG> (Thumb, 40 bytes, Stack size 24 bytes, stm32l0xx_ll_rcc.o(.text.RCC_GetPCLK1ClockFreq))
+<P><STRONG><a name="[6e]"></a>RCC_GetPCLK1ClockFreq</STRONG> (Thumb, 40 bytes, Stack size 24 bytes, stm32l0xx_ll_rcc.o(.text.RCC_GetPCLK1ClockFreq))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = RCC_GetPCLK1ClockFreq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetAPB1Prescaler
+<BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetAPB1Prescaler
 </UL>
-<BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetLPUARTClockFreq
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetUSARTClockFreq
+<BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetLPUARTClockFreq
+<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetUSARTClockFreq
 </UL>
 
-<P><STRONG><a name="[68]"></a>RCC_GetSystemClockFreq</STRONG> (Thumb, 136 bytes, Stack size 16 bytes, stm32l0xx_ll_rcc.o(.text.RCC_GetSystemClockFreq))
+<P><STRONG><a name="[69]"></a>RCC_GetSystemClockFreq</STRONG> (Thumb, 136 bytes, Stack size 16 bytes, stm32l0xx_ll_rcc.o(.text.RCC_GetSystemClockFreq))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = RCC_GetSystemClockFreq &rArr; RCC_PLL_GetFreqDomain_SYS &rArr; __aeabi_uidiv
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_PLL_GetFreqDomain_SYS
-<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_MSI_GetRange
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_IsActiveFlag_HSIDIV
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetSysClkSource
+<BR>[Calls]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_PLL_GetFreqDomain_SYS
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_MSI_GetRange
+<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_IsActiveFlag_HSIDIV
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetSysClkSource
 </UL>
-<BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetLPUARTClockFreq
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetUSARTClockFreq
+<BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetLPUARTClockFreq
+<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetUSARTClockFreq
 </UL>
 
-<P><STRONG><a name="[a0]"></a>RCC_PLL_GetFreqDomain_SYS</STRONG> (Thumb, 104 bytes, Stack size 24 bytes, stm32l0xx_ll_rcc.o(.text.RCC_PLL_GetFreqDomain_SYS))
+<P><STRONG><a name="[a1]"></a>RCC_PLL_GetFreqDomain_SYS</STRONG> (Thumb, 104 bytes, Stack size 24 bytes, stm32l0xx_ll_rcc.o(.text.RCC_PLL_GetFreqDomain_SYS))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = RCC_PLL_GetFreqDomain_SYS &rArr; __aeabi_uidiv
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_PLL_GetMultiplicator
-<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_PLL_GetMainSource
-<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_PLL_GetDivider
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_IsActiveFlag_HSIDIV
+<BR>[Calls]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_PLL_GetMultiplicator
+<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_PLL_GetMainSource
+<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_PLL_GetDivider
+<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_IsActiveFlag_HSIDIV
 <LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidiv
 </UL>
-<BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetSystemClockFreq
+<BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetSystemClockFreq
 </UL>
 
 <P><STRONG><a name="[8]"></a>RTC_IRQHandler</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, stm32l0xx_it.o(.text.RTC_IRQHandler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l011xx.o(RESET)
 </UL>
-<P><STRONG><a name="[a4]"></a>RTC_initAlarm</STRONG> (Thumb, 104 bytes, Stack size 16 bytes, timers.o(.text.RTC_initAlarm))
+<P><STRONG><a name="[4f]"></a>RTC_getTimeDate</STRONG> (Thumb, 108 bytes, Stack size 32 bytes, timers.o(.text.RTC_getTimeDate))
+<BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = RTC_getTimeDate &rArr; LL_RTC_TIME_GetSecond
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_TIME_GetSecond
+<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_TIME_GetMinute
+<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_TIME_GetHour
+<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_TIME_GetFormat
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DATE_GetYear
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DATE_GetWeekDay
+<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DATE_GetMonth
+<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DATE_GetDay
+</UL>
+<BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPS_subroutine
+</UL>
+
+<P><STRONG><a name="[ad]"></a>RTC_initAlarm</STRONG> (Thumb, 104 bytes, Stack size 16 bytes, timers.o(.text.RTC_initAlarm))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = RTC_initAlarm &rArr; LL_RTC_ALMA_SetSecond
 </UL>
-<BR>[Calls]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_EnableWriteProtection
-<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DisableWriteProtection
-<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_ALMA_SetSecond
-<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_ALMA_SetMask
-<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_ALMA_Enable
-<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_ALMA_Disable
+<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_EnableWriteProtection
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DisableWriteProtection
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_ALMA_SetSecond
+<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_ALMA_SetMask
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_ALMA_Enable
+<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_ALMA_Disable
 </UL>
 <BR>[Called By]<UL><LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -690,8 +708,8 @@ Global Symbols
 <P><STRONG><a name="[4e]"></a>RTC_setTimeDate</STRONG> (Thumb, 80 bytes, Stack size 64 bytes, timers.o(.text.RTC_setTimeDate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 200<LI>Call Chain = RTC_setTimeDate &rArr; LL_RTC_TIME_Init &rArr; LL_RTC_TIME_Config
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_TIME_Init
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DATE_Init
+<BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_TIME_Init
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DATE_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPS_subroutine
 </UL>
@@ -702,35 +720,35 @@ Global Symbols
 <P><STRONG><a name="[5]"></a>SysTick_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32l0xx_it.o(.text.SysTick_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l011xx.o(RESET)
 </UL>
-<P><STRONG><a name="[ab]"></a>SystemClock_Config</STRONG> (Thumb, 200 bytes, Stack size 24 bytes, main.o(.text.SystemClock_Config))
+<P><STRONG><a name="[b4]"></a>SystemClock_Config</STRONG> (Thumb, 200 bytes, Stack size 24 bytes, main.o(.text.SystemClock_Config))
 <BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = SystemClock_Config &rArr; LL_Init1msTick &rArr; LL_InitTick &rArr; __aeabi_uidiv
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_SetSystemCoreClock
-<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_Init1msTick
-<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
-<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_SYSTICK_SetClkSource
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_SetUSARTClockSource
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_SetSysClkSource
-<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_SetRTCClockSource
-<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_SetLPUARTClockSource
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_SetAPB2Prescaler
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_SetAPB1Prescaler
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_SetAHBPrescaler
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_ReleaseBackupDomainReset
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_MSI_SetRange
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_MSI_SetCalibTrimming
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_MSI_IsReady
-<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_MSI_Enable
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_LSE_SetDriveCapability
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_LSE_IsReady
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_LSE_Enable
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetSysClkSource
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_ForceBackupDomainReset
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_EnableRTC
-<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_PWR_SetRegulVoltageScaling
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_PWR_EnableBkUpAccess
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_FLASH_SetLatency
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_FLASH_GetLatency
+<BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_SetSystemCoreClock
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_Init1msTick
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_SYSTICK_SetClkSource
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_SetUSARTClockSource
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_SetSysClkSource
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_SetRTCClockSource
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_SetLPUARTClockSource
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_SetAPB2Prescaler
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_SetAPB1Prescaler
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_SetAHBPrescaler
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_ReleaseBackupDomainReset
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_MSI_SetRange
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_MSI_SetCalibTrimming
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_MSI_IsReady
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_MSI_Enable
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_LSE_SetDriveCapability
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_LSE_IsReady
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_LSE_Enable
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetSysClkSource
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_ForceBackupDomainReset
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_EnableRTC
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_PWR_SetRegulVoltageScaling
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_PWR_EnableBkUpAccess
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_FLASH_SetLatency
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_FLASH_GetLatency
 </UL>
 <BR>[Called By]<UL><LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -747,7 +765,7 @@ Global Symbols
 <LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPS_subroutine
 </UL>
 
-<P><STRONG><a name="[c7]"></a>TIM2_init</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, timers.o(.text.TIM2_init))
+<P><STRONG><a name="[d0]"></a>TIM2_init</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, timers.o(.text.TIM2_init))
 <BR><BR>[Called By]<UL><LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -757,36 +775,36 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPS_subroutine
 </UL>
 
-<P><STRONG><a name="[17]"></a>USART2_IRQHandler</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, stm32l0xx_it.o(.text.USART2_IRQHandler))
+<P><STRONG><a name="[17]"></a>USART2_IRQHandler</STRONG> (Thumb, 76 bytes, Stack size 0 bytes, stm32l0xx_it.o(.text.USART2_IRQHandler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l011xx.o(RESET)
 </UL>
-<P><STRONG><a name="[c8]"></a>XB_DisableXbee</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, xbee.o(.text.XB_DisableXbee))
+<P><STRONG><a name="[d1]"></a>XB_DisableXbee</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, xbee.o(.text.XB_DisableXbee))
 <BR><BR>[Called By]<UL><LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[19]"></a>main</STRONG> (Thumb, 160 bytes, Stack size 48 bytes, main.o(.text.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 552<LI>Call Chain = main &rArr; GPS_subroutine &rArr; GPS_getNMEA &rArr; atoi &rArr; strtol &rArr; _strtoul
+<BR><BR>[Stack]<UL><LI>Max Depth = 592<LI>Call Chain = main &rArr; GPS_subroutine &rArr; GPS_getNMEA &rArr; atoi &rArr; strtol &rArr; _strtoul
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;XB_DisableXbee
-<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM2_init
+<BR>[Calls]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;XB_DisableXbee
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM2_init
 <LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM2_delay
-<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
-<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_initAlarm
+<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_initAlarm
 <LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPS_subroutine
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPS_GPSDisable
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPS_GPSDisable
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPS_GPSCSHigh
 <LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_initDataStorage
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART2_UART_Init
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI1_Init
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_RTC_Init
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_LPUART1_UART_Init
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
-<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_USART_Enable
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_USART_Disable
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_LPUART_Enable
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_LPUART_Disable
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_APB2_GRP1_EnableClock
-<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_APB1_GRP1_EnableClock
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART2_UART_Init
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI1_Init
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_RTC_Init
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_LPUART1_UART_Init
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_USART_Enable
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_USART_Disable
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_LPUART_Enable
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_LPUART_Disable
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_APB2_GRP1_EnableClock
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_APB1_GRP1_EnableClock
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
@@ -796,314 +814,314 @@ Global Symbols
 <LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atoi
 </UL>
 
-<P><STRONG><a name="[d9]"></a>__rt_errno_addr</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, errno.o(i.__aeabi_errno_addr), UNUSED)
+<P><STRONG><a name="[e2]"></a>__rt_errno_addr</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, errno.o(i.__aeabi_errno_addr), UNUSED)
 
-<P><STRONG><a name="[da]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<P><STRONG><a name="[e3]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[db]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+<P><STRONG><a name="[e4]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
 
-<P><STRONG><a name="[dc]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P><STRONG><a name="[e5]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 <P>
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[8f]"></a>LL_APB1_GRP1_EnableClock</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, main.o(.text.LL_APB1_GRP1_EnableClock))
+<P><STRONG><a name="[90]"></a>LL_APB1_GRP1_EnableClock</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, main.o(.text.LL_APB1_GRP1_EnableClock))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = LL_APB1_GRP1_EnableClock
 </UL>
 <BR>[Called By]<UL><LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART2_UART_Init
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_LPUART1_UART_Init
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART2_UART_Init
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_LPUART1_UART_Init
 </UL>
 
-<P><STRONG><a name="[97]"></a>LL_APB2_GRP1_EnableClock</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, main.o(.text.LL_APB2_GRP1_EnableClock))
+<P><STRONG><a name="[98]"></a>LL_APB2_GRP1_EnableClock</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, main.o(.text.LL_APB2_GRP1_EnableClock))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = LL_APB2_GRP1_EnableClock
 </UL>
 <BR>[Called By]<UL><LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI1_Init
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI1_Init
 </UL>
 
-<P><STRONG><a name="[ad]"></a>LL_FLASH_GetLatency</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, main.o(.text.LL_FLASH_GetLatency))
-<BR><BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<P><STRONG><a name="[b6]"></a>LL_FLASH_GetLatency</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, main.o(.text.LL_FLASH_GetLatency))
+<BR><BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[ac]"></a>LL_FLASH_SetLatency</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, main.o(.text.LL_FLASH_SetLatency))
+<P><STRONG><a name="[b5]"></a>LL_FLASH_SetLatency</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, main.o(.text.LL_FLASH_SetLatency))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_FLASH_SetLatency
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[8a]"></a>LL_GPIO_ResetOutputPin</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, main.o(.text.LL_GPIO_ResetOutputPin))
+<P><STRONG><a name="[8b]"></a>LL_GPIO_ResetOutputPin</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, main.o(.text.LL_GPIO_ResetOutputPin))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = LL_GPIO_ResetOutputPin
 </UL>
-<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
+<BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 </UL>
 
-<P><STRONG><a name="[8d]"></a>LL_GPIO_SetPinMode</STRONG> (Thumb, 50 bytes, Stack size 40 bytes, main.o(.text.LL_GPIO_SetPinMode))
+<P><STRONG><a name="[8e]"></a>LL_GPIO_SetPinMode</STRONG> (Thumb, 50 bytes, Stack size 40 bytes, main.o(.text.LL_GPIO_SetPinMode))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = LL_GPIO_SetPinMode
 </UL>
-<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
+<BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 </UL>
 
-<P><STRONG><a name="[8c]"></a>LL_GPIO_SetPinPull</STRONG> (Thumb, 50 bytes, Stack size 40 bytes, main.o(.text.LL_GPIO_SetPinPull))
+<P><STRONG><a name="[8d]"></a>LL_GPIO_SetPinPull</STRONG> (Thumb, 50 bytes, Stack size 40 bytes, main.o(.text.LL_GPIO_SetPinPull))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = LL_GPIO_SetPinPull
 </UL>
-<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
+<BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 </UL>
 
-<P><STRONG><a name="[89]"></a>LL_IOP_GRP1_EnableClock</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, main.o(.text.LL_IOP_GRP1_EnableClock))
+<P><STRONG><a name="[8a]"></a>LL_IOP_GRP1_EnableClock</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, main.o(.text.LL_IOP_GRP1_EnableClock))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = LL_IOP_GRP1_EnableClock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART2_UART_Init
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI1_Init
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_LPUART1_UART_Init
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
+<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART2_UART_Init
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI1_Init
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_LPUART1_UART_Init
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 </UL>
 
-<P><STRONG><a name="[c5]"></a>LL_LPUART_Disable</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, main.o(.text.LL_LPUART_Disable))
+<P><STRONG><a name="[ce]"></a>LL_LPUART_Disable</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, main.o(.text.LL_LPUART_Disable))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_LPUART_Disable
 </UL>
 <BR>[Called By]<UL><LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[c6]"></a>LL_LPUART_Enable</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, main.o(.text.LL_LPUART_Enable))
+<P><STRONG><a name="[cf]"></a>LL_LPUART_Enable</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, main.o(.text.LL_LPUART_Enable))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_LPUART_Enable
 </UL>
 <BR>[Called By]<UL><LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[b4]"></a>LL_PWR_EnableBkUpAccess</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, main.o(.text.LL_PWR_EnableBkUpAccess))
-<BR><BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<P><STRONG><a name="[bd]"></a>LL_PWR_EnableBkUpAccess</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, main.o(.text.LL_PWR_EnableBkUpAccess))
+<BR><BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[af]"></a>LL_PWR_SetRegulVoltageScaling</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, main.o(.text.LL_PWR_SetRegulVoltageScaling))
+<P><STRONG><a name="[b8]"></a>LL_PWR_SetRegulVoltageScaling</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, main.o(.text.LL_PWR_SetRegulVoltageScaling))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_PWR_SetRegulVoltageScaling
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[93]"></a>LL_RCC_EnableRTC</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, main.o(.text.LL_RCC_EnableRTC))
-<BR><BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_RTC_Init
+<P><STRONG><a name="[94]"></a>LL_RCC_EnableRTC</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, main.o(.text.LL_RCC_EnableRTC))
+<BR><BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_RTC_Init
 </UL>
 
-<P><STRONG><a name="[b5]"></a>LL_RCC_ForceBackupDomainReset</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, main.o(.text.LL_RCC_ForceBackupDomainReset))
-<BR><BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<P><STRONG><a name="[be]"></a>LL_RCC_ForceBackupDomainReset</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, main.o(.text.LL_RCC_ForceBackupDomainReset))
+<BR><BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[bf]"></a>LL_RCC_GetSysClkSource</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, main.o(.text.LL_RCC_GetSysClkSource))
-<BR><BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<P><STRONG><a name="[c8]"></a>LL_RCC_GetSysClkSource</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, main.o(.text.LL_RCC_GetSysClkSource))
+<BR><BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[b8]"></a>LL_RCC_LSE_Enable</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, main.o(.text.LL_RCC_LSE_Enable))
-<BR><BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<P><STRONG><a name="[c1]"></a>LL_RCC_LSE_Enable</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, main.o(.text.LL_RCC_LSE_Enable))
+<BR><BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[b9]"></a>LL_RCC_LSE_IsReady</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, main.o(.text.LL_RCC_LSE_IsReady))
-<BR><BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<P><STRONG><a name="[c2]"></a>LL_RCC_LSE_IsReady</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, main.o(.text.LL_RCC_LSE_IsReady))
+<BR><BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[b7]"></a>LL_RCC_LSE_SetDriveCapability</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, main.o(.text.LL_RCC_LSE_SetDriveCapability))
+<P><STRONG><a name="[c0]"></a>LL_RCC_LSE_SetDriveCapability</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, main.o(.text.LL_RCC_LSE_SetDriveCapability))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_RCC_LSE_SetDriveCapability
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[b0]"></a>LL_RCC_MSI_Enable</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, main.o(.text.LL_RCC_MSI_Enable))
-<BR><BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<P><STRONG><a name="[b9]"></a>LL_RCC_MSI_Enable</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, main.o(.text.LL_RCC_MSI_Enable))
+<BR><BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[b1]"></a>LL_RCC_MSI_IsReady</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, main.o(.text.LL_RCC_MSI_IsReady))
-<BR><BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<P><STRONG><a name="[ba]"></a>LL_RCC_MSI_IsReady</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, main.o(.text.LL_RCC_MSI_IsReady))
+<BR><BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[b3]"></a>LL_RCC_MSI_SetCalibTrimming</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, main.o(.text.LL_RCC_MSI_SetCalibTrimming))
+<P><STRONG><a name="[bc]"></a>LL_RCC_MSI_SetCalibTrimming</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, main.o(.text.LL_RCC_MSI_SetCalibTrimming))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_RCC_MSI_SetCalibTrimming
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[b2]"></a>LL_RCC_MSI_SetRange</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, main.o(.text.LL_RCC_MSI_SetRange))
+<P><STRONG><a name="[bb]"></a>LL_RCC_MSI_SetRange</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, main.o(.text.LL_RCC_MSI_SetRange))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_RCC_MSI_SetRange
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[b6]"></a>LL_RCC_ReleaseBackupDomainReset</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, main.o(.text.LL_RCC_ReleaseBackupDomainReset))
-<BR><BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<P><STRONG><a name="[bf]"></a>LL_RCC_ReleaseBackupDomainReset</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, main.o(.text.LL_RCC_ReleaseBackupDomainReset))
+<BR><BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[bb]"></a>LL_RCC_SetAHBPrescaler</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, main.o(.text.LL_RCC_SetAHBPrescaler))
+<P><STRONG><a name="[c4]"></a>LL_RCC_SetAHBPrescaler</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, main.o(.text.LL_RCC_SetAHBPrescaler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_RCC_SetAHBPrescaler
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[bc]"></a>LL_RCC_SetAPB1Prescaler</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, main.o(.text.LL_RCC_SetAPB1Prescaler))
+<P><STRONG><a name="[c5]"></a>LL_RCC_SetAPB1Prescaler</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, main.o(.text.LL_RCC_SetAPB1Prescaler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_RCC_SetAPB1Prescaler
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[bd]"></a>LL_RCC_SetAPB2Prescaler</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, main.o(.text.LL_RCC_SetAPB2Prescaler))
+<P><STRONG><a name="[c6]"></a>LL_RCC_SetAPB2Prescaler</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, main.o(.text.LL_RCC_SetAPB2Prescaler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_RCC_SetAPB2Prescaler
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[c3]"></a>LL_RCC_SetLPUARTClockSource</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, main.o(.text.LL_RCC_SetLPUARTClockSource))
+<P><STRONG><a name="[cc]"></a>LL_RCC_SetLPUARTClockSource</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, main.o(.text.LL_RCC_SetLPUARTClockSource))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_RCC_SetLPUARTClockSource
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[ba]"></a>LL_RCC_SetRTCClockSource</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, main.o(.text.LL_RCC_SetRTCClockSource))
+<P><STRONG><a name="[c3]"></a>LL_RCC_SetRTCClockSource</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, main.o(.text.LL_RCC_SetRTCClockSource))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_RCC_SetRTCClockSource
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[be]"></a>LL_RCC_SetSysClkSource</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, main.o(.text.LL_RCC_SetSysClkSource))
+<P><STRONG><a name="[c7]"></a>LL_RCC_SetSysClkSource</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, main.o(.text.LL_RCC_SetSysClkSource))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_RCC_SetSysClkSource
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[c2]"></a>LL_RCC_SetUSARTClockSource</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, main.o(.text.LL_RCC_SetUSARTClockSource))
+<P><STRONG><a name="[cb]"></a>LL_RCC_SetUSARTClockSource</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, main.o(.text.LL_RCC_SetUSARTClockSource))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = LL_RCC_SetUSARTClockSource
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[94]"></a>LL_RTC_WAKEUP_Enable</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, main.o(.text.LL_RTC_WAKEUP_Enable))
+<P><STRONG><a name="[95]"></a>LL_RTC_WAKEUP_Enable</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, main.o(.text.LL_RTC_WAKEUP_Enable))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_RTC_WAKEUP_Enable
 </UL>
-<BR>[Called By]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_RTC_Init
+<BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_RTC_Init
 </UL>
 
-<P><STRONG><a name="[95]"></a>LL_RTC_WAKEUP_SetClock</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, main.o(.text.LL_RTC_WAKEUP_SetClock))
+<P><STRONG><a name="[96]"></a>LL_RTC_WAKEUP_SetClock</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, main.o(.text.LL_RTC_WAKEUP_SetClock))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = LL_RTC_WAKEUP_SetClock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_RTC_Init
+<BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_RTC_Init
 </UL>
 
-<P><STRONG><a name="[98]"></a>LL_SPI_SetStandard</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, main.o(.text.LL_SPI_SetStandard))
+<P><STRONG><a name="[99]"></a>LL_SPI_SetStandard</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, main.o(.text.LL_SPI_SetStandard))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = LL_SPI_SetStandard
 </UL>
-<BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI1_Init
+<BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI1_Init
 </UL>
 
-<P><STRONG><a name="[8b]"></a>LL_SYSCFG_SetEXTISource</STRONG> (Thumb, 56 bytes, Stack size 32 bytes, main.o(.text.LL_SYSCFG_SetEXTISource))
+<P><STRONG><a name="[8c]"></a>LL_SYSCFG_SetEXTISource</STRONG> (Thumb, 56 bytes, Stack size 32 bytes, main.o(.text.LL_SYSCFG_SetEXTISource))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = LL_SYSCFG_SetEXTISource
 </UL>
-<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
+<BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 </UL>
 
-<P><STRONG><a name="[c0]"></a>LL_SYSTICK_SetClkSource</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, main.o(.text.LL_SYSTICK_SetClkSource))
+<P><STRONG><a name="[c9]"></a>LL_SYSTICK_SetClkSource</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, main.o(.text.LL_SYSTICK_SetClkSource))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_SYSTICK_SetClkSource
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[9a]"></a>LL_USART_ConfigAsyncMode</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, main.o(.text.LL_USART_ConfigAsyncMode))
+<P><STRONG><a name="[9b]"></a>LL_USART_ConfigAsyncMode</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, main.o(.text.LL_USART_ConfigAsyncMode))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_USART_ConfigAsyncMode
 </UL>
-<BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART2_UART_Init
+<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART2_UART_Init
 </UL>
 
-<P><STRONG><a name="[c4]"></a>LL_USART_Disable</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, main.o(.text.LL_USART_Disable))
+<P><STRONG><a name="[cd]"></a>LL_USART_Disable</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, main.o(.text.LL_USART_Disable))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_USART_Disable
 </UL>
 <BR>[Called By]<UL><LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[9b]"></a>LL_USART_Enable</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, main.o(.text.LL_USART_Enable))
+<P><STRONG><a name="[9c]"></a>LL_USART_Enable</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, main.o(.text.LL_USART_Enable))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_USART_Enable
 </UL>
 <BR>[Called By]<UL><LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART2_UART_Init
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART2_UART_Init
 </UL>
 
-<P><STRONG><a name="[88]"></a>MX_GPIO_Init</STRONG> (Thumb, 428 bytes, Stack size 128 bytes, main.o(.text.MX_GPIO_Init))
+<P><STRONG><a name="[89]"></a>MX_GPIO_Init</STRONG> (Thumb, 428 bytes, Stack size 128 bytes, main.o(.text.MX_GPIO_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 208<LI>Call Chain = MX_GPIO_Init &rArr; LL_GPIO_Init &rArr; LL_GPIO_SetPinSpeed
 </UL>
-<BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_Init
-<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_EXTI_Init
-<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_SYSCFG_SetEXTISource
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_IOP_GRP1_EnableClock
-<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_SetPinPull
-<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_SetPinMode
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_ResetOutputPin
+<BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_Init
+<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_EXTI_Init
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_SYSCFG_SetEXTISource
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_IOP_GRP1_EnableClock
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_SetPinPull
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_SetPinMode
+<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_ResetOutputPin
 </UL>
 <BR>[Called By]<UL><LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[8e]"></a>MX_LPUART1_UART_Init</STRONG> (Thumb, 188 bytes, Stack size 112 bytes, main.o(.text.MX_LPUART1_UART_Init))
+<P><STRONG><a name="[8f]"></a>MX_LPUART1_UART_Init</STRONG> (Thumb, 188 bytes, Stack size 112 bytes, main.o(.text.MX_LPUART1_UART_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 248<LI>Call Chain = MX_LPUART1_UART_Init &rArr; LL_LPUART_Init &rArr; LL_LPUART_SetBaudRate &rArr; __aeabi_uldivmod &rArr; __aeabi_llsr
 </UL>
-<BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_LPUART_Init
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_Init
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_SetPriority
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_EnableIRQ
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_IOP_GRP1_EnableClock
-<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_APB1_GRP1_EnableClock
+<BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_LPUART_Init
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_Init
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_SetPriority
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_EnableIRQ
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_IOP_GRP1_EnableClock
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_APB1_GRP1_EnableClock
 </UL>
 <BR>[Called By]<UL><LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[92]"></a>MX_RTC_Init</STRONG> (Thumb, 72 bytes, Stack size 32 bytes, main.o(.text.MX_RTC_Init))
+<P><STRONG><a name="[93]"></a>MX_RTC_Init</STRONG> (Thumb, 72 bytes, Stack size 32 bytes, main.o(.text.MX_RTC_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = MX_RTC_Init &rArr; NVIC_SetPriority
 </UL>
-<BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_SetPriority
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_EnableIRQ
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_WAKEUP_SetClock
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_WAKEUP_Enable
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_EnableRTC
+<BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_SetPriority
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_EnableIRQ
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_WAKEUP_SetClock
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_WAKEUP_Enable
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_EnableRTC
 </UL>
 <BR>[Called By]<UL><LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[96]"></a>MX_SPI1_Init</STRONG> (Thumb, 252 bytes, Stack size 136 bytes, main.o(.text.MX_SPI1_Init))
+<P><STRONG><a name="[97]"></a>MX_SPI1_Init</STRONG> (Thumb, 252 bytes, Stack size 136 bytes, main.o(.text.MX_SPI1_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = MX_SPI1_Init &rArr; LL_GPIO_Init &rArr; LL_GPIO_SetPinSpeed
 </UL>
-<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_SPI_Init
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_Init
-<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_SPI_SetStandard
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_IOP_GRP1_EnableClock
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_APB2_GRP1_EnableClock
+<BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_SPI_Init
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_Init
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_SPI_SetStandard
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_IOP_GRP1_EnableClock
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_APB2_GRP1_EnableClock
 <LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[99]"></a>MX_USART2_UART_Init</STRONG> (Thumb, 220 bytes, Stack size 120 bytes, main.o(.text.MX_USART2_UART_Init))
+<P><STRONG><a name="[9a]"></a>MX_USART2_UART_Init</STRONG> (Thumb, 220 bytes, Stack size 120 bytes, main.o(.text.MX_USART2_UART_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 236<LI>Call Chain = MX_USART2_UART_Init &rArr; LL_USART_Init &rArr; LL_RCC_GetUSARTClockFreq &rArr; RCC_GetSystemClockFreq &rArr; RCC_PLL_GetFreqDomain_SYS &rArr; __aeabi_uidiv
 </UL>
-<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_USART_Init
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_Init
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_SetPriority
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_EnableIRQ
-<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_USART_Enable
-<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_USART_ConfigAsyncMode
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_IOP_GRP1_EnableClock
-<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_APB1_GRP1_EnableClock
+<BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_USART_Init
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_Init
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_SetPriority
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_EnableIRQ
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_USART_Enable
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_USART_ConfigAsyncMode
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_IOP_GRP1_EnableClock
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_APB1_GRP1_EnableClock
 </UL>
 <BR>[Called By]<UL><LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[91]"></a>NVIC_EnableIRQ</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, main.o(.text.NVIC_EnableIRQ))
+<P><STRONG><a name="[92]"></a>NVIC_EnableIRQ</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, main.o(.text.NVIC_EnableIRQ))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = NVIC_EnableIRQ
 </UL>
-<BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART2_UART_Init
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_RTC_Init
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_LPUART1_UART_Init
+<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART2_UART_Init
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_RTC_Init
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_LPUART1_UART_Init
 </UL>
 
-<P><STRONG><a name="[90]"></a>NVIC_SetPriority</STRONG> (Thumb, 140 bytes, Stack size 32 bytes, main.o(.text.NVIC_SetPriority))
+<P><STRONG><a name="[91]"></a>NVIC_SetPriority</STRONG> (Thumb, 140 bytes, Stack size 32 bytes, main.o(.text.NVIC_SetPriority))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = NVIC_SetPriority
 </UL>
-<BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART2_UART_Init
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_RTC_Init
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_LPUART1_UART_Init
+<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART2_UART_Init
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_RTC_Init
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_LPUART1_UART_Init
 </UL>
 
 <P><STRONG><a name="[30]"></a>LL_USART_TransmitData8</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, comport.o(.text.LL_USART_TransmitData8))
@@ -1131,328 +1149,376 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPS_getNMEA
 </UL>
 
-<P><STRONG><a name="[a6]"></a>LL_RTC_ALMA_Disable</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, timers.o(.text.LL_RTC_ALMA_Disable))
+<P><STRONG><a name="[af]"></a>LL_RTC_ALMA_Disable</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, timers.o(.text.LL_RTC_ALMA_Disable))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_RTC_ALMA_Disable
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_initAlarm
+<BR>[Called By]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_initAlarm
 </UL>
 
-<P><STRONG><a name="[a9]"></a>LL_RTC_ALMA_Enable</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, timers.o(.text.LL_RTC_ALMA_Enable))
+<P><STRONG><a name="[b2]"></a>LL_RTC_ALMA_Enable</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, timers.o(.text.LL_RTC_ALMA_Enable))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_RTC_ALMA_Enable
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_initAlarm
+<BR>[Called By]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_initAlarm
 </UL>
 
-<P><STRONG><a name="[a8]"></a>LL_RTC_ALMA_SetMask</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, timers.o(.text.LL_RTC_ALMA_SetMask))
+<P><STRONG><a name="[b1]"></a>LL_RTC_ALMA_SetMask</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, timers.o(.text.LL_RTC_ALMA_SetMask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = LL_RTC_ALMA_SetMask
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_initAlarm
+<BR>[Called By]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_initAlarm
 </UL>
 
-<P><STRONG><a name="[a7]"></a>LL_RTC_ALMA_SetSecond</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, timers.o(.text.LL_RTC_ALMA_SetSecond))
+<P><STRONG><a name="[b0]"></a>LL_RTC_ALMA_SetSecond</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, timers.o(.text.LL_RTC_ALMA_SetSecond))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = LL_RTC_ALMA_SetSecond
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_initAlarm
+<BR>[Called By]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_initAlarm
 </UL>
 
-<P><STRONG><a name="[a5]"></a>LL_RTC_DisableWriteProtection</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, timers.o(.text.LL_RTC_DisableWriteProtection))
+<P><STRONG><a name="[a9]"></a>LL_RTC_DATE_GetDay</STRONG> (Thumb, 26 bytes, Stack size 12 bytes, timers.o(.text.LL_RTC_DATE_GetDay))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = LL_RTC_DATE_GetDay
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_getTimeDate
+</UL>
+
+<P><STRONG><a name="[aa]"></a>LL_RTC_DATE_GetMonth</STRONG> (Thumb, 30 bytes, Stack size 12 bytes, timers.o(.text.LL_RTC_DATE_GetMonth))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = LL_RTC_DATE_GetMonth
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_getTimeDate
+</UL>
+
+<P><STRONG><a name="[ac]"></a>LL_RTC_DATE_GetWeekDay</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, timers.o(.text.LL_RTC_DATE_GetWeekDay))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_RTC_DATE_GetWeekDay
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_getTimeDate
+</UL>
+
+<P><STRONG><a name="[ab]"></a>LL_RTC_DATE_GetYear</STRONG> (Thumb, 28 bytes, Stack size 12 bytes, timers.o(.text.LL_RTC_DATE_GetYear))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = LL_RTC_DATE_GetYear
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_getTimeDate
+</UL>
+
+<P><STRONG><a name="[ae]"></a>LL_RTC_DisableWriteProtection</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, timers.o(.text.LL_RTC_DisableWriteProtection))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_RTC_DisableWriteProtection
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_initAlarm
+<BR>[Called By]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_initAlarm
 </UL>
 
-<P><STRONG><a name="[aa]"></a>LL_RTC_EnableWriteProtection</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, timers.o(.text.LL_RTC_EnableWriteProtection))
+<P><STRONG><a name="[b3]"></a>LL_RTC_EnableWriteProtection</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, timers.o(.text.LL_RTC_EnableWriteProtection))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_RTC_EnableWriteProtection
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_initAlarm
+<BR>[Called By]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_initAlarm
 </UL>
 
-<P><STRONG><a name="[5c]"></a>LL_GPIO_SetAFPin_0_7</STRONG> (Thumb, 58 bytes, Stack size 40 bytes, stm32l0xx_ll_gpio.o(.text.LL_GPIO_SetAFPin_0_7))
+<P><STRONG><a name="[a8]"></a>LL_RTC_TIME_GetFormat</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, timers.o(.text.LL_RTC_TIME_GetFormat))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_RTC_TIME_GetFormat
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_getTimeDate
+</UL>
+
+<P><STRONG><a name="[a5]"></a>LL_RTC_TIME_GetHour</STRONG> (Thumb, 30 bytes, Stack size 12 bytes, timers.o(.text.LL_RTC_TIME_GetHour))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = LL_RTC_TIME_GetHour
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_getTimeDate
+</UL>
+
+<P><STRONG><a name="[a6]"></a>LL_RTC_TIME_GetMinute</STRONG> (Thumb, 30 bytes, Stack size 12 bytes, timers.o(.text.LL_RTC_TIME_GetMinute))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = LL_RTC_TIME_GetMinute
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_getTimeDate
+</UL>
+
+<P><STRONG><a name="[a7]"></a>LL_RTC_TIME_GetSecond</STRONG> (Thumb, 26 bytes, Stack size 12 bytes, timers.o(.text.LL_RTC_TIME_GetSecond))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = LL_RTC_TIME_GetSecond
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_getTimeDate
+</UL>
+
+<P><STRONG><a name="[5d]"></a>LL_GPIO_SetAFPin_0_7</STRONG> (Thumb, 58 bytes, Stack size 40 bytes, stm32l0xx_ll_gpio.o(.text.LL_GPIO_SetAFPin_0_7))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = LL_GPIO_SetAFPin_0_7
 </UL>
-<BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_Init
+<BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_Init
 </UL>
 
-<P><STRONG><a name="[5d]"></a>LL_GPIO_SetAFPin_8_15</STRONG> (Thumb, 60 bytes, Stack size 40 bytes, stm32l0xx_ll_gpio.o(.text.LL_GPIO_SetAFPin_8_15))
+<P><STRONG><a name="[5e]"></a>LL_GPIO_SetAFPin_8_15</STRONG> (Thumb, 60 bytes, Stack size 40 bytes, stm32l0xx_ll_gpio.o(.text.LL_GPIO_SetAFPin_8_15))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = LL_GPIO_SetAFPin_8_15
 </UL>
-<BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_Init
+<BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_Init
 </UL>
 
-<P><STRONG><a name="[59]"></a>LL_GPIO_SetPinMode</STRONG> (Thumb, 50 bytes, Stack size 40 bytes, stm32l0xx_ll_gpio.o(.text.LL_GPIO_SetPinMode))
+<P><STRONG><a name="[5a]"></a>LL_GPIO_SetPinMode</STRONG> (Thumb, 50 bytes, Stack size 40 bytes, stm32l0xx_ll_gpio.o(.text.LL_GPIO_SetPinMode))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = LL_GPIO_SetPinMode
 </UL>
-<BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_Init
+<BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_Init
 </UL>
 
-<P><STRONG><a name="[5e]"></a>LL_GPIO_SetPinOutputType</STRONG> (Thumb, 44 bytes, Stack size 40 bytes, stm32l0xx_ll_gpio.o(.text.LL_GPIO_SetPinOutputType))
+<P><STRONG><a name="[5f]"></a>LL_GPIO_SetPinOutputType</STRONG> (Thumb, 44 bytes, Stack size 40 bytes, stm32l0xx_ll_gpio.o(.text.LL_GPIO_SetPinOutputType))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = LL_GPIO_SetPinOutputType
 </UL>
-<BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_Init
+<BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_Init
 </UL>
 
-<P><STRONG><a name="[5b]"></a>LL_GPIO_SetPinPull</STRONG> (Thumb, 50 bytes, Stack size 40 bytes, stm32l0xx_ll_gpio.o(.text.LL_GPIO_SetPinPull))
+<P><STRONG><a name="[5c]"></a>LL_GPIO_SetPinPull</STRONG> (Thumb, 50 bytes, Stack size 40 bytes, stm32l0xx_ll_gpio.o(.text.LL_GPIO_SetPinPull))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = LL_GPIO_SetPinPull
 </UL>
-<BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_Init
+<BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_Init
 </UL>
 
-<P><STRONG><a name="[5a]"></a>LL_GPIO_SetPinSpeed</STRONG> (Thumb, 50 bytes, Stack size 40 bytes, stm32l0xx_ll_gpio.o(.text.LL_GPIO_SetPinSpeed))
+<P><STRONG><a name="[5b]"></a>LL_GPIO_SetPinSpeed</STRONG> (Thumb, 50 bytes, Stack size 40 bytes, stm32l0xx_ll_gpio.o(.text.LL_GPIO_SetPinSpeed))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = LL_GPIO_SetPinSpeed
 </UL>
-<BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_Init
+<BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_Init
 </UL>
 
-<P><STRONG><a name="[7e]"></a>LL_RTC_ClearFlag_RS</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, stm32l0xx_ll_rtc.o(.text.LL_RTC_ClearFlag_RS))
+<P><STRONG><a name="[7f]"></a>LL_RTC_ClearFlag_RS</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, stm32l0xx_ll_rtc.o(.text.LL_RTC_ClearFlag_RS))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_RTC_ClearFlag_RS
 </UL>
-<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_WaitForSynchro
+<BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_WaitForSynchro
 </UL>
 
-<P><STRONG><a name="[73]"></a>LL_RTC_DATE_Config</STRONG> (Thumb, 88 bytes, Stack size 64 bytes, stm32l0xx_ll_rtc.o(.text.LL_RTC_DATE_Config))
+<P><STRONG><a name="[74]"></a>LL_RTC_DATE_Config</STRONG> (Thumb, 88 bytes, Stack size 64 bytes, stm32l0xx_ll_rtc.o(.text.LL_RTC_DATE_Config))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = LL_RTC_DATE_Config
 </UL>
-<BR>[Called By]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DATE_Init
+<BR>[Called By]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DATE_Init
 </UL>
 
-<P><STRONG><a name="[74]"></a>LL_RTC_DisableInitMode</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, stm32l0xx_ll_rtc.o(.text.LL_RTC_DisableInitMode))
+<P><STRONG><a name="[75]"></a>LL_RTC_DisableInitMode</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, stm32l0xx_ll_rtc.o(.text.LL_RTC_DisableInitMode))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_RTC_DisableInitMode
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_TIME_Init
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DATE_Init
+<BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_TIME_Init
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DATE_Init
 </UL>
 
-<P><STRONG><a name="[71]"></a>LL_RTC_DisableWriteProtection</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, stm32l0xx_ll_rtc.o(.text.LL_RTC_DisableWriteProtection))
+<P><STRONG><a name="[72]"></a>LL_RTC_DisableWriteProtection</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, stm32l0xx_ll_rtc.o(.text.LL_RTC_DisableWriteProtection))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_RTC_DisableWriteProtection
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_TIME_Init
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DATE_Init
+<BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_TIME_Init
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DATE_Init
 </UL>
 
-<P><STRONG><a name="[79]"></a>LL_RTC_EnableInitMode</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, stm32l0xx_ll_rtc.o(.text.LL_RTC_EnableInitMode))
+<P><STRONG><a name="[7a]"></a>LL_RTC_EnableInitMode</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, stm32l0xx_ll_rtc.o(.text.LL_RTC_EnableInitMode))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_RTC_EnableInitMode
 </UL>
-<BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_EnterInitMode
+<BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_EnterInitMode
 </UL>
 
-<P><STRONG><a name="[77]"></a>LL_RTC_EnableWriteProtection</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, stm32l0xx_ll_rtc.o(.text.LL_RTC_EnableWriteProtection))
+<P><STRONG><a name="[78]"></a>LL_RTC_EnableWriteProtection</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, stm32l0xx_ll_rtc.o(.text.LL_RTC_EnableWriteProtection))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_RTC_EnableWriteProtection
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_TIME_Init
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DATE_Init
+<BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_TIME_Init
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DATE_Init
 </UL>
 
-<P><STRONG><a name="[7c]"></a>LL_RTC_GetHourFormat</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, stm32l0xx_ll_rtc.o(.text.LL_RTC_GetHourFormat))
+<P><STRONG><a name="[7d]"></a>LL_RTC_GetHourFormat</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, stm32l0xx_ll_rtc.o(.text.LL_RTC_GetHourFormat))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_RTC_GetHourFormat
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_TIME_Init
+<BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_TIME_Init
 </UL>
 
-<P><STRONG><a name="[78]"></a>LL_RTC_IsActiveFlag_INIT</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, stm32l0xx_ll_rtc.o(.text.LL_RTC_IsActiveFlag_INIT))
+<P><STRONG><a name="[79]"></a>LL_RTC_IsActiveFlag_INIT</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, stm32l0xx_ll_rtc.o(.text.LL_RTC_IsActiveFlag_INIT))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_RTC_IsActiveFlag_INIT
 </UL>
-<BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_EnterInitMode
+<BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_EnterInitMode
 </UL>
 
-<P><STRONG><a name="[7f]"></a>LL_RTC_IsActiveFlag_RS</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, stm32l0xx_ll_rtc.o(.text.LL_RTC_IsActiveFlag_RS))
+<P><STRONG><a name="[80]"></a>LL_RTC_IsActiveFlag_RS</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, stm32l0xx_ll_rtc.o(.text.LL_RTC_IsActiveFlag_RS))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_RTC_IsActiveFlag_RS
 </UL>
-<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_WaitForSynchro
+<BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_WaitForSynchro
 </UL>
 
-<P><STRONG><a name="[75]"></a>LL_RTC_IsShadowRegBypassEnabled</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, stm32l0xx_ll_rtc.o(.text.LL_RTC_IsShadowRegBypassEnabled))
+<P><STRONG><a name="[76]"></a>LL_RTC_IsShadowRegBypassEnabled</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, stm32l0xx_ll_rtc.o(.text.LL_RTC_IsShadowRegBypassEnabled))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_RTC_IsShadowRegBypassEnabled
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_TIME_Init
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DATE_Init
+<BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_TIME_Init
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_DATE_Init
 </UL>
 
-<P><STRONG><a name="[7d]"></a>LL_RTC_TIME_Config</STRONG> (Thumb, 84 bytes, Stack size 64 bytes, stm32l0xx_ll_rtc.o(.text.LL_RTC_TIME_Config))
+<P><STRONG><a name="[7e]"></a>LL_RTC_TIME_Config</STRONG> (Thumb, 84 bytes, Stack size 64 bytes, stm32l0xx_ll_rtc.o(.text.LL_RTC_TIME_Config))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = LL_RTC_TIME_Config
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_TIME_Init
+<BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_TIME_Init
 </UL>
 
-<P><STRONG><a name="[7a]"></a>LL_SYSTICK_IsActiveCounterFlag</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, stm32l0xx_ll_rtc.o(.text.LL_SYSTICK_IsActiveCounterFlag))
-<BR><BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_WaitForSynchro
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_EnterInitMode
+<P><STRONG><a name="[7b]"></a>LL_SYSTICK_IsActiveCounterFlag</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, stm32l0xx_ll_rtc.o(.text.LL_SYSTICK_IsActiveCounterFlag))
+<BR><BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_WaitForSynchro
+<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RTC_EnterInitMode
 </UL>
 
-<P><STRONG><a name="[81]"></a>LL_SPI_IsEnabled</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, stm32l0xx_ll_spi.o(.text.LL_SPI_IsEnabled))
+<P><STRONG><a name="[82]"></a>LL_SPI_IsEnabled</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, stm32l0xx_ll_spi.o(.text.LL_SPI_IsEnabled))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_SPI_IsEnabled
 </UL>
-<BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_SPI_Init
+<BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_SPI_Init
 </UL>
 
-<P><STRONG><a name="[82]"></a>LL_SPI_SetCRCPolynomial</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, stm32l0xx_ll_spi.o(.text.LL_SPI_SetCRCPolynomial))
+<P><STRONG><a name="[83]"></a>LL_SPI_SetCRCPolynomial</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, stm32l0xx_ll_spi.o(.text.LL_SPI_SetCRCPolynomial))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = LL_SPI_SetCRCPolynomial
 </UL>
-<BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_SPI_Init
+<BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_SPI_Init
 </UL>
 
-<P><STRONG><a name="[50]"></a>LL_EXTI_DisableEvent_0_31</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, stm32l0xx_ll_exti.o(.text.LL_EXTI_DisableEvent_0_31))
+<P><STRONG><a name="[51]"></a>LL_EXTI_DisableEvent_0_31</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, stm32l0xx_ll_exti.o(.text.LL_EXTI_DisableEvent_0_31))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_EXTI_DisableEvent_0_31
 </UL>
-<BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_EXTI_Init
+<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_EXTI_Init
 </UL>
 
-<P><STRONG><a name="[54]"></a>LL_EXTI_DisableFallingTrig_0_31</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, stm32l0xx_ll_exti.o(.text.LL_EXTI_DisableFallingTrig_0_31))
+<P><STRONG><a name="[55]"></a>LL_EXTI_DisableFallingTrig_0_31</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, stm32l0xx_ll_exti.o(.text.LL_EXTI_DisableFallingTrig_0_31))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_EXTI_DisableFallingTrig_0_31
 </UL>
-<BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_EXTI_Init
+<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_EXTI_Init
 </UL>
 
-<P><STRONG><a name="[52]"></a>LL_EXTI_DisableIT_0_31</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, stm32l0xx_ll_exti.o(.text.LL_EXTI_DisableIT_0_31))
+<P><STRONG><a name="[53]"></a>LL_EXTI_DisableIT_0_31</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, stm32l0xx_ll_exti.o(.text.LL_EXTI_DisableIT_0_31))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_EXTI_DisableIT_0_31
 </UL>
-<BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_EXTI_Init
+<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_EXTI_Init
 </UL>
 
-<P><STRONG><a name="[56]"></a>LL_EXTI_DisableRisingTrig_0_31</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, stm32l0xx_ll_exti.o(.text.LL_EXTI_DisableRisingTrig_0_31))
+<P><STRONG><a name="[57]"></a>LL_EXTI_DisableRisingTrig_0_31</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, stm32l0xx_ll_exti.o(.text.LL_EXTI_DisableRisingTrig_0_31))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_EXTI_DisableRisingTrig_0_31
 </UL>
-<BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_EXTI_Init
+<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_EXTI_Init
 </UL>
 
-<P><STRONG><a name="[53]"></a>LL_EXTI_EnableEvent_0_31</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, stm32l0xx_ll_exti.o(.text.LL_EXTI_EnableEvent_0_31))
+<P><STRONG><a name="[54]"></a>LL_EXTI_EnableEvent_0_31</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, stm32l0xx_ll_exti.o(.text.LL_EXTI_EnableEvent_0_31))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_EXTI_EnableEvent_0_31
 </UL>
-<BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_EXTI_Init
+<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_EXTI_Init
 </UL>
 
-<P><STRONG><a name="[57]"></a>LL_EXTI_EnableFallingTrig_0_31</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, stm32l0xx_ll_exti.o(.text.LL_EXTI_EnableFallingTrig_0_31))
+<P><STRONG><a name="[58]"></a>LL_EXTI_EnableFallingTrig_0_31</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, stm32l0xx_ll_exti.o(.text.LL_EXTI_EnableFallingTrig_0_31))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_EXTI_EnableFallingTrig_0_31
 </UL>
-<BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_EXTI_Init
+<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_EXTI_Init
 </UL>
 
-<P><STRONG><a name="[51]"></a>LL_EXTI_EnableIT_0_31</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, stm32l0xx_ll_exti.o(.text.LL_EXTI_EnableIT_0_31))
+<P><STRONG><a name="[52]"></a>LL_EXTI_EnableIT_0_31</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, stm32l0xx_ll_exti.o(.text.LL_EXTI_EnableIT_0_31))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_EXTI_EnableIT_0_31
 </UL>
-<BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_EXTI_Init
+<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_EXTI_Init
 </UL>
 
-<P><STRONG><a name="[55]"></a>LL_EXTI_EnableRisingTrig_0_31</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, stm32l0xx_ll_exti.o(.text.LL_EXTI_EnableRisingTrig_0_31))
+<P><STRONG><a name="[56]"></a>LL_EXTI_EnableRisingTrig_0_31</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, stm32l0xx_ll_exti.o(.text.LL_EXTI_EnableRisingTrig_0_31))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_EXTI_EnableRisingTrig_0_31
 </UL>
-<BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_EXTI_Init
+<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_EXTI_Init
 </UL>
 
-<P><STRONG><a name="[84]"></a>LL_USART_IsEnabled</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, stm32l0xx_ll_usart.o(.text.LL_USART_IsEnabled))
+<P><STRONG><a name="[85]"></a>LL_USART_IsEnabled</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, stm32l0xx_ll_usart.o(.text.LL_USART_IsEnabled))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_USART_IsEnabled
 </UL>
-<BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_USART_Init
+<BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_USART_Init
 </UL>
 
-<P><STRONG><a name="[87]"></a>LL_USART_SetBaudRate</STRONG> (Thumb, 116 bytes, Stack size 64 bytes, stm32l0xx_ll_usart.o(.text.LL_USART_SetBaudRate))
+<P><STRONG><a name="[88]"></a>LL_USART_SetBaudRate</STRONG> (Thumb, 116 bytes, Stack size 64 bytes, stm32l0xx_ll_usart.o(.text.LL_USART_SetBaudRate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = LL_USART_SetBaudRate &rArr; __aeabi_uidiv
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidiv
 </UL>
-<BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_USART_Init
+<BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_USART_Init
 </UL>
 
-<P><STRONG><a name="[86]"></a>LL_USART_SetHWFlowCtrl</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, stm32l0xx_ll_usart.o(.text.LL_USART_SetHWFlowCtrl))
+<P><STRONG><a name="[87]"></a>LL_USART_SetHWFlowCtrl</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, stm32l0xx_ll_usart.o(.text.LL_USART_SetHWFlowCtrl))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = LL_USART_SetHWFlowCtrl
 </UL>
-<BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_USART_Init
+<BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_USART_Init
 </UL>
 
-<P><STRONG><a name="[85]"></a>LL_USART_SetStopBitsLength</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, stm32l0xx_ll_usart.o(.text.LL_USART_SetStopBitsLength))
+<P><STRONG><a name="[86]"></a>LL_USART_SetStopBitsLength</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, stm32l0xx_ll_usart.o(.text.LL_USART_SetStopBitsLength))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = LL_USART_SetStopBitsLength
 </UL>
-<BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_USART_Init
+<BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_USART_Init
 </UL>
 
-<P><STRONG><a name="[9c]"></a>LL_RCC_GetAHBPrescaler</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32l0xx_ll_rcc.o(.text.LL_RCC_GetAHBPrescaler))
-<BR><BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetHCLKClockFreq
+<P><STRONG><a name="[9d]"></a>LL_RCC_GetAHBPrescaler</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32l0xx_ll_rcc.o(.text.LL_RCC_GetAHBPrescaler))
+<BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetHCLKClockFreq
 </UL>
 
-<P><STRONG><a name="[9d]"></a>LL_RCC_GetAPB1Prescaler</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32l0xx_ll_rcc.o(.text.LL_RCC_GetAPB1Prescaler))
-<BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetPCLK1ClockFreq
+<P><STRONG><a name="[9e]"></a>LL_RCC_GetAPB1Prescaler</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32l0xx_ll_rcc.o(.text.LL_RCC_GetAPB1Prescaler))
+<BR><BR>[Called By]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetPCLK1ClockFreq
 </UL>
 
-<P><STRONG><a name="[67]"></a>LL_RCC_GetLPUARTClockSource</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, stm32l0xx_ll_rcc.o(.text.LL_RCC_GetLPUARTClockSource))
+<P><STRONG><a name="[68]"></a>LL_RCC_GetLPUARTClockSource</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, stm32l0xx_ll_rcc.o(.text.LL_RCC_GetLPUARTClockSource))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_RCC_GetLPUARTClockSource
 </UL>
-<BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetLPUARTClockFreq
+<BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetLPUARTClockFreq
 </UL>
 
-<P><STRONG><a name="[9e]"></a>LL_RCC_GetSysClkSource</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32l0xx_ll_rcc.o(.text.LL_RCC_GetSysClkSource))
-<BR><BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetSystemClockFreq
+<P><STRONG><a name="[9f]"></a>LL_RCC_GetSysClkSource</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32l0xx_ll_rcc.o(.text.LL_RCC_GetSysClkSource))
+<BR><BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetSystemClockFreq
 </UL>
 
-<P><STRONG><a name="[6f]"></a>LL_RCC_GetUSARTClockSource</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, stm32l0xx_ll_rcc.o(.text.LL_RCC_GetUSARTClockSource))
+<P><STRONG><a name="[70]"></a>LL_RCC_GetUSARTClockSource</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, stm32l0xx_ll_rcc.o(.text.LL_RCC_GetUSARTClockSource))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_RCC_GetUSARTClockSource
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetUSARTClockFreq
+<BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetUSARTClockFreq
 </UL>
 
-<P><STRONG><a name="[69]"></a>LL_RCC_HSI_IsReady</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32l0xx_ll_rcc.o(.text.LL_RCC_HSI_IsReady))
-<BR><BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetLPUARTClockFreq
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetUSARTClockFreq
+<P><STRONG><a name="[6a]"></a>LL_RCC_HSI_IsReady</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32l0xx_ll_rcc.o(.text.LL_RCC_HSI_IsReady))
+<BR><BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetLPUARTClockFreq
+<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetUSARTClockFreq
 </UL>
 
-<P><STRONG><a name="[6a]"></a>LL_RCC_IsActiveFlag_HSIDIV</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32l0xx_ll_rcc.o(.text.LL_RCC_IsActiveFlag_HSIDIV))
-<BR><BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_PLL_GetFreqDomain_SYS
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetSystemClockFreq
-<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetLPUARTClockFreq
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetUSARTClockFreq
+<P><STRONG><a name="[6b]"></a>LL_RCC_IsActiveFlag_HSIDIV</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32l0xx_ll_rcc.o(.text.LL_RCC_IsActiveFlag_HSIDIV))
+<BR><BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_PLL_GetFreqDomain_SYS
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetSystemClockFreq
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetLPUARTClockFreq
+<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetUSARTClockFreq
 </UL>
 
-<P><STRONG><a name="[6b]"></a>LL_RCC_LSE_IsReady</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, stm32l0xx_ll_rcc.o(.text.LL_RCC_LSE_IsReady))
-<BR><BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetLPUARTClockFreq
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetUSARTClockFreq
+<P><STRONG><a name="[6c]"></a>LL_RCC_LSE_IsReady</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, stm32l0xx_ll_rcc.o(.text.LL_RCC_LSE_IsReady))
+<BR><BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetLPUARTClockFreq
+<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RCC_GetUSARTClockFreq
 </UL>
 
-<P><STRONG><a name="[9f]"></a>LL_RCC_MSI_GetRange</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32l0xx_ll_rcc.o(.text.LL_RCC_MSI_GetRange))
-<BR><BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetSystemClockFreq
+<P><STRONG><a name="[a0]"></a>LL_RCC_MSI_GetRange</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32l0xx_ll_rcc.o(.text.LL_RCC_MSI_GetRange))
+<BR><BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetSystemClockFreq
 </UL>
 
-<P><STRONG><a name="[a3]"></a>LL_RCC_PLL_GetDivider</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32l0xx_ll_rcc.o(.text.LL_RCC_PLL_GetDivider))
-<BR><BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_PLL_GetFreqDomain_SYS
+<P><STRONG><a name="[a4]"></a>LL_RCC_PLL_GetDivider</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32l0xx_ll_rcc.o(.text.LL_RCC_PLL_GetDivider))
+<BR><BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_PLL_GetFreqDomain_SYS
 </UL>
 
-<P><STRONG><a name="[a1]"></a>LL_RCC_PLL_GetMainSource</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32l0xx_ll_rcc.o(.text.LL_RCC_PLL_GetMainSource))
-<BR><BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_PLL_GetFreqDomain_SYS
+<P><STRONG><a name="[a2]"></a>LL_RCC_PLL_GetMainSource</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32l0xx_ll_rcc.o(.text.LL_RCC_PLL_GetMainSource))
+<BR><BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_PLL_GetFreqDomain_SYS
 </UL>
 
-<P><STRONG><a name="[a2]"></a>LL_RCC_PLL_GetMultiplicator</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32l0xx_ll_rcc.o(.text.LL_RCC_PLL_GetMultiplicator))
-<BR><BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_PLL_GetFreqDomain_SYS
+<P><STRONG><a name="[a3]"></a>LL_RCC_PLL_GetMultiplicator</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32l0xx_ll_rcc.o(.text.LL_RCC_PLL_GetMultiplicator))
+<BR><BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_PLL_GetFreqDomain_SYS
 </UL>
 
-<P><STRONG><a name="[60]"></a>LL_InitTick</STRONG> (Thumb, 60 bytes, Stack size 24 bytes, stm32l0xx_ll_utils.o(.text.LL_InitTick))
+<P><STRONG><a name="[61]"></a>LL_InitTick</STRONG> (Thumb, 60 bytes, Stack size 24 bytes, stm32l0xx_ll_utils.o(.text.LL_InitTick))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = LL_InitTick &rArr; __aeabi_uidiv
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidiv
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_Init1msTick
+<BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_Init1msTick
 </UL>
 
-<P><STRONG><a name="[62]"></a>LL_LPUART_IsEnabled</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, stm32l0xx_ll_lpuart.o(.text.LL_LPUART_IsEnabled))
+<P><STRONG><a name="[63]"></a>LL_LPUART_IsEnabled</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, stm32l0xx_ll_lpuart.o(.text.LL_LPUART_IsEnabled))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LL_LPUART_IsEnabled
 </UL>
-<BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_LPUART_Init
+<BR>[Called By]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_LPUART_Init
 </UL>
 
-<P><STRONG><a name="[66]"></a>LL_LPUART_SetBaudRate</STRONG> (Thumb, 60 bytes, Stack size 48 bytes, stm32l0xx_ll_lpuart.o(.text.LL_LPUART_SetBaudRate))
+<P><STRONG><a name="[67]"></a>LL_LPUART_SetBaudRate</STRONG> (Thumb, 60 bytes, Stack size 48 bytes, stm32l0xx_ll_lpuart.o(.text.LL_LPUART_SetBaudRate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = LL_LPUART_SetBaudRate &rArr; __aeabi_uldivmod &rArr; __aeabi_llsr
 </UL>
 <BR>[Calls]<UL><LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_LPUART_Init
+<BR>[Called By]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_LPUART_Init
 </UL>
 
-<P><STRONG><a name="[64]"></a>LL_LPUART_SetHWFlowCtrl</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, stm32l0xx_ll_lpuart.o(.text.LL_LPUART_SetHWFlowCtrl))
+<P><STRONG><a name="[65]"></a>LL_LPUART_SetHWFlowCtrl</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, stm32l0xx_ll_lpuart.o(.text.LL_LPUART_SetHWFlowCtrl))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = LL_LPUART_SetHWFlowCtrl
 </UL>
-<BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_LPUART_Init
+<BR>[Called By]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_LPUART_Init
 </UL>
 
-<P><STRONG><a name="[63]"></a>LL_LPUART_SetStopBitsLength</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, stm32l0xx_ll_lpuart.o(.text.LL_LPUART_SetStopBitsLength))
+<P><STRONG><a name="[64]"></a>LL_LPUART_SetStopBitsLength</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, stm32l0xx_ll_lpuart.o(.text.LL_LPUART_SetStopBitsLength))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = LL_LPUART_SetStopBitsLength
 </UL>
-<BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_LPUART_Init
+<BR>[Called By]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_LPUART_Init
 </UL>
 <P>
 <H3>

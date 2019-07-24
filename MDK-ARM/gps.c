@@ -456,7 +456,7 @@ struct GPS_POS GPS_getNMEA(void){
 						}
 						if(count == 10)
 						{
-							strncpy( position.date, &rxBuffer[lastIndex + 1], 4);
+							strncpy( position.date, &rxBuffer[lastIndex + 1], 6);
 							break;
 						}
 
@@ -522,6 +522,9 @@ int GPS_subroutine(void){
 		RTC_getTimeDate( &time, &date );
 		position.time[0] = (time.Hours / 10)+'0';  position.time[1] = (time.Hours % 10)+'0';
 		position.time[2] = (time.Hours / 10)+'0';  position.time[3] = (time.Hours % 10)+'0';
+		position.date[0] = (date.Day   / 10)+'0';  position.date[1] = (date.Day   % 10)+'0';
+		position.date[2] = (date.Month / 10)+'0';  position.date[3] = (date.Month % 10)+'0';
+		position.date[4] = (date.Year  / 10)+'0';  position.date[5] = (date.Year  % 10)+'0';
 		
 	}
 	

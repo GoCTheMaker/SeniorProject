@@ -150,11 +150,11 @@ void USART2_IRQHandler(void)
   /* USER CODE BEGIN USART2_IRQn 0 */
 	
 	//Write comport data to ring buffer as it is received
-	/*if(USART2->ISR & USART_ISR_ORE)
+	if(USART2->ISR & USART_ISR_ORE)
 	{
 		USART2->ISR |= USART_ISR_ORE;
 		return;
-	}*/
+	}
 		
 	
 	ComRxBuff[ComRxWriteIndex] = USART2->RDR;
