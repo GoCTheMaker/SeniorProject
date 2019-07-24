@@ -3,7 +3,7 @@
   ..\Drivers\CMSIS\Device\ST\STM32L0xx\Include\stm32l0xx.h \
   ..\Drivers\CMSIS\Device\ST\STM32L0xx\Include\stm32l011xx.h \
   ..\Drivers\CMSIS\Include\core_cm0plus.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
   ..\Drivers\CMSIS\Include\core_cmInstr.h \
   ..\Drivers\CMSIS\Include\cmsis_armcc_V6.h \
   ..\Drivers\CMSIS\Include\core_cmFunc.h \
@@ -24,12 +24,12 @@
   ..\Inc\commPeriph.h ..\MDK-ARM\comport.h ..\MDK-ARM\globals.h \
   ..\MDK-ARM\flash.h ..\MDK-ARM\gps.h ..\MDK-ARM\xbee.h \
   ..\MDK-ARM\timers.h ..\MDK-ARM\scheduler.h ..\MDK-ARM\globals.h \
-  ..\MDK-ARM\timers.h C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
+  ..\MDK-ARM\timers.h D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
   ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_conf_template.h \
   ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_rcc.h \
   ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_def.h \
   ..\Drivers\STM32L0xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stddef.h \
+  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stddef.h \
   ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_rcc_ex.h \
   ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_gpio.h \
   ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_gpio_ex.h \

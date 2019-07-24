@@ -311,6 +311,7 @@ struct GPS_POS GPS_getNMEA(void){
 	char checksum[2];
 	uint8_t msgComplete = 0;
 	static struct GPS_POS position;
+		memset(&position, 0, sizeof(position));
 	position.acc = 99999;
 	int i, count = 0, nextIndex = 0, lastIndex = 0;
 
@@ -417,7 +418,7 @@ struct GPS_POS GPS_getNMEA(void){
 						switch( strI ){
 							case 2:
 								// Latitude 
-								strcpy(position.lat, charTok);
+								strncpy(position.lat, charTok, 10);
 							break;
 							case 3:
 								// N/S Indicator 
@@ -425,7 +426,7 @@ struct GPS_POS GPS_getNMEA(void){
 							break;
 							case 4:
 								// Longitude
-								strcpy(position.longt, charTok);
+								strncpy(position.longt, charTok, 10);
 							break;
 							case 5:
 								// E/W Indicator
@@ -433,8 +434,7 @@ struct GPS_POS GPS_getNMEA(void){
 							break;
 							case 8:
 								// Horizontal Accuracy
-							
-							
+								position.acc = atoi(charTok);
 								strI=PUBX_POS_NUM_FIELDS;
 							break;
 						};
@@ -451,12 +451,12 @@ struct GPS_POS GPS_getNMEA(void){
 							nextIndex = i;
 						}
 						if( (count == 2) && (RMC_timeFlag == 0) ){
-							memcpy(position.time, &rxBuffer[lastIndex + 1], index - lastIndex - 1);
+							strncpy( position.time, &rxBuffer[lastIndex + 1], 4);
 							RMC_timeFlag = 1;
 						}
 						if(count == 10)
 						{
-							memcpy(position.date, &rxBuffer[lastIndex + 1], index - lastIndex - 1);
+							strncpy( position.date, &rxBuffer[lastIndex + 1], 4);
 							break;
 						}
 
@@ -484,19 +484,45 @@ int GPS_UBX_enablePUBX_Position(void){
 }
 //---------------------------------------------------
 int GPS_subroutine(void){
-	static struct GPS_POS position = {0};
-	position.acc = 99999;
+	static struct GPS_POS position;
+		memset(&position, 0, sizeof(position));
+		position.acc = 99999;
+	LL_RTC_TimeTypeDef time;
+	LL_RTC_DateTypeDef date;
+	
 	
 	GPS_GPSEnable();
 	GPS_GPSCSHigh();
 	TIM2_delay(150);
 	GPS_GPSCSLow();
-	TIM2_delay(150);
+	TIM2_delay(500);
 	GPS_UBX_enablePUBX_Position();
 	
 	TIM2_initDelay_inline( GPS_TIMEOUT );
 	while( !(TIM2->SR & TIM_SR_UIF) &&  (position.acc > GPS_ACC_REQ) ){
 		position = GPS_getNMEA();
+	}
+	
+	if(position.acc > GPS_ACC_REQ){
+		memset(position.lat, '0', sizeof(position.lat));
+		memset(position.longt, '0', sizeof(position.longt));
+	}
+	
+	time.Hours   = (position.time[0]-'0')*10+(position.time[1]-'0');
+	time.Minutes = (position.time[2]-'0')*10+(position.time[3]-'0');
+	date.Day     = (position.date[0]-'0')*10+(position.date[1]-'0');
+	date.Month   = (position.date[2]-'0')*10+(position.date[3]-'0');
+	date.Year   = (position.date[4]-'0')*10+(position.date[5]-'0');
+	// thank you to Michael Keith and Tom Craver for this beaut:
+	date.WeekDay = (date.Day += date.Month < 3 ? date.Year--:date.Year-2,23*date.Month/9+date.Day+4+date.Year/4-date.Year/100+date.Year/400)%7;
+	
+	if( (date.Year != ',') && (date.Year > 0) && (date.Year < 100) ){
+		RTC_setTimeDate(time, date);
+	}else{
+		RTC_getTimeDate( &time, &date );
+		position.time[0] = (time.Hours / 10)+'0';  position.time[1] = (time.Hours % 10)+'0';
+		position.time[2] = (time.Hours / 10)+'0';  position.time[3] = (time.Hours % 10)+'0';
+		
 	}
 	
 	

@@ -1,5 +1,5 @@
 ./cubemx/commperiph.o: ..\Src\commPeriph.c ..\Inc\commPeriph.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
   ..\Drivers\CMSIS\Device\ST\STM32L0xx\Include\stm32l0xx.h \
   ..\Drivers\CMSIS\Device\ST\STM32L0xx\Include\stm32l011xx.h \
   ..\Drivers\CMSIS\Include\core_cm0plus.h \
