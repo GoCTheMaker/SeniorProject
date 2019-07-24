@@ -1,0 +1,137 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.27.1.0
+Copyright (C) 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Collin Halamka, Grand Valley State Univeristy, LIC=0K156-D0NYC-IW7J0-P9A5F-EABNQ-KAD07
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Cortex-M0/M0+ 256K for ST  Version: 5.27.1.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.12
+Assembler:       Armasm.exe V6.12
+Linker/Locator:  ArmLink.exe V6.12
+Library Manager: ArmAr.exe V6.12
+Hex Converter:   FromElf.exe V6.12
+CPU DLL:         SARMCM3.DLL V5.27.1.0
+Dialog DLL:      DARMCM1.DLL V1.19.2.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.6.0
+Dialog DLL:      TARMCM1.DLL V1.14.1.0
+ 
+<h2>Project:</h2>
+C:\Users\Collin\Desktop\TEST\MDK-ARM\TEST.uvprojx
+Project File Date:  07/24/2019
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.12', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'TEST'
+assembling startup_stm32l071xx.s...
+compiling scheduler.c...
+compiling timers.c...
+../Src/flash.c(176): warning: incompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type 'unsigned char *' [-Wincompatible-pointer-types]
+        FLASH_ReadData( &startAddr, 4, NEXTSTARTADDR_ADDR);
+                        ^~~~~~~~~~
+../Src/flash.c(70): note: passing argument to parameter 'str' here
+int FLASH_ReadData(unsigned char * str, int len, unsigned int addr)
+                                   ^
+../Src/flash.c(190): warning: incompatible pointer types assigning to 'uint32_t *' (aka 'unsigned int *') from 'char *' [-Wincompatible-pointer-types]
+        data = &position.time[0];       // Time: 4/4
+             ^ ~~~~~~~~~~~~~~~~~
+../Src/flash.c(192): warning: incompatible pointer types assigning to 'uint32_t *' (aka 'unsigned int *') from 'char *' [-Wincompatible-pointer-types]
+        data = &position.date[0]; // Date: 4/6
+             ^ ~~~~~~~~~~~~~~~~~
+../Src/flash.c(194): warning: incompatible pointer types assigning to 'uint32_t *' (aka 'unsigned int *') from 'char *' [-Wincompatible-pointer-types]
+        data = &str1[0];                                        // Date: 6/6 | Lat 2/10
+             ^ ~~~~~~~~
+../Src/flash.c(196): warning: incompatible pointer types assigning to 'uint32_t *' (aka 'unsigned int *') from 'char *' [-Wincompatible-pointer-types]
+        data = &position.lat[2];        // Lat: 6/10
+             ^ ~~~~~~~~~~~~~~~~
+../Src/flash.c(198): warning: incompatible pointer types assigning to 'uint32_t *' (aka 'unsigned int *') from 'char *' [-Wincompatible-pointer-types]
+        data = &position.lat[6];        // Lat: 10/10
+             ^ ~~~~~~~~~~~~~~~~
+../Src/flash.c(200): warning: incompatible pointer types assigning to 'uint32_t *' (aka 'unsigned int *') from 'char *' [-Wincompatible-pointer-types]
+        data = &str2[0];                                        // NS: 1/1 | Longt: 3/10
+             ^ ~~~~~~~~
+../Src/flash.c(202): warning: incompatible pointer types assigning to 'uint32_t *' (aka 'unsigned int *') from 'char *' [-Wincompatible-pointer-types]
+        data = &position.longt[3];// Longt: 7/10
+             ^ ~~~~~~~~~~~~~~~~~~
+../Src/flash.c(204): warning: incompatible pointer types assigning to 'uint32_t *' (aka 'unsigned int *') from 'char *' [-Wincompatible-pointer-types]
+        data = &str3[0];
+             ^ ~~~~~~~~
+../Src/flash.c(215): warning: incompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type 'unsigned char *' [-Wincompatible-pointer-types]
+        FLASH_ReadData( &lastSavedAddr, 4, NEXTSTARTADDR_ADDR);
+                        ^~~~~~~~~~~~~~
+../Src/flash.c(70): note: passing argument to parameter 'str' here
+int FLASH_ReadData(unsigned char * str, int len, unsigned int addr)
+                                   ^
+10 warnings generated.
+compiling flash.c...
+../Src/gps.c(361): warning: if statement has empty body [-Wempty-body]
+                                }else if( rxData != (char)0xFF ); //LL_USART_TransmitData8( USART1, rxData );
+                                                                ^
+../Src/gps.c(361): note: put the semicolon on a separate line to silence this warning
+1 warning generated.
+compiling gps.c...
+../Src/xbee.c(43): warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+compiling xbee.c...
+../Src/comport.c(220): warning: implicitly declaring library function 'sprintf' with type 'int (char *, const char *, ...)' [-Wimplicit-function-declaration]
+        sprintf(time, "%x%x%x%x%x%x%x", currtime.Seconds,
+        ^
+../Src/comport.c(220): note: include the header <stdio.h> or explicitly provide a declaration for 'sprintf'
+1 warning generated.
+compiling comport.c...
+../Src/main.c(150): warning: passing 'char *' to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        while( FLASH_readFixes( &fix[0] ) == 0 ){
+                                ^~~~~~~
+../Inc\flash.h(53): note: passing argument to parameter 'rtn' here
+int FLASH_readFixes(unsigned char *rtn);
+                                   ^
+1 warning generated.
+compiling main.c...
+compiling stm32l0xx_it.c...
+compiling system_stm32l0xx.c...
+compiling stm32l0xx_ll_gpio.c...
+compiling stm32l0xx_ll_rtc.c...
+compiling stm32l0xx_ll_spi.c...
+compiling stm32l0xx_ll_dma.c...
+compiling stm32l0xx_ll_pwr.c...
+compiling stm32l0xx_ll_exti.c...
+compiling stm32l0xx_ll_usart.c...
+compiling stm32l0xx_ll_tim.c...
+compiling stm32l0xx_ll_rcc.c...
+compiling stm32l0xx_ll_utils.c...
+linking...
+Program Size: Code=9062 RO-data=258 RW-data=8 ZI-data=1168  
+FromELF: creating hex file...
+"TEST\TEST.axf" - 0 Error(s), 14 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.5.1.pack
+                ARM.CMSIS.5.5.1
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.2.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32L0xx_DFP.2.0.1.pack
+                Keil.STM32L0xx_DFP.2.0.1
+                STMicroelectronics STM32L0 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_TEST
+  C:\Users\Collin\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include
+  C:\Users\Collin\AppData\Local\Arm\Packs\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.2.0
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>

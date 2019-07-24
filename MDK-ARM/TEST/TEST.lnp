@@ -1,0 +1,25 @@
+--cpu Cortex-M0+
+"test\startup_stm32l071xx.o"
+"test\comport.o"
+"test\flash.o"
+"test\gps.o"
+"test\scheduler.o"
+"test\timers.o"
+"test\xbee.o"
+"test\main.o"
+"test\stm32l0xx_it.o"
+"test\system_stm32l0xx_1.o"
+"test\stm32l0xx_ll_gpio.o"
+"test\stm32l0xx_ll_rtc.o"
+"test\stm32l0xx_ll_spi.o"
+"test\stm32l0xx_ll_dma.o"
+"test\stm32l0xx_ll_pwr.o"
+"test\stm32l0xx_ll_exti.o"
+"test\stm32l0xx_ll_tim.o"
+"test\stm32l0xx_ll_usart.o"
+"test\stm32l0xx_ll_rcc.o"
+"test\stm32l0xx_ll_utils.o"
+--library_type=microlib --strict --scatter "TEST\TEST.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "TEST.map" -o TEST\TEST.axf
